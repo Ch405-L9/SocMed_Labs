@@ -27,7 +27,7 @@ import requests
 CHROMA_DIR = Path(__file__).parent / ".chroma_db"
 COLLECTION_NAME = "social_lab"
 OLLAMA_URL = "http://localhost:11434/api/generate"
-DEFAULT_MODEL = "qwen2.5-coder:7b"   # confirmed installed; swap to phi3:mini or llama3.2:3b once pulled
+DEFAULT_MODEL = "phi3:mini"
 TOP_K = 5                      # chunks to retrieve
 
 

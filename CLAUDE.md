@@ -53,7 +53,7 @@ The project is a **documentation-first knowledge base** — no traditional app f
 ### RAG Pipeline (Phase 7 — active)
 - **Collection:** `social_lab` in `.chroma_db/` — **246 chunks** as of 2026-04-18
 - **Embeddings:** `all-MiniLM-L6-v2` via ChromaDB DefaultEmbeddingFunction (ONNX)
-- **Generation:** Ollama on `localhost:11434`; default model `qwen2.5-coder:7b`
+- **Generation:** Ollama on `localhost:11434`; default model `phi3:mini`; fallback `llama3.2:3b`
 - **Python env:** Always use `.venv/` — system Python has a broken pydantic stub
 
 ## Commands
