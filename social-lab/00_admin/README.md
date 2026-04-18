@@ -24,11 +24,19 @@ All `.md` files here are designed to be ingested by `social_lab_ingest.py` (Phas
 
 ## Current Status
 
-- Phase 1 (folder structure): ✅ Complete
-- Phase 2 (brand, research, products): ✅ Complete
-- Phase 3 (posting calendar): ✅ Complete
-- Phase 4 (scripts, archetypes, ad creatives): ✅ Complete
-- Phase 5 (ad creatives): ✅ Complete
-- Phase 6 (KPIs, experiment log): ✅ Complete
-- Phase 7 (RAG ingestion scripts): Pending
-- Phase 8 (live recording + posting): Pending — begin Tue Apr 21, 2026
+| Phase | Description | Status |
+|-------|-------------|--------|
+| 1 | Folder structure | Complete |
+| 2 | Brand, research, products | Complete |
+| 3 | Posting calendar | Complete |
+| 4 | Scripts, archetypes, ad creatives | Complete |
+| 5 | Platform playbooks | Complete |
+| 6 | KPIs, experiment log | Complete |
+| 7 | RAG pipeline (ingest + query scripts) | Complete — 246 chunks indexed |
+| 8 | Live recording + posting | Pending — begin Tue Apr 21, 2026 |
+
+**Prompt library (03_prompts/):** 12 files — 5 core + 7 Social Marketing Prompt Ware integrations
+
+**Stubs remaining (low priority):**
+- `01_brand/visual_assets/README.md` — needs actual logo file inventory
+- `05_analytics/charts/README.md` — needs 20+ posts before meaningful data
