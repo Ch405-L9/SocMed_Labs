@@ -1,0 +1,63 @@
+badgrTechBusiness:
+  company:
+    name: "BADGRTechnologies LLC"
+    legalName: "BADGRTechnologies LLC"
+    type: "Limited Liability Company"
+    status: "Active/Compliance"
+    naics: "541511"
+    founded: "2025-02-03"
+    phone: "470-223-6127"
+    EIN: "33-3212015"
+    DUNS: "136411582"
+
+  owner:
+    firstName: "Brandon"
+    lastName: "Grant"
+    email: "adgrant1@badgrtech.com"
+    homeAddress:
+      street: "1360 Carlysle Park Dr."
+      city: "Lawrenceville"
+      state: "GA"
+      zip: "30044"
+      country: "USA"
+
+  businessAddress:
+    street: "8735 Dunwoody Place STE. #7223"
+    city: "Atlanta"
+    state: "GA"
+    zip: "30350-2995"
+    country: "USA"
+    hours:
+      weekdays: "Monday - Friday, 8:30 AM - 5:30 PM EST"
+      weekends: "Client calls only - leave message"
+
+  brand:
+    name: "BADGR Technologies LLC"
+    colors: Variations of Blue & Black gray scale from soft white to dark grey - (Match the sites colors)
+      primary:  (Deepest Blue on the official LOGO)
+        badgrBlu: "#02068D"
+        logoPrimary: "#0E305F"
+        logoPrimaryDark: "#0A2345"
+        logoMid: "#1C4A86"
+        logoLight: "#3E6FB0"
+        logoLightest: "#7FA1D3"
+      neutrals:
+        white: "#F2F0E6"
+        grey: "#A9A9A9"
+        black: "#050505"
+    usage:
+      headerColor: "#0E305F"
+      bodyText: "#050505"
+      background: "#F2F0E6"
+      accentPrimary: "#02068D"
+
+  revenue:
+    verified: "$2"
+    unverified: null
+
+  entity:
+    legalType: "LLC"
+    employees: null
+    industry: "Custom Computer Programming Services"
+
+

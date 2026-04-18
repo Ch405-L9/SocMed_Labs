@@ -1,0 +1,39 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# RAG / ChromaDB (large binary, rebuild with social_lab_ingest.py)
+.chroma_db/
+
+# Ollama model cache (managed by Ollama, not this repo)
+.ollama/
+
+# Secrets — never commit these
+secrets*
+secrets_*
+*secret*
+*.env
+.env*
+*_credentials*
+*_token*
+*logins*
+*github repos*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/

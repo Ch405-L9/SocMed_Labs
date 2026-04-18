@@ -1,0 +1,804 @@
+Method
+This essay employs a descriptive and analytical approach to deeply explore the significance of Agentic AI, Reasoning Models, and Multimodal LLMs. The analysis will explore each trend’s core concepts and mechanisms, highlight relevant leading LLMs and popular frameworks (where applicable), examine their interconnections and potential synergies, illustrate applications across various domains, and consider their broader implications and challenges.
+
+Agentic AI: Deep Dive
+Agentic AI focuses on creating autonomous systems that can perceive, reason, and act in their environment to achieve specific goals. The core of an AI agent typically involves an LLM orchestrating various components. Leading LLMs like GPT-4, Gemini 2.0, and Claude 3 demonstrate strong planning, memory interaction, and tool usage capabilities crucial for agentic behaviour. Frameworks such as LangChain, with its modularity, LlamaIndex for knowledge integration, Autogen for multi-agent systems, Semantic Kernel, with its skill-based approach, and the Google Agent Development Kit (ADK), designed for streamlined multi-agent development and multimodal interactions, are popular tools in this domain. The synergy of sophisticated LLMs with these frameworks drives the creation of increasingly autonomous and capable AI agents.
+
+Get Frank Morales Aguilera’s stories in your inbox
+Join Medium for free to get updates from this writer.
+
+Reasoning Models: Deep Dive
+Reasoning Models enhance the logical inference and problem-solving capabilities of LLMs. Techniques like Chain-of-Thought (CoT), effective in models like GPT-4, PaLM 2, and Claude 2, encourage step-by-step reasoning. Tree-of-Thoughts (ToT), as seen with GPT-4, allows for exploring multiple reasoning paths. Graph-based reasoning, relevant to models like Gemini 2.0, leverages structured knowledge. Neuro-symbolic integration, relying on models like GPT-4 and Gemini, combines neural and symbolic approaches. The Mixture of Expert (MoE) architecture, utilized in models like DeepSeek-R1 and Mistral AI’s Mixtral 8x7B, and potentially internally in GPT-4, scales reasoning capacity efficiently. These advancements are enabling AI to tackle increasingly complex cognitive tasks.
+
+Multimodal LLMs: Deep Dive
+Multimodal LLMs extend the capabilities of traditional LLMs to process and generate information across various modalities. Models like Gemini 2.0, GPT-4V, Flamingo, and notably Llama 4 employ architectures with modality-specific encoders and fusion mechanisms like cross-attention to achieve this. Llama 4 stands out with its native multimodal architecture using early fusion, achieving strong performance on various multimodal benchmarks and featuring a long context window in some variants. Effective alignment of different modalities in a shared embedding space, as seen in Gemini, GPT-4V, and Llama 4, is crucial for their performance. These MLLMs offer a richer world understanding by integrating diverse data sources.
+
+Applications
+The convergence of Agentic AI, Reasoning Models, and Multimodal LLMs drives a new wave of sophisticated applications. Multimodal agents, built with frameworks like LangChain or Google ADK and powered by reasoning models and MLLMs (including Llama 4), can handle complex problem-solving with visual and spoken instructions. Using LlamaIndex and advanced reasoning, AI-powered research assistants can analyze multimodal data and synthesize findings. Intuitive virtual assistants, like those built on Gemini and Llama 4, can understand complex, multimodal user requests and perform intricate actions. Advanced robotics, controlled by agentic frameworks and equipped with multimodal perception and reasoning, can interact more naturally in real-world environments.
+
+Discussion
+Examining Agentic AI, Reasoning Models, and Multimodal LLMs reveals each field’s rapid and interconnected advancements. Leading LLMs, including the newly released and highly capable Llama 4, are central to these developments, and specialized frameworks are streamlining the creation of agentic systems. Architectural innovations like MoE significantly enhance reasoning capabilities, while MLLMs provide AI with a more comprehensive understanding of the world. The synergy between these trends is crucial; for instance, agentic systems can leverage advanced reasoning over multimodal inputs (including those understood by Llama 4) to perform complex tasks autonomously. However, safety, interpretability, bias, and evaluation challenges require ongoing research and ethical considerations to ensure responsible innovation.
+
+Conclusion
+Agentic AI, Reasoning Models, and Multimodal LLMs represent next-generation artificial intelligence’s critical and interconnected pillars. The advancements in their underlying mechanisms, the capabilities of leading LLMs like GPT-4, Gemini 2.0, Claude 3, and the recently released Llama 4, and the development of powerful frameworks are driving a significant transformation in AI’s potential. The convergence of these trends promises to unlock unprecedented applications across various domains, inspiring awe and wonder at the possibilities of AI. As we continue to push the boundaries of AI, a commitment to ethical development, rigorous testing, and interdisciplinary collaboration will be essential to harness the full power of these ascendant technologies for the benefit of society.
+
+"Next Gen AI reasoning policies" refers to the emerging guidelines and technical approaches designed to govern and enhance the advanced, human-like logical capabilities of the latest AI models. These policies aim to ensure that AI systems not only generate content but also demonstrate transparent, verifiable, and safe problem-solving steps. 
+Key aspects of these next-gen policies fall into two main categories: technical approaches to building reasoning capabilities and governance policies for their safe use. 
+Technical Policies & Approaches for Reasoning Models
+Developers are implementing specific strategies to move AI beyond simple pattern matching (System 1 thinking) to methodical, step-by-step logic (System 2 thinking). 
+Explicit Training on Reasoning Traces: Models are specifically trained on data that includes explicit, step-by-step solutions to problems (like math or coding problems) so they learn how to reason, not just what the answer is.
+Automated Reasoning Checks: Companies like Amazon Web Services (AWS) are integrating "Automated Reasoning checks" into AI guardrails. These use mathematical logic to validate the accuracy of content against domain knowledge, aiming for up to 99% verification accuracy to prevent hallucinations.
+Advanced Optimization Techniques: Methods like Generative Reinforcement Policy Optimization (GRPO) use verifiable rewards (e.g., whether code runs correctly) to guide a model's policy toward logically sound outcomes, making models more robust in tasks like math and code generation.
+Inference-Time Methods: Techniques that don't require retraining, such as Chain-of-Thought (CoT) prompting and Tree-of-Thoughts (ToT), encourage the model to "think out loud" and explore multiple reasoning paths before providing a final answer.
+Self-Correction and Backtracking: Newer models are being developed with the ability to "rewind" and explore alternate logical paths when a line of reasoning hits a dead end, improving accuracy on complex puzzles. 
+Governance and Ethical Policies
+As AI reasoning capabilities advance, new governance policies are being developed to ensure responsible deployment. 
+Mandated Explainability and Transparency: A core policy is the requirement for AI systems to provide clear and traceable reasoning paths, especially in sensitive applications like healthcare or law, to foster trust and accountability.
+Human Oversight and Accountability: Policies emphasize the need for human-in-the-loop mechanisms and clear audit trails for all AI actions. This ensures that even advanced reasoning systems operate within established legal and ethical boundaries.
+Neurosymbolic Governance: This emerging framework combines neural networks (for perception) with symbolic reasoning (for explicit, auditable, rule-based constraints), aiming to embed law and ethics directly into AI decision-making processes.
+Risk Mitigation: Policies focus on preventing bias, ensuring fairness, and implementing guardrails to handle non-monotonic reasoning (where information can change) in dynamic, real-world environments. 
+These policies and technical advancements represent a significant shift towards more reliable, transparent, and capable AI systems. For more detailed information on specific frameworks, you can explore resources from organizations like Stanford HAI, AWS, and OpenAI. 
+
+Yes. Perfect. Awesome. All right. Well, we will get
+started then. So, thank you everyone for coming to this week's tech talk. This week's tech
+talk um is with Luke Shenan, head of research computing and
+data services. And the tech talk series is a series that attempts to put
+researchers in touch with tools, technologies, and software that can help them do scholarly work in the digital
+and information age. So to that end, Luke is going to be talking to us about
+AI models that reason. Now they think we're getting closer and closer to the
+torment nexus as we speak. Closer. Yeah. So we appreciate it. And uh if you have
+any questions, I'll be monitoring the chat. U feel free to just shout them out. But otherwise, Luke, take it away.
+Okay, thanks Norm. Um yeah, so I Luke Shenean, director of research computing, data services, and our group's been
+doing a lot of stuff recently with AI. Um and I find it really interesting just
+intellectually. So I've been playing around um completely on in the margins of my job with um reasoning models and
+um trying to understand how uh how these
+large language models reason if they do and trying to follow kind of the latest
+um developments uh that are that are happening in that area. And so um I'm going to talk a little bit
+about what my understanding is of how models currently reason to the extent
+that they do and then um talk about specifically the the the deepseek R1
+method that that came out in I think January uh of this year to a lot of um
+press. uh that particular method is actually very approachable and um you
+can actually adopt that method for training your own reasoning model relatively easily and so I've done that
+and we'll describe as best I can how how I did it and and provide source code and stuff like that so that you you can also
+play around with that. Um so
+[Music] Okay. Um, so the motivation and goals here. So, so why are reasoning models uh
+important? So, um, you know, we have these large language models. They do a lot of really cool things with language.
+But why do we want models that can reason? Um, well, first of all, you know, to be able to handle more complex
+multi-step processes, right? So, for example, uh if if well, if you want a an
+AI system to be able to drive a car effectively, if you want it to be able to plan and evaluate some sort of
+complex multi-step thing, whether that's writing code or um you know, creating
+some content for you that's relatively elaborate um or planning your life or
+your science or whatever. Um you know, you really need the ability to to reason.
+um being able to just predict the next token is not going to be sufficient. And so uh and and you want to be able to uh
+you know assign to an intelligent agent the ability for it to pursue goals,
+right? To for it to be able to act as on on its own behalf to go and accomplish
+some sort of complex task. And in order to do that really reasoning, it turns out very important. So
+um uh we wanted it to be able to handle problems outside of its original training data. So a lot of the original
+large language models that came out in you know 2022 etc um were really impressive but really they could uh they
+couldn't really do much beyond what they they learned in their training their initial training data. Um, we're
+starting to see that models can do more than that, that they can start to um um
+extrapolate and uh abstract into areas that they were not trained on. And so
+that's interesting. Um, and I'll talk a little bit about that in a second. Also,
+uh, you know, large language models, circa 2022 and 2023, you know, to the
+extent that they think, they don't think like humans, right? Um, I mean, it's pretty clear that they don't and uh and
+their reasoning and I'll talk about about this more uh you know is less real
+reasoning and more just sort of mimicry. Um and and so if you can get a model to
+to really reason in a way that we're familiar with and that's more in alignment with with human thought. Um
+and ultimately you know if you can create models that can truly reason that can solve proofs that can um you know
+write complex code that can create models and simulations and run that then you you can
+automate and and accelerate a a lot of like exploration
+in science and math and other other disciplines. So it's super exciting. Um I think so I'm going to talk you know at
+first just a little historical perspective like like what do we've been doing for the last 50 years 75 years
+with respect to creating reasoning models. Um I'm going to talk about the modern transformer-based large language
+model that is so popular today um and is the basis of uh most of the current
+reasoning models that are out there. I'm going to spend quite a bit of time talking about what's called a chain of
+thought, which is the core method that these reasoning models use to to do
+their reasoning and an alternative more extensive approach uh called tree of
+thought. Um and then uh if we have time, I wanted to talk a bit about um the
+importance of data compression uh with with intelligence. Um and then in part
+two I'm going to kind of talk about uh this DeepSeek R1 model and specifically
+how it uses what we call reinforcement learning um to to teach itself how to
+reason right and which is kind of interesting. Um so historical
+perspective right so uh you know Alan Turing back in 1950 uh wrote this paper
+can can machines think and introduced this concept of the touring test um which I think we're all familiar with.
+It's it's pretty uh well known. Um but that touring test wasn't really about um
+understanding how machines think but trying to kind of imagine a world in which it can
+appear to think. so convincingly that we can't tell the difference. And uh you know he claimed in that paper well if if
+we get to that point where humans can't actually tell if it's a machine or another human then we've reached you
+know some point at which we can say humans or machines can think. Well I would say we are past that now right
+like the touring test is a solved problem. I mean these large language models can convince most people I think
+in the right circumstances that you know they're they're another person or or
+whatever. um you know and and I think that the goalposts have now shifted right that that touring test is no
+longer like relevant like okay we're past that it's I don't think that's
+actually a good measure of intelligence it's interesting but let's move on um so
+one of the very first AI programs was written in like 1956 which was um Newan
+Simon who actually uh wrote rule-based um uh reasoning systems that could prove
+theorem sorry theorems from Principia Mathematica and they actually introduced
+this idea of chain of thought reasoning back in 1956, right? Uh in a completely different framework, not using large
+language models. It was a completely different paradigm, but those concepts were were uh popularized. Um and then
+after that, uh you know, starting to use symbolic AI, right? starting to use symbols and rules related to those and
+then expert systems where you hardcoded you know sort of domain specific rules uh into a system um and you basically
+had to create uh complex logic structures around uh expert knowledge.
+So there was a lot of work in this area to try to create thinking machines you know ever since the
+1940s. Um so in about in the 1960s and 70s you
+know people kind of realized the limitations of symbolic reasoning with machines that it was sort of brittle and
+you know these while they could maybe do operations with symbols and kind of appear to reason in a in a certain
+symbolic way. They were kind of brittle and they lacked common sense and they didn't learn from data. Right? That was
+not part of what they would do. Um and and you had also had this other issue like with what they call the frame
+problem where um you know if you try to uh get a system to understand its
+environment um say for example you had a robot that you know picked up a a cup
+for example uh well that picking by picking up that cup something has changed in its environment and it's
+aware of that right potentially but it now needs to ask the question what else has changed in my environment and you
+know what what do I need to pay attention to what's changed and what's not changed and the the systems of
+intelligence that were being developed with the symbolic reasoning, you know, didn't handle that very well. Um, you
+know, and so you ended up having problems just with the the complexity of the environment and
+tracking change. Um so in machine learning as we sort of know it now
+started you know um in earnest in the 1980s with neural networks support
+vector machines and other methods that were a shift from handcoded rules and symbolic logic to more about pattern
+recognition. It was more about perception and prediction based on data
+than u than sort of symbolic manipulation. Um and that that was kind of prevalent uh for quite a long time.
+Um and so now in the modern era which you know could argue started in 2017
+with the uh with the paper that came out attention is all you need uh from Google where they introduced the concept of the
+transformer uh network architecture. uh this paper really as I've mentioned in
+my other talks really changed everything in the in the way that we uh handle sequential data and how we handle
+language in particular. Um it developed a model architecture that's very scalable and parallelizable and that can
+um uh identify patterns in very very large data sets efficiently uh you know to to
+get us to where we are today with the the large frontier language models. Um just really quickly uh I want to talk a
+little bit about the transformer um because we'll we use it later when I
+talk about how we're going to create our own reasoning model and so it's important to understand just some very basics right so the idea is that the
+transformer is called the transformer because it takes a set of words
+um and what we call embeddings that were computed from those words and these embeddings are semantic
+representation of those words that was learned during the model's pre-training
+on a large corpus of data. Um, and it then transforms them based on the
+sequence and the context in the sequence into a transformed set of embeddings
+where you're basically taking every word in the sequence and reconsidering it in the context of all of the other words in
+in your sequence and you're transforming them in a way where now they are encoded to capture the the the meaning of you
+know in your current context. And that's really the power of of the transformer. But the transformer uh
+model is really um um it's really just a function, right?
+It's not it's not like this intelligent system that sits there with lots of knowledge and and you know amazing
+intelligence. It's really just a function which takes as input a sequence of tokens or words and then predicts the
+next token. And so when this when they do this, it's called uh it's called it being auto reggressive. You take uh a
+set of tokens, you you compute the next token in the sequence, you add it to
+your context window, and then you iterate the process and until you get to some stopping point, right? Whether it's
+the you hit some maximum length or you hit some sort of stop token. Um, but
+really it's a function that takes as input a sequence and produces one token, but you just do it iteratively to get
+larger responses and completions and and that's how large language models these days work. Um, and so transformers are
+built of lots of layers and those layers play a role, right? The initial layers in the overall transformer network that
+use that um uh what we call an attention mechanism. uh it it looks at really
+simplistic linguistic uh things, right? So it can identify maybe okay this is
+the subject or the object the noun or whatever in this sentence at the first level in the in the network then the
+output of that layer when you've transformed the tokens considering it in that simplistic way uh now have kind of
+a revised meaning the overall context of the sequence is now considered in those
+those revised embeddings or those revised tokens and then you iterate that again and now you're looking at maybe uh
+that data uh in a in a slightly more abstract composite way. And you do this
+many times, maybe hundreds of times, hundreds of layers until by the end of that uh you're starting to look at
+really complex parts of language, right? You're a the model is a actually able to discern things like humor and um sarcasm
+and um idioms and things like that. Um I think I skipped ahead. Uh but at
+the end of all of this, right, every token in your dictionary, every word that's possible is assigned a
+probability, right? So in this particular case, our input sequence was the fish lived in the and we're trying
+to predict the next token. So we pass it through all of our transformer layers and we're given a set of probabilities
+assigned to each of the output tokens. And in this case, we're going to if we picked the the most probable next token,
+the completion to this would be the fish lived in the sea. uh but we can change what we call our temperature and we can
+pick uh other next tokens at a different you know at a slightly less prob
+probable uh way. Um so that's that's that's the gist of how uh how these
+transformers work. Um so transformers are you know to some
+extent emergent reasoners right so there's an argument that they can they're they have exhibited the ability
+uh just through learning next token prediction with these multi-level
+transformer networks the ability to uh reason simply right even though they
+might not have explicitly been trained to reason but they're capable of chain
+of thought reasoning and I'll talk more about that being able to do simple magic and sorry mic math and logic puzzles and
+then being able to do translation summarization and question answering. Um and being able to do that even for you
+know sequences they haven't seen before just given the body of stuff that they learned during pre-training. Um and the
+the very complex multi-dimensional and multi-layer uh sort of way that that's
+represented in the training. um th so those those emergent behaviors uh seem
+to appear in these large language models once the model reaches a certain size right so these these large language
+models um you know there's a thing called the scaling laws and I'll talk about that in a second but when they get to a certain size which is the number of
+parameters in the model you get to some number of billions of parameters then some of these capabilities start to
+tease out and you know I would argue that they're very simplistic and mechanistic that it's learn It's seen
+examples of um reasoning in its training data and it's able to extrapolate to new
+data that it hasn't seen but by by finding patterns at a certain level of abstraction and hierarchy that it's able
+to reuse right and so it certainly looks like reasoning at the very least. Um and
+then you can do uh what's called you know oneshot or few shot prompting which
+is rather you know it used to be before 2020 you know if you wanted any AI model or machine learning model to do
+something you really got had to train it uh for your particular data uh and you
+know you tried to generalize it as much as you could by giving it enough data and enough capacity but uh but GPT3 when
+it was released back In I guess 2020, you know, people were really impressed because you could do just few shot
+prompting where that means you could give it an example or two of something and then it would kind of understand
+what you were getting at by your examples and be able to then uh answer
+in a similar way even for problems it hadn't seen before. Um, and even zero shot, given just what it learned in its
+latent representation from the training corpus that you provided, it could even do zero shot, which you don't give it an
+example. You just ask a question and it's able to to give you a meaningful answer. Um, and there's no parameter
+updates or fine-tuning or additional training that's needed when you get to that point. It's just a sort of magic of
+inference. Um, so I mentioned these transformer scaling laws. Um and so the the thing about transformer networks and
+the thing that makes them so powerful is that uh they uh you know they seem to
+have this really predictive quality that you can uh pretty much estimate what the
+loss is going to be or predict what the loss is going to be. And remember with machine learning you're always trying to
+minimize your loss, right? That's the difference between the your prediction and the ground truth. You're trying to minimize that loss. your loss decreases
+predictably as a function of how many how much compute you throw at it, what you're how many parameters are in your
+model and how much data you're training it on. So, uh this is almost sort of a
+linear sort of prediction and that's why uh you know these large companies are spending gazillions of dollars building
+enormous data centers and spinning up nuclear power plants and all that sort of thing. Um, but these scaling laws
+play into the ability for, you know, perhaps these machine learning models to to learn uh to to reason. Um, I'm sorry,
+not to learn, but to reason. Um you know there's a lot of papers out there um
+some of them uh pretty compelling that argue that you know where there's an a significant significant number of
+researchers who believe that scale alone will get you to a point where uh you
+will kind of converge to uh to genuine reasoning right um so anthropic is kind
+of the company that makes claude is sort of famous for this right they they believe scaling at least the CEO believe
+scaling is really all you need and we just got to keep pushing that vector and eventually um we will these transformer
+scaling laws will will come into effect to the point where they genuinely will learn to reason and um and because
+through reasoning and I'll talk a little bit more about that uh you know often
+the correct answer to a complex problem you know is the most probable right
+answer and and you get to a point of scale where you can't you can't differentiate
+between true reasoning and and sort of mimicry. Um but I would argue right now
+um it's we're reasoning without logic, right? So these auto reggressive
+transformers in my mind mimic the patterns of reasoned text because they saw patterns like that while they were
+training, right? They saw lots of examples of reasoned arguments about, you know, uh steps being taken to solve
+math problems. um you know logical logical arguments,
+things like that. Um but the idea that you know it's able
+to draw connections between similar data or similar examples so that it's seen
+enough examples of for example a math problem or logical arguments or a multi-step solution, it's able to
+extrapolate that to other problem domains, right? and and it's it's been demonstrated that it does
+have that that ability, right, to sometimes bridge that gap and and make that sort of analogy to to a
+domain that it it's unfamiliar with. Um I would argue it's not true reasoning because there's no sort of internal
+representation of logic or rules. Um and in fact, I don't even think you know necessarily the models like the a
+traditional sort of transformerbased models even knows that it's solving a math problem. It's just statistically
+continuing a a pattern, right? is doing a completion. Um, but it's really good at fluency and
+semantic coherency, right? Uh, but sometimes will give you the
+wrong answer. So, it'll take give you an answer that reads really well and it's very confident in it and it's absolutely
+wrong, right? Because that that's it, you know, wasn't optimized for correctness. It was optimized for
+semantic coherency for predicting the next token.
+Um so transformers and reasoning. So GPT40 for example may explain a riddle by mimicking a coherent explanation
+token by token but not even understanding it. Right? And cla similarly claude may solve a math word
+problem by chaining steps that sound right but actually are quite wrong. And that's that's really common. We run into
+this a lot. Some people call it hallucination or confabulation. Um but but that's that's pretty common and it's
+a it's a a known issue. So if if if as I
+say, you know, the models aren't really reasoning, well, why are there all these reasoning benchmarks out there? So
+there's there's a number of these reasoning benchmarks that measure the ability for a model to reason. Um,
+examples would be GSM 8K, which is a grade school math um data set that, you
+know, you can use to try to understand or try to measure the ability for a model to solve problems or to reason
+through problems. There's other ones like MMLU Logic or Aquarat. Um, but the
+issue the issue I have with the benchmarks is that the the reasoning benchmarks really evaluate the answer, but they don't really look they don't
+really break down the step-by-step reasoning process. You're you're rarely
+training the model. You're really rarely testing how well the model can actually like break apart a problem and solve it
+in a reasonable logical way. You're just seeing if it comes up with the right answers. And because LLMs are so good at
+sort of identifying and memorizing patterns at multiple scales and looking at statistical correlations, it often
+can produce the right answer, but for the wrong reasons. Right? It didn't reason through the problem. It just happened that uh it found it identified
+some other correlation that happened to allow it to produce the right answer, which but it but it didn't get there in
+the right way. Those are really hard to tease out, right, when you're using these benchmarks. But I would argue that you know the other thing with the
+benchmarks is once once a benchmark is out all of the large language models train on them instantly and so they're
+you know uh they all try to optimize for that particular benchmark pretty quickly. Um just by memorizing
+uh memorizing the the questions and answers in the benchmark. So so I would say that what
+we have is this reasoning gap right so it's the space between fluency or semantic coherence and actual
+understanding. So LLMs can sound smart, but they often lack the grounded logic,
+structure, and intentionality that that true reasoning actually requires. Um, you know, so here's an an actual
+example, right? So, you know, it's a story problem. If a train leaves Chicago at 2 p.m., blah blah blah, and another
+train leaves New York New York City, when do they meet? Um, the LLM may output really quickly, they meet at 6
+p.m. It's confident, it's fluent, but it's incorrect, right? That's the wrong answer. Um in that particular case, no
+steps are shown. It's not grounded in any sort of computation. Right? This is a model that does next token prediction.
+All it can do is predict the next most likely token. And there's no steps shown
+and obviously no real computation that happened here to to actually solve this math problem. It's just giving you an
+answer that sounds fluent and and semantically correct. And uh models have
+gotten a lot better at do dealing with this, but I would say like a year and a half, two years ago, like this was really common. You give it a math
+problem and it just would give you an answer that sounded really good and was often very wrong. Um and it lacks, you
+know, the model looks smart, but it really lacks verifiability. And so what I mean by um
+I'll talk about verifiability in a second, but uh a little bit more about the reasoning gap, right? So uh a
+mismatch between semantically coherent outputs and actual reasoning which involves you know actual reasoning in my
+mind involves some amount of symbolic manipulation or deductive inductive deductive inductive logic error error
+checking or goal directive inference. Um LMS can mimic reasoning without grounded
+understanding truth maintenance uh backtracking or proof systems. They can mimic it. Um and and so we get to this
+this issue of verifiability or the lack of verifiability which is you know the bridge between what a model says and
+what we can trust. So towards that end towards this idea of
+verifiability so that we can begin to trust the model a little better in its
+reasoning or its mimicked reasoning or whatever you want to think of it. One key tool in that toolbox is what we call
+chain of thought. Um and so chain of thoughts actually relatively
+simple. It means um you know because LMS is smart but but they uh they lack
+intentional structured logic. Chain of thought partially addresses this by uh
+by making the reasoning steps very explicit. It expresses all of the reasoning steps. They're intentional.
+They're transparent. Um and because you have to spill out every step in your
+reasoning process or a lot of the steps in your reasoning process, uh the semantic
+coherency to some extent becomes subservient or or secondary to to that
+chain of thought. meaning toward when you get towards the point where it's going to answer the
+question, it has to consider all of the things it spit out before in the chain of thought uh uh in order to uh to
+provide that answer and the semantically coherent response has to consider all of
+that and in so doing it's kind of subservient to that chain of thought. Um so LLMs can do simple chain of thought
+with just prompting alone, right? So um an example would be to just ask ask
+the LLM to to think step by step. So you could say answer the following question by thinking step by step blah blah blah.
+It's a small story problem. That that's one really simple way. You could also be more elaborate in your prompting. Right?
+You can say answer the following question by thinking through step by step. Carefully consider all the
+relevant information. Perform calculations and explain your reasoning at each step. Do not jump at an answer.
+Take your time. Think through it thoroughly and then you give the the question. And in fact, when you give the
+question, you kind of split up the question into specific discrete parts. You will get provably a much better
+answer. If you do a prompt like this, right? Um because it forces the model to
+uh not just spit out an answer that's fluent, but to actually spit out all of its ch reasoning in in kind of a
+a strict way. Um, this even even the elaborate example here though with a
+large language model I would say is um still kind of rudimentary. You're just
+using prompts to do it. And we're going to talk about deeper ways to invoke chain of thought. Um, but the positive
+effects of chain of thought are very well researched. There's lots of literature out there on why chain of
+thought is beneficial. um you know Google Google uh the Google
+brain team has a great paper um you know that uh I think it was one of the first
+papers about chain of thought but specifically how it elicits reasoning in large language models you know they're
+arguing in that paper that through using chain of thought you get to more genuine
+reasoning um so lots of lots of literature in the area um so some of the
+core chain of thought principles if you start like looking at it more carefully is this idea of cognitive
+unloading, right? You're reasoning out loud step by step. It's sort of like the difference between, you know, trying to
+solve a math problem, a complex math problem where you put every step out. You're you're you're like writing it
+out. It's not just in your head in this giant mess. You're writing it out explicitly so that you can like review
+it, look at it carefully, look at the individual pieces, and then reason about it. um versus just taking a large a hard
+math problem and just thinking of think trying to find the solution without without any any sort of communication or
+or or providing any output before the answer.
+um excuse me chain of thought also um creates this sort of inductive bias
+towards reasoning right so it sort of nudges the large language model into a new mode where it's not just about
+fluency of the answer but specifically about about reasoning right you're
+asking it to reason so it will try to reason it will spit out tokens that um
+are in that sort of mode uh and that inductive bias actually is superant are important
+uh you know to get it into that mode to try to get it to you know invoke some sort of ability to do reasoning um um
+you can do error correction through structure. So, so as you as you emit your reasoning in
+your chain of thought, one of the key tools is to do reflection and and
+correction, right? To actually reflect on the answers in the reasoning steps that you're you're taking uh and then
+change course potentially to do that sort of uh uh reflection and correction as you go. If you don't if you don't
+expressly emit those tokens with a with an autogressive model, uh there's no
+ability for it, I think, to to reflect, right? There's no opportunity for it to
+reconsider any sort of uh you know, alternative answer or whether what or
+whether it's it's its reasoning thus far is correct or not. You have to you have to emit that as as tokens before it can
+consider it. That's just a a fundamental nature of of how it processes the the tokens with the attention mechanism. Um
+uh and then um um LLM I believe have internalized to
+some extent the ability to do selfst step-by-step reasoning from training data because it's seen so many examples
+of it. um it will always try to predict the next token, but I believe that that
+there is a intrinsic sort of internalized um understanding or or at least you know
+understanding of the pattern of of of reasoning from the training data. And so if you can take advantage of that by
+explicitly having it spit out chain of thought then then uh then I think that's
+beneficial. Um, I will say that there there was a really interesting article from
+Anthropic just a few weeks ago where they um argued about
+uh with with experiments with Claude, they found that it would do chain of
+thought, but it was it would often do it in a way that was misleading that it
+that it would do it in a way that you as the end user
+it would spit out what it thought you would need to see, but that it was using parts of that reasoning in a way that
+was kind of hidden that that the patterns in the chain of thought um
+weren't obvious. And um I didn't bring a reference to that paper, but you should try to dig it up. It's a paper that came
+out just like two or three weeks ago um where they were trying to understand the
+correlation between you know the output and the chain of thought and found some interesting things that the model was
+doing. Um so before we get too much further into how to train a reasoning
+model I think it's important to understand how LLMs get trained uh
+now and really they're done in multiple steps right so the first step is what we call pre-training so like chat GPT so
+the um the the the P in the GPT stands for pre-training what you're doing in
+that step step is you're just taking the model and you're presenting to it a
+giant corpus of of text, right? In the case of these large models where you you basically are providing it all the text
+that's ever been written ever that's on the internet. Um, and that's your training data. And it's this amazing
+thing that's already labeled because all you do is want to predict the next token. You don't need any additional
+labels. You just mask out words or tokens and have it predict the next
+token. So it's like this immense sort of semilabl data set that
+that pre-exists. And so that pre-training stage that's the really you know GPU intensive initial pre-training
+where we're understanding the correlation of all the tokens ever written um in in all sorts of layers of
+complexity and and and abstraction um and and the the model that you get out
+of that pre-training uh is what they call a base model. it is
+if you try to interact with a a model that's just been pre-trained, it it's not a fun experience. Uh it just it just
+predicts the next tokens and so it might emit a lot of HTML tags because the internet is full of those or it might
+just start repeating things. Uh it hasn't it's like a it's like a diamond in the rough, right? like it knows all
+these correlations between uh you know you know co-occurrence of tokens in
+the language and and it understands all of that to some some degree but you can't really interact with it. So you have to go through other steps, other
+processes and one is the next step is what they call supervised fine-tuning.
+And so in this case companies like OpenAI or Anthropic or any of the other ones would um provide it labeled data.
+So they would give it like examples in the format that they expect
+that model to return respond in. So if you're trying to create what they call an instruct model, you have to give it
+like a format that where that makes sense where it's like a question and an answer and you know it's a helpful
+assistant that's answering your question and you know you have the right answer and and here you know that's where you
+could give it personality or characteristics like that is by giving
+it lots of examples. It's still doing sort of this masked uh causal sort of
+training with that that supervised fine-tuning, but it's on a very curated
+specific set of uh examples that begin
+to have the model uh respond in a way that you would expect sort of a chatbot or an
+interactive instruct model to to perform. So after that phase then you do what's called reinforcement learning
+with human feedback. Um this is where humans uh can provide feedback in a
+variety of ways. Um sometimes these companies will hire people just to provide feedback or they'll they'll get
+feedback from end users when you click you know do I like this answer or I don't like this answer or I prefer this answer to that answer. Um it they
+collect all of that information and use it to train a different model called the
+reward model. Um, and that reward model is then used through reinforcement
+learning, and I'll talk more about that in a minute, to continually improve the output of of the model. And it's really
+more for I mean, format's part of it, but a lot of it is is um, you know, do I like
+the personality of this model? Is it helpful and friendly? Is it um, you know, is it spitting out dangerous
+things? I want to provide negative feedback if that's the case, right? Um, so it's a way of of getting the model to
+be in alignment with with human goals and and morals. Um, but also
+uh also maximizing utility, but it's using human feedback to train a reward model and
+then that reward model is then used to further train the large language model. Um, and once you've done all this these
+steps, you end up with a something like chat GPT where you can interact with it. It's safe and aligned and you know it
+gives you answers that you would expect in the format you would expect it. Um, and that and that's what we get. So, um,
+I would say that the large language model is exposed to chain of thought examples at every training stage, right?
+So, certainly it sees examples of train of chain of thought in just the raw data it sees on the internet.
+Um um if if the label data that's used in the supervised fine-tuning is worth
+anything, they should be providing lots of examples of chain of thought there as well so that the model can learn to uh
+you know reason sort of as a function of what it does. Um and then also in the in
+the uh reinforcement learning. Um so one of the things that
+chain of thought unlocks is this ability to use to exploit
+uh test or inference time compute. Right? So if uh when you do chain of
+thought you spend more compute you spend more time and more tokens emitting these
+reasoning tokens right there's just more time being spent in the inner mechanism of the model to to spit out uh tokens
+and you can spit out you know as many as is reasonable in the in your chain of
+thought to get to the right answer but you are spending more compute um and
+hopefully you the model is trained in a way that it can be adaptive in the sense that simple problems don't require very
+long chains of thought. Very hard problems require longer chains of thought and therefore uh the model
+learns to to basically compute more on harder problems and emit more tokens as
+as as a as a function of that. Um so that unlocks an entire new dimension in
+scaling laws. Right? So I showed you the scaling laws before and that was all for training the models. Well, this is
+scaling laws for inference. Meaning the more time you spend on the compute side
+during inference um the better the the answers you get. Um there's a great paper from Google where you know
+um uh where they talk about how scaling the large language model at test time or inference time uh is actually often more
+effective than scaling the model parameters during training. So um
+spending more time thinking in your chain of thought uh gives you better
+answers. So there's an extension to chain of thought called tree of
+thoughts. Um and tree of thoughts is uh most likely it's hard to say because
+open AI is very closed these days but uh it appears to be that tree of thoughts is what like open AI's reasoning models
+use right so like 03 01 04 those those models there that spend time actually
+thinking and can spend an a lot of time thinking potentially especially if you pay the extra $200 a month and you get
+unlimited computer whatever that is. Um and and what they do there is
+um it's it's basically chain of thought but in a tree structure, right? Where uh
+there's multiple paths through through the tree. Um and so basically your your
+different chains in your chain of thought can lead to different sort of paths and what it will do is explore
+that. It becomes almost like a search, right? It's a tree search to to try to find the optimal chain of thought to get
+to uh the best possible answer. Um and uh you know they they use a form of
+reinforcement learning uh there as well using um uh called Q-learning. Um but
+they they haven't really given a lot of details about about how that all works. There's a lot of speculation that it has
+to be this tree of thought kind of mechanism. Um and the thing about tree of thought
+is that it is uh you can spend an arbitrary amount of compute right like you can spend as much time as you have
+to search that giant search space of potential reasoning steps. Um and so in
+the ARC AGI prize uh you know the O uh three model did really really well. In
+fact, they uh were able to outperform the average human on this, you know,
+problem set that is very challenging for machines. Um, but they did it by
+exploring this search space much more thoroughly than they normally would, right?
+Um I think the they use what they call unlimited compute uh to to be able to to
+sort of pursue these uh these paths through the the tree of thoughts. And uh you know the thing about the pursuing
+these paths is you know the the if implemented correctly
+you can you can uh you know search down a path back up search another path right
+I mean it's it's it's sort of a search algorithm. Um, it's a guided search algorithm guided by the LLM and its
+ability to uh reason via a chain of thought. But fundamentally,
+you know, you just, you know, you have your prompt. Um, you can compute parallel branches all at the same time.
+You you can predict in continuations at every reasoning step. You have to be able to evaluate them. Uh, you know, is
+this reasoning step leading me to the right place? And they've got, like I said, they use reinforcement learning reward functions to be able to provide
+them feedback as to whether or not they're on the right path, right? Um, and but they can backtrack if they need
+to. Um, and uh get to a point where they they terminate hopefully with the best
+possible um chain of of of thought. Um,
+and again, you can spend arbitrary uh inference compute. Um, and you can spend
+um, uh, you know, unlimited amount of time searching this space. There's probably a point of diminishing return,
+but uh, but the longer you search it, the better your results. Um, and so so inference becomes this LLM guided search
+algorithm, which which appears to be uh, uh, OpenAI's main main um, game right
+now with the reasoning models. But then came deepseeek, right? So, DeepSseek was announced in
+um January I believe of this year and um so Deepseek is uh a model
+out of China um from a company I guess called Deepseek. So, Deepseek R1 is particular is specifically the model
+that they released. Um, and it wowed everybody because it
+seemed to be as good as OpenAI's best model at the time, which was 01. And
+they trained it on a fraction of the amount of compute. And uh you can run it
+on commodity hardware. And so all of a sudden all this uh amount of effort that
+o that open AAI puts into their data centers and training seemed to be maybe a waste of time. Um at least that that
+was the impression that everybody got. Um uh you know and so Mark Andre I used to
+work with this douchebag by the way. Um he uh he uh made this really really cool
+quote actually. The Deepseek R1 is you know AI's Sputnik moment. Um, and uh, so
+I think I think that's that's that's about right. Right. It's kind of like, wow, we thought China was really behind
+and now there's this group out of China that has this model and this approach that seems to be like beating our best
+our best models. Um, still what's that? Distill the model though.
+Oh, distill 01. Um, I don't know. It's hard to say. I mean, yeah, 01. I mean obviously Open AI believes that they
+uh built a training data set by interacting with their model. Yeah, that
+you know there's a lot of questions as to did they do it really as cheaply as they said they did. You know, who knows?
+But but the truth is though that their their methodology works. they released a
+paper at the same time um that's reproducible that's very transparent that and I'll I'll go through how I took
+advantage of it to create a reasoning model here in a second um so it it is actually an impressive development is
+it like totally gamechanging I'm not sure yet like so they're going to release R2 I think soon I think in May
+um and we'll see what that's like but Um so again they released this paper uh
+at the same time deepseek R1 incentivizing reasoning capabilities in LLM via reinforcement learning. Um it's
+a really cool paper. Uh it's pretty approachable actually. Um and and I think you know if you haven't read it
+it's worth a read. This group is impressive, right? The amount of work
+that they do, the outputs that they provide produce, not just not just with Deepseek R1, but they have a another
+model called Deepseek V3 where they they made some impressive innovations that
+accelerated the just the fundamental transformer architecture. um they have uh a deep math model where
+they actually invented or they invented this form of reinforcement learning that they're using called um GRPO which I'll
+talk about in a minute. Uh they're very productive and and producing some amazing things.
+Um so the really fundamentally if you
+distill it down to what they did they took a normal pre-trained transformer model which was their deepseeek v3 model
+and they used reinforcement learning on problems with verifiable rewards. So that is pro like math problems where you
+know the answer you have a you know the answer to that problem or there there's other kinds of logic problems or
+whatever where you know the answer it's it's a verifiable answer and they use that in their reinforcement learning. So
+they rewarded through this gpo thing I'll talk about correct well formatted answers and then they got out of the way
+right they just let the model learn to reason on its own and that was the big
+innovation right open AI other groups right they were using supervised fine uh
+tuning providing lots of examples of reasoning to their model here's how you reason here's how you reason here's how
+you reason what deepseek did was create a framework where in order to get to the
+right answer, it had to learn to reason on its own. And that was the core innovation and why it was so much more
+efficient than than what what OpenAI did. Um, and so this get out of the way thing
+really like hearkens back to the bitter lesson, right? Um, so Rich Sutton back in he's a he's one of the AI pioneers uh
+in the world but he he wrote this article back in 2019 2019 I think called
+the bitter lesson which is basically like you know in his career doing AI
+research he's come to the conclusion that trying to get AI models to think
+like people by by adding what we how we think they should work
+uh and trying to be clever and efficient about it isn't the right approach. That
+the best thing you can do is give it lots of compute and lots of data and get out of
+the way and it will learn how to it will learn on its own how to make the connections and how to work. And he
+wasn't even talking about large language models in that at that point. He's talking about computer vision models and other things. But but it all still
+applies. And again, here's a a diagram which shows kind of the relative expenditures
+for um you know, training some of the really large models versus at the very
+bottom uh DeepSeek R1 which they claim was a $5 million investment um which is
+tiny to to train a model of that of that quality. Um who knows if it's correct or
+not. Um but before they did deep before they created Deepseek R1, they created
+this thing called DeepSec R10. This was their first attempt and they really tried to get out of the way on this one.
+And so what they did was they, you know, the model taught itself how to reason via chain of thought using reinforcement
+learning. And it used this thing called group relative policy optimization or GRPO, which I'll go into a lot more
+detail in a second. Um, and it it had this emergent capability, right, that despite having any supervised data
+showing it examples of reasoning, it able it was able to learn how to reason. And it learned not only reason but in
+its chain of thought it could do self-verification reflection and long
+chain of thought right so if a problem required it it would learn how to like emit a very long chain of thought that
+had hey am I doing this right kind of questions and and okay let's take a step back and try it this way and you know it
+would learn to emit these long chain of thought because it was the best way to get the right answer right and it
+learned this uh dynamically um but it had issues And the main issues
+was through that reinforcement learning uh it would lose the ability to be sort of uh the formatting that was required
+you know if you ever used deepsek R1 you know you have this think tags and inside
+the think tags is where the reasoning is and then you have like these this answer section at the end and it's the simple
+formatting thing but it's important uh and it would kind of lose track of that it would lose track it would switch
+often between Chinese and English you know, it just like spew tokens to get the right answer and it just wasn't very
+coherent. It wasn't transparent. It wasn't very good. Uh and so um so they
+they did something a little different. So, Deepseek R1 uh expanded on Deepseek R10 by using this thing called cold
+start supervised fine-tuning which is they gave it just a really small data set at the very beginning of this using
+supervised fine-tuning just like OpenAI and other groups do where they give it
+lots of examples of the right format the right language how to be consistent in language and then they use this thing
+called rejection sampling which is this really cool pro process where I mean these guys are smart uh where they
+actually use the model at some point after after it's trained for a while they actually use the model to then
+generate multiple uh answers with reasoning chains
+and just pick the best ones, throw out the worst ones and use the best ones as
+a synthetic training data set to do additional supervised fine-tuning. So it was kind of like and they would do this
+iteratively. So it would like learn how to reason. They' pick the best answers from the reason from its own reasoning
+output and then use that to further sort of reinforce or to super do supervised
+fine fine-tuning on the model so that it would kind of really bake in like okay this is how I answer questions and this
+is how I uh this is the right format that I need to output in. um and
+uh they would use the supervised fine-tuning in an iterative way on that bootstrap synthetic data and that
+synthetic data came from itself, right? It's it was kind of interesting. Um okay, so I've talked about this GRPO,
+right? So this is where we get into what reinforcement learning is. So the first um so there's lots of different ways to
+do uh reinforcement learning. Open AI invented this way called um proximity
+policy optimization or PO. This is what they use when they're doing their h reinforcement with human
+feedback. And what you have right is you have a a prompt that goes into uh what
+they call a policy which is really just the the the large language model. You get an output from that. You compare it
+to the reference model which is like the model you know the a static version of
+the model. You have a reward model and a value model. And you uh the the the
+reward model as we talked about before is kind of this trained thing that that that gets trained and and applied uh
+during during reinforcement learning. But this value model um is this extra
+model that um is trained as you go. So not only are you training the policy
+model but also the value model. The value model ultimately is partially responsible for giving you uh this this
+value A which is um uh basically the
+um A stands for it's basically the the the the ultimate um advantage from uh
+from your your new policy or your new model. Um and so it's used in the calculation of that. So what GRPO does
+is get rid of that value model and only have the the the model that you're training what's called a policy model.
+They have a reference model which is the static base version of your model and then this reward model. And in fact the
+reward model for for uh deepseek is actually not a model at all in the sense
+it's not like a large language model or a neural network or anything. It's just a set of rules. Um, and that's how I
+implemented it. And I'll show you if we have time here in a minute what that looks like. But the thing with gRPO is that you give it a you give it a
+an input and you end up getting some number of outputs, right? That's why
+they call it a group. Uh, and you get some number of outputs and with chain of thought, with the answer, with the
+format, all of that. And you evaluate them relative to each other. Um and and
+when you do that uh you you are uh you
+know you use your reward model to evaluate them. You try to make sure that your uh outputs don't diverge too much
+from your reference model. This was a a thing to kind of make the training more stable. You don't want the model to
+start just spewing garbage even if it gets you the right answer. you want it to be a little bit more constrained to
+uh not differ too much from the base model. Um and so they use this KL divergence criteria to to sort of
+constrain the training to improve but not be too different from like a token
+probability perspective from the reference model and you so you get a set
+of outputs and rewards and with those rewards then you you calculate the advantage. Um, and all of that is used
+uh to to ultimately train the neural network. Um, the advantage here is you
+don't have a value model. Your reward model is actually really simple set of rules. Um, the way I implemented mine is
+just like regular expressions and looking for formatting and making sure that the answer was right. Right? That's
+about it. Um but the trick here is that you have multiple outputs at every iteration and that you're comparing them
+to each other and the signal from that uh ultimately
+um is is used to compute what they call the surrogate loss. So as you're find as
+you're using gradient descent to optimize your neural network, right? If you recall from previous talks I've
+given um you need you need to calculate loss and you're trying to optimize loss as you as you train your network. Well,
+in the case of reinforcement learning, it's not really loss in the same sort
+of differentiable way that it is with uh normal neural networks. Um, and so you
+you calculate what's called the surrogate loss. And so what we do here, this looks really hard and complex, but
+it's actually not as hard and complex as you might think. Um, basically you just average across all of the sequences and
+all of the token lengths of your outputs so that you're norm so so you're not penalizing outputs for being either too
+long or too short. Um, and and you try to average the you know the the scores
+uh for those. You compute the probability ratios or how likely is uh
+the output from the new policy and you clip it, right? So that and that's what this this term is. That's it's the min
+of of the these things. you clip it to a point, you don't want your training to
+become unstable. And so that clipping just kind of constrains your training. And same with this last term, which is
+that KL divergence from your uh reference model. Um, and so this this
+surrogate loss is relatively easy to compute. And the great thing is you don't need to do it because there's libraries that do it. So, uh, there's a,
+uh, when I trained my reasoning model, I used a thing called
+Unsloth. Unsloth is a, um, really great open- source, I think they have a paid
+version, too, uh, way to fine-tune and train large language models that can handle GPUs really well. It can handle,
+you know, quantized Laura. It can handle reinforcement learning and causal, you know, just sort of supervised
+fine-tuning. It's a it's a framework that makes things a lot easier these days. And then GRPO was implemented
+inside the hugging face um transformer uh reinforcement learning or TRL
+library. And so uh which unsloth can use. So that so the combination of those
+two things allowed me to to create my my model. Um and so what I used was Quinn
+2.5 3B instruct as the base model. So Quinn is another model out of China from
+a different group from the Alibaba group. uh the three billion parameter model means it's small but it's not the
+smallest model they have but um you know it's it's reasonable um and uh that's
+the base model so that's the reference model that I would use in my in my supervised fine-tuning I'm sorry in my
+reinforcement learning um and to save memory on my GPU I used what's called Qura Qura stands for quantized low rank
+uh adaptation so I fine-tuned what what we call these adapters
+at four bit quantization. Um, and so really quickly, you know, your fine-tuned weights for your new model is
+basically the same as your base model plus uh plus the weights of these
+adapters. And so what it does is it takes your base model and at various components of it, it tacks on these
+adapters which are just weight matrices that are at a lower rank. that that
+means there's fewer parameters to tweak in them that uh that that you modify. So
+you're not actually when you're fine-tuning, you're not actually modifying the parameters of the the real model. You're you're you're you're
+tweaking the parameters of this adapter that's attached to the uh base model and
+you're doing it in a way that's called parameter efficient fine-tuning or pft. You're just working them into the crowd
+and and getting them to to Yeah, it's almost like Yeah. And this is
+a way like you could do this. I guess like those pre-trained weights, they could actually then in that case still be like uh hidden, right? Like you could
+in some way like not know what they are, right? That's true. Yeah. You don't you don't necessarily even know or care like adding subtracting. Yeah. Right. So you
+take basically you run your um as you're doing your forward pass you run your um
+you know you run your tensors through the pre-trained weights like you normally do but then you run them through your your Qura and then you
+combine them on the other end. And so one of the things you have to do is specify the rank um of of your QR which
+is basically a a proxy for how many parameters it has. Um and then a a
+weight associated with it like how how much do I want to weight these adapters compared to the base model. And anyway
+all of this is handled by unsloth. You you just have to set a few parameters. You don't really have to do too much.
+But what you end up um well I'll get to that a second. I know we're running just a little bit over, right? But um on the
+training data side, um I I trained everything with GSM8K, right? So this is
+the grade school math. It's got about 8,000 story problems and their answers.
+Um so it's this really easy problem to deal with. And I mean, I'm pretty sure
+that Quinn was already trained on this at some point because it's one of the like main reasoning and math like
+benchmarks. But um but it was still useful because Quinn Quinn at least 3B
+doesn't get all the answers right. Right. It gets some some of them right out of the box but not all of them. So I
+wanted to see if I could improve upon it. And so specifically what I wanted to do was train the model to reason using
+metaphors. And this is something like based on a conversations that Bird and I have had and some of the stuff you're doing with the the Mark thing. I wanted
+to um specifically have the model learn to emit a metaphor, which is to say
+rephrase the question or the prompt into a new form that might be more
+approachable and more uh relatable. Um and and and the idea being can by
+forcing it to think of a metaphor before it answers the question, does it give
+you better results? Right? Um, and then there's the reasoning section, which would be like the think tags in in
+DeepSeek, where it can put its chain of thought. Then sort of a short answer, and then the final answer tags were just
+like a um in between. The final answer tag should just be like basically a number,
+right? It's it's so I could parse it out and and see what it is. Um, so the native format is like this JSON thing.
+It was just a question and an answer, right? So the question is the story problem and the answer is
+um is basically a really brief sort of solution to the problem. The final
+answer is after these four hash marks. That's that's the native GSM8K format.
+So what I did was first in order to do the supervised fine-tuning, I created a
+synthetic version of that by taking all of the original questions and their answers using OpenAI's GPT4 mini to
+create just placeholder metaphors and reasoning uh sections and create like a
+synthetic data set like this and that now this is my input and I use JSON L,
+right? So every line is a self-contained piece of JSON and that's that's what I use to do the the the model fine-tuning.
+So again the workflow here is to take uh the original base model weights Quinn
+2.53B. I downloaded the you know from hugging face the GSM8K data set create
+my synthetic version of it. I do the cold start pausal SFT just like DeepSeek
+R1 did to internalize the right format right I found that if I didn't do that
+like unless I prompted it to do it like it wouldn't start emitting a metaphor in
+a reasoning section I I had to give I had to do this supervised fine-tuning uh at least for a little bit so that it
+could could pick up on it and what was interesting is you just need a little bit of that
+cold start so that it knows like, okay, the next the next thing to emit is like
+that open bracket for the metaphor tag, right? And once and it only has to know
+how to do that every once in a while and then the reinforcement learning will pick up on that and it rewards the
+correct format. So over iterations it got better and better and better at getting the right format and giving long
+form chain of thought. So anyway, I do the cold the the SFT create do my
+four-bit Q Laura to get a new set of adapter weights. So these are just like really small sort of representation of
+just the adapters that plug into the model. And then I apply the gpo reinforcement learning um and and this
+sft.py and gpao.py is in this GitHub repo that I'll show you in just a second. But then
+after you've trained, you end up with a final set of adapter weights. And you can merge those then with your original
+model to get like a self-contained like thing that you can run with O Lama or whatever um and interact
+with. Um and so uh I don't have time to go through the code, but uh if you go to
+this GitHub repo, uh github.comi-insitreasoning,
+um all of my code is there. Um, maybe I'll just bring that up real quick and
+show you what that looks like and then we'll call it good.
+Um, share my screen.
+You're not seeing what I need to get out
+of. Okay. Um, yeah. So, it's it's actually
+relatively straightforward. If you look through it, the SFT.py pi
+um uh kind of goes through uh what what's required in order in
+order to do the supervised finetuning. Um I found that this was really easy and
+like almost trivial and didn't take very long to do right to do like a couple epochs of teaching it how to predict the
+next token for the format that I expected. I just had to provide lots of examples and it would crunch through
+them. Um so here's where I would provide for example um you know the base model
+you know what was my input data to to train from um what was my output
+directory um how many epochs what my learning rate was that sort of thing I have to specify a sequence length like
+what is the se maximum sequence length that you're going to use for your model I use 4k um my Laura rank was 64 and
+I've just read that like my like rule of thumb is your Laura alpha which is the weight of that you assign to your rank
+to your uh adapter should be twice the whatever your rank is. Um and that's
+about it. And then I had a a little test prompt that every at the end of every um
+batch I would have it like just spit out the answer to see if it was starting to pick up on the right format and starting
+to provide train of thought. Um and and then at the end of this you get yeah you get a a set an adapter set of adapter
+weights that are now when combined with the base model uh knows the right format
+and can start to like do the right thing. Um and then uh and then so the next thing to look at
+would be this gpo. This is where I actually do the reinforcement learning. Um, and of course I use this unsloth
+library to do everything and then the TRL to get the the GRPO specific um,
+functions. Um, and you you have to make sure that your Laura uh, your sequence length, your Laura rank and your Laura
+alpha are the same. You can't like start on off these adapters uh, uh, and and
+then try to use different settings. It just doesn't work. Um, and so
+my my uh reward function is the trickiest part, right? Because the reward function
+in my my code was just a function that would make sure using regular
+expressions that the format was correct, that it started with a metaphor tag and
+then had the reasoning section and then had the right answer. So it would reward it for each one of those sections
+independently being in the correct order in the correct format and then fundamentally did it give the right
+answer. And I would just sum all of those subcores together to get a final
+sort of reward score. And so it's relatively efficient code, right? It's just a really simple sort of check of
+format and correctness. And that's that's the advantage of you using verifiable uh uh rewards. You can and
+people do you you know if you've got a problem where you don't have verifiable
+rewards in theory you could use like a large language model to be your reward
+function to to reward a certain kind of reasoning to reward a certain kind
+of whatever. um it's going to be slower because now you have another like LLM
+you've got to like run as the reward function. But it it is possible to do on those more qualitative things where you
+don't have a a verifiable a numeric verifiable like
+reward and and that's about it. So yeah, you should definitely take a look at that. Um there's a lot of people who
+have done something similar. I'm not the first one who's done this by any means. There's um uh a really cool uh there
+there's a a company called um Oxen AI. They've got some really
+great uh YouTube videos where uh they talk in depth about GRPO and inside
+Deepsec R1. Um there's a really great page about the math behind GRPO and why
+it works and as as as well as Unsllo and and TRL. So hopefully by looking at the
+GitHub repo um that gives you some ideas to get started. Um I'm happy to answer
+any questions and either now or later if anybody has them.
+Bert, did you have a question about the rejection learning and bootstrap bootstrapping the synthetic data? Uh I
+did. Um how because it's it's it's
+before you were talking about like verifiable answers, right? And so how if it's if it's creating and then assessing
+those answers themselves, like is there some way of knowing that it's not just
+like saying the right things because it it's the one that's doing the verification, right? Or is there
+um so so depending on what your reward function is, like if it was as simple as
+mine, it's just is it in the right format and did it give me the right answer? Okay. And so,
+uh, you know, one thing I did play around with quite a bit actually was was
+rewarding longer reasoning. So, I I did play around with that and I I I still
+think that there might be a place for that. Um, so basically what I did was reward reasoning that was long but not
+too long. Um, thinking that uh longer reasoning chains would probably give me
+better answers. And I found all sorts of interesting results with that where yes, it at least at first it seems to like
+give you better chain of thought, a lot more reflection, a lot more sort of
+backtracking in its thinking to doublech checkck answers. And then at some point
+it gets, at least I found in my training, you get to a point where it starts becoming repetitive. It would
+start repeating the right answer a hundred different ways. And so
+you there's no benefit to that. Um but according to my reward function, it
+would reward high because it was long. Um and and it had the right answer and
+it was in the right format. Um so yeah, it it all comes down to your reward
+function. Like how careful is that? I think there's a thing called rewards
+hacking where with re reinforcement learning um you have to be really careful about what you reward and how
+you track that because the model will optimize it but it might not optimize it for the same reasons you want it to
+optimize it and there's been lots of examples in the literature of of reward hacking where these models will go do we
+weird things uh because the it's it gives them a better reward score but it
+wasn't really what you wanted it to do right um so you have to be careful with that and I found that that to be true
+with that that case. I I also found in my early uh training of the model that
+when I rewarded length up to a point, it started uh and this was before I was
+doing the supervised fine-tuning, it started doing what DeepS experienced
+with with their Deepseek R10, which is it started emitting things in Chinese and
+English and code. And but what was interesting is when I translated the
+Chinese, like it was legit, like it was like meaningful. And I think what it was
+doing was I would reward it with length up to a point, but what it found was
+maybe it could, and I'm I'm somewhat speculating here, that it was able to fit more reasoning by using Chinese
+uh partially because they're more token efficient in in the way in the way the language works that it it was beneficial
+to get to the right answer to do Chinese, English, and code. Um and that was kind of fascinating actually. Yeah.
+Uh SK had his hand up but then you can yeah
+great presentation. So my question was uh what is the configuration of GPU you used and
+how much time it took in the cold start SFT and GPU learning.
+Yeah. So the cold start like SFT uh I think you could do on almost any
+commodity GPU for this size of model. Uh I think it was only using maybe uh I
+don't know five gigs or so um to to do that part. Um and it was able to finish
+in an hour maybe. Um I was running it on an H100 which not everybody has access to an H100. Uh but I don't think for
+that step you needed it. What I found in the um reinforcement learning with GRPO was
+that that took a lot more memory and part of the reason is that um I was doing you remember how you have
+to generate multiple outputs. I would generate simultaneously four or no eight
+sorry eight uh eight eight outputs. So I actually had eight copies of the the
+weights uh there and so it ended up using a lot more a lot more memory plus the reference model was also in memory.
+Um and so I think you could probably get that lower but for me I think I was using like 50 50 gig or something of
+video RAM. I think you could get that lower. Um the one of the YouTube videos
+that I was sharing uh on the GitHub repo, he trained I think it was a llama model, a 1B parameter uh llama model
+with success on a 16 gig um GPU just on his laptop and and he was able to make a
+reasoning model out of it. So I think I think this stuff is approachable for anybody almost.
+Uh I have a similar question like what like how much compute it took uh whether I'm allowed to try this on our UI
+servers and if not um what the sort of like rough cost estimate would be if one
+would try to use like AWS or something like that you have some estimate on um yeah I mean you definitely could do all
+this all this on our infrance servers or not well maybe not on infrance servers but on our um high performance computing
+clusters right so we've uh GPUs that have up to 48 gigs of of RAM. Um, Unsloth actually supports doing
+multi-GPU training and most of our GPU nodes have two GPUs on them. So, I think
+if you want, yeah, if you're interested, work with me and uh I can get you on the HPC systems and training this stuff
+there. Yeah, for sure. Classwise at AWS, I don't know too
+much.
+Anyone else?
+Okay. Okay. Well, thank you everybody. Yeah. Thank you. You haven't tested it yet, right? You haven't evaluated what it actually is. I have not I have not
+evaluated whether or not um the longer chain of thought or the metaphors actually makes a material difference. I
+just haven't had time. But I it's on my to-do list. I'm really interested. Yeah. Some of the sometimes the metaphors are
+really cool and sometimes they're about gardening and baking and they're not that interesting. Um, you
+know, uh, but sometimes they're like, "Oh, wow. I never thought of that problem in that way. I wonder how well
+this this works." I also thought about using a large language model as a crit, what they call critic model uh in the
+reinforcement learning to uh emphasize
+creative useful metaphors over just sort of any old metaphor to see if that has
+an impact. But I really want to explore this more. Yeah, for sure. We should definitely talk, you know, I can play
+this after. Okay, sounds good. All right. And this talk was recorded, so anyone who registered will get an email
+once that's up on YouTube. But otherwise, feel free to follow up with me, Norman Lee, at the library with any
+questions. Thanks for coming, everyone. Thank
+
+All
+
+From UofILibrary
+
+Intelligence
+
+
