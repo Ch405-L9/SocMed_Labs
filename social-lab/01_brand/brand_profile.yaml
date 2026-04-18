@@ -1,0 +1,74 @@
+company:
+  name: "BADGR Technologies LLC"
+  legal_name: "BADGR Technologies LLC"
+  type: "Limited Liability Company"
+  status: "Active/Compliance"
+  naics: "541511"
+  industry: "Custom Computer Programming Services"
+  founded: "2025-02-03"
+  ein: "33-3212015"
+  duns: "136411582"
+
+owner:
+  first_name: "Brandon"
+  last_name: "Grant"
+  email: "adgrant1@badgrtech.com"
+  home_address:
+    street: "1360 Carlysle Park Dr."
+    city: "Lawrenceville"
+    state: "GA"
+    zip: "30044"
+    country: "USA"
+
+business_address:
+  street: "8735 Dunwoody Place STE. #7223"
+  city: "Atlanta"
+  state: "GA"
+  zip: "30350-2995"
+  country: "USA"
+  phone: "470-223-6127"
+  hours:
+    weekdays: "Monday - Friday, 8:30 AM - 5:30 PM EST"
+    weekends: "Client calls only - leave message"
+
+brand_colors:
+  primary:
+    badgr_blue: "#02068D"
+    logo_primary: "#0E305F"
+    logo_primary_dark: "#0A2345"
+    logo_mid: "#1C4A86"
+    logo_light: "#3E6FB0"
+    logo_lightest: "#7FA1D3"
+  neutrals:
+    white: "#F2F0E6"
+    grey: "#A9A9A9"
+    black: "#050505"
+  usage:
+    header: "#0E305F"
+    body_text: "#050505"
+    background: "#F2F0E6"
+    accent_primary: "#02068D"
+
+core_services:
+  - "Technical SEO & Core Web Vitals repair"
+  - "Website compliance (HIPAA-adjacent, ADA/WCAG)"
+  - "Conversion & intake UX fixes"
+  - "Local SEO & Google Business Profile"
+  - "Done-for-you social content & automation"
+  - "14-Day Lead Leak & Compliance Fix (flagship)"
+
+icp:
+  phase_1:
+    location: "Atlanta Metro, GA"
+    size: "5–25 FTEs"
+    structure: "Owner-led or partner-led"
+    verticals:
+      - "Employment / wage & hour / personal injury law firms"
+      - "Small medical or dental practices"
+    current_state: "Existing website with technical, UX, or compliance gaps; limited social presence; wants more booked consults or inbound calls"
+
+positioning_statement: >
+  BADGR Technologies helps small law firms and healthcare practices fix
+  revenue-killing website issues and build a consistent digital presence
+  through technical SEO, compliance-focused optimization, and done-for-you
+  social content.
