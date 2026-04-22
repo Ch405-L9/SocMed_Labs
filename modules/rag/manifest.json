@@ -1,0 +1,66 @@
+{
+  "_comment": "[MANIS_EDIT] RAG source registry. Add new corpora here – loader.py reads this list on startup.",
+  "version": "1.0",
+  "sources": [
+    {
+      "id": "viral_system",
+      "path": "social-lab/rag_sources/social_profile_viral_system_clean.md",
+      "description": "Viral social profile system – strategy, hooks, platform tactics",
+      "tags": ["social", "viral", "strategy", "profiles"]
+    },
+    {
+      "id": "viral_charts",
+      "path": "social-lab/rag_sources/viral_tech_video_charts_summary.md",
+      "description": "Viral tech video platform performance charts – TikTok, YouTube, Instagram",
+      "tags": ["analytics", "video", "tiktok", "youtube"]
+    },
+    {
+      "id": "viral_chunks",
+      "path": "social-lab/rag_sources/viral_tech_video_chunks_charts.md",
+      "description": "Chunked viral video data for RAG retrieval",
+      "tags": ["video", "chunks", "analytics"]
+    },
+    {
+      "id": "rag_instructions",
+      "path": "social-lab/rag_sources/rag_setup_instructions_viral_videos.md",
+      "description": "RAG setup and chunking instructions for viral video content",
+      "tags": ["rag", "setup", "instructions"]
+    },
+    {
+      "id": "marketing_narratives",
+      "path": "Marketing&FULLplatformNarratives.txt",
+      "description": "Full platform marketing narratives – 262KB – primary content corpus",
+      "tags": ["marketing", "content", "platforms", "narratives"]
+    },
+    {
+      "id": "market_research",
+      "path": "Market Research & Behavioral Analytics Report_ Str.md",
+      "description": "Market research and behavioral analytics for BADGR strategy",
+      "tags": ["research", "analytics", "market", "badgr"]
+    },
+    {
+      "id": "research_ocean",
+      "path": "Research mode ENGAGED!_____Boil the ocean.__The ma (1).md",
+      "description": "Deep research dump – 134KB – platform data, competitor analysis",
+      "tags": ["research", "competitors", "platforms", "deep"]
+    },
+    {
+      "id": "launch_kit",
+      "path": "Badger Technologies LLC - Social Media Launch Kit.md",
+      "description": "BADGR social media launch kit – platform strategies and launch plan",
+      "tags": ["launch", "badgr", "strategy", "social"]
+    },
+    {
+      "id": "branding_kit",
+      "path": "badgr_branding_kit.json",
+      "description": "BADGR brand config – colors, fonts, voice, handles",
+      "tags": ["brand", "badgr", "identity"]
+    },
+    {
+      "id": "voice_tone",
+      "path": "voice_and_tone.md",
+      "description": "Brand voice and tone guide",
+      "tags": ["brand", "voice", "tone", "writing"]
+    }
+  ]
+}
