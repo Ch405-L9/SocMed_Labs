@@ -1,0 +1,10 @@
+{
+  "_comment": "[MANIS_EDIT] Paste the 'manis-social' block into your .mcp.json or .claude.json mcpServers section. Adjust the absolute path to match your checkout location.",
+  "mcpServers": {
+    "manis-social": {
+      "command": "python",
+      "args": ["/home/t0n34781/projects/SocMed_Labs/mcp_server_social.py"],
+      "env": {}
+    }
+  }
+}
