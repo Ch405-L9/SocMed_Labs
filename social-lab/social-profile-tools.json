@@ -1,0 +1,419 @@
+[
+  {
+    "name": "ollama_generate",
+    "description": "Generate structured or unstructured text using a local Ollama model. Supports brand-aware generation when brand_context_path is provided.",
+    "failure_modes": [
+      "Model timeout — Ollama service not running or model not loaded",
+      "Output exceeds character_limit and cannot be trimmed cleanly — regenerate with tighter constraints",
+      "brand_context_path file not found — generation proceeds without brand context (degraded output)",
+      "Model echoes instructions verbatim instead of generating (known mistral:latest failure) — switch to gemma3:4b"
+    ],
+    "dependencies": [
+      "Ollama service must be running (ollama serve)",
+      "brand_context_path file must exist on disk if provided",
+      "Model must be pulled locally before invocation"
+    ],
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "model": { "type": "string" },
+        "task_type": {
+          "type": "string",
+          "enum": [
+            "write",
+            "rewrite",
+            "summarize",
+            "expand",
+            "format",
+            "brainstorm",
+            "profile_bio",
+            "profile_build"
+          ]
+        },
+        "input": { "type": "string" },
+        "constraints": { "type": "string" },
+        "output_format": {
+          "type": "string",
+          "enum": ["plain_text", "json", "markdown"]
+        },
+        "brand_context_path": {
+          "type": "string",
+          "description": "Absolute path to a brand kit or voice/tone file (e.g. badgr_branding_kit.json, voice_and_tone.md). Injected as system context before generation."
+        },
+        "character_limit": {
+          "type": "number",
+          "description": "Hard cap on output character count. Enforced post-generation — output will be truncated or regenerated if exceeded."
+        }
+      },
+      "required": ["model", "task_type", "input"]
+    }
+  },
+  {
+    "name": "ollama_extract",
+    "description": "Extract structured data from text using a local Ollama model.",
+    "failure_modes": [
+      "Model returns malformed JSON — retry once, then fall back to manual extraction",
+      "Schema mismatch — model fills fields not in schema or omits required fields",
+      "Model hallucinates values not present in source text"
+    ],
+    "dependencies": [
+      "Ollama service must be running",
+      "Model must be pulled locally"
+    ],
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "model": { "type": "string" },
+        "input": { "type": "string" },
+        "schema": { "type": "object" }
+      },
+      "required": ["model", "input", "schema"]
+    }
+  },
+  {
+    "name": "ollama_rag_query",
+    "description": "Query local knowledge base using embeddings + retrieval.",
+    "failure_modes": [
+      "Vector store is empty or not initialized — returns no results",
+      "No relevant chunks found for query — returns empty set (not an error)",
+      "Embedding model mismatch between index build and query time — returns irrelevant results"
+    ],
+    "dependencies": [
+      "RAG index must be populated before querying",
+      "Embedding model used at index build time must match query time"
+    ],
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": { "type": "string" },
+        "top_k": { "type": "number", "default": 5 },
+        "filters": { "type": "object" }
+      },
+      "required": ["query"]
+    }
+  },
+  {
+    "name": "ollama_validate",
+    "description": "Validate content against platform + brand constraints. Returns pass/fail with violation details and character count status.",
+    "failure_modes": [
+      "brand_context_path not found — validation runs without brand voice check (char limits still enforced)",
+      "Platform not in enum — returns error, do not proceed to output",
+      "False positives on brand naming — model may flag valid compound words; manually review before blocking"
+    ],
+    "dependencies": [
+      "brand_context_path file must exist if provided",
+      "Ollama service must be running for LLM-based voice checks"
+    ],
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "content": { "type": "string" },
+        "platform": {
+          "type": "string",
+          "enum": ["tiktok", "x", "youtube", "instagram", "facebook", "linkedin"]
+        },
+        "field_type": {
+          "type": "string",
+          "enum": ["bio", "about", "description", "display_name", "headline", "tagline"],
+          "description": "The specific profile field being validated. Used to apply correct character limits per platform."
+        },
+        "ruleset": { "type": "string" },
+        "brand_context_path": {
+          "type": "string",
+          "description": "Path to brand kit or voice/tone file to validate against brand voice rules."
+        }
+      },
+      "required": ["content", "platform"]
+    }
+  },
+  {
+    "name": "ollama_generate_variants",
+    "description": "Generate multiple content variations for A/B testing.",
+    "failure_modes": [
+      "variant_count exceeds model context window — reduce to 2–3 variants",
+      "Variants converge on same structure — increase variation_axis specificity",
+      "Model generates variants that violate brand voice — run ollama_validate on each variant before surfacing"
+    ],
+    "dependencies": [
+      "Ollama service must be running",
+      "Model must be pulled locally",
+      "Variants should be validated via ollama_validate before use in production"
+    ],
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "model": { "type": "string" },
+        "input": { "type": "string" },
+        "variant_count": { "type": "number", "default": 3 },
+        "variation_axis": {
+          "type": "string",
+          "enum": ["tone", "length", "structure", "hook", "platform"]
+        }
+      },
+      "required": ["model", "input"]
+    }
+  },
+  {
+    "name": "ollama_image_spec",
+    "description": "Returns platform-specific image dimension and format requirements for a given asset type, and optionally validates a source asset path against those requirements. Source assets are pulled from the brand kit (logo, color system). Use before any image export or logo resize step in a profile build.",
+    "failure_modes": [
+      "source_asset_path not found on disk — returns spec only, no transform executed",
+      "ImageMagick not installed — transform_command cannot execute",
+      "Output directory does not exist — create parent directory before writing",
+      "PNG → JPG conversion strips transparency — background color must be set explicitly (#0E305F)"
+    ],
+    "dependencies": [
+      "ImageMagick must be installed for transform execution (imagemagick package)",
+      "source_asset_path must exist on disk if provided",
+      "Output directory must exist before writing"
+    ],
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "platform": {
+          "type": "string",
+          "enum": ["tiktok", "x", "youtube", "instagram", "facebook", "linkedin"]
+        },
+        "asset_type": {
+          "type": "string",
+          "enum": ["profile_photo", "banner", "cover", "thumbnail"],
+          "description": "The profile image slot being targeted. Not all platforms support all asset types (e.g. TikTok has no banner)."
+        },
+        "source_asset_path": {
+          "type": "string",
+          "description": "Optional. Absolute path to the source image or logo file to validate or resize. If omitted, the tool returns spec requirements only."
+        },
+        "output_path": {
+          "type": "string",
+          "description": "Optional. Absolute path where the resized/cropped asset should be written. Requires source_asset_path."
+        },
+        "brand_context_path": {
+          "type": "string",
+          "description": "Path to badgr_branding_kit.json. Used to apply correct background color and safe-zone rules during resize."
+        }
+      },
+      "required": ["platform", "asset_type"],
+      "platform_image_specs": {
+        "tiktok": {
+          "profile_photo": { "width": 200, "height": 200, "format": "jpg", "max_kb": 2048, "notes": "Square crop. Displayed as circle." }
+        },
+        "x": {
+          "profile_photo": { "width": 400, "height": 400, "format": "jpg", "max_kb": 2048, "notes": "Square crop. Displayed as circle." },
+          "banner": { "width": 1500, "height": 500, "format": "jpg", "max_kb": 5120, "notes": "Safe zone center 1260x360. Sides crop on mobile." }
+        },
+        "youtube": {
+          "profile_photo": { "width": 800, "height": 800, "format": "png", "max_kb": 4096, "notes": "Square crop. Displayed as circle." },
+          "banner": { "width": 2560, "height": 1440, "format": "jpg", "max_kb": 6144, "notes": "Safe area 1546x423 centered. TV shows full 2560x1440." }
+        },
+        "instagram": {
+          "profile_photo": { "width": 320, "height": 320, "format": "jpg", "max_kb": 2048, "notes": "Displayed at 110x110 on mobile. Stored at 320x320. Displayed as circle." }
+        },
+        "facebook": {
+          "profile_photo": { "width": 170, "height": 170, "format": "jpg", "max_kb": 2048, "notes": "Desktop display size. Displayed as circle. Minimum 128x128." },
+          "cover": { "width": 820, "height": 312, "format": "jpg", "max_kb": 4096, "notes": "Desktop cover. Mobile renders 640x360 center crop. Safe zone: center 820x312 minus 88px bottom-left for profile overlap." }
+        },
+        "linkedin": {
+          "profile_photo": { "width": 400, "height": 400, "format": "jpg", "max_kb": 8192, "notes": "Square crop. Displayed as circle." },
+          "banner": { "width": 1584, "height": 396, "format": "jpg", "max_kb": 8192, "notes": "4:1 ratio. Safe zone: keep key content in center 1200x396." }
+        }
+      }
+    }
+  },
+  {
+    "name": "ollama_profile_build",
+    "description": "Orchestrates a complete social media profile package for a single platform. Generates all text fields (bio, display name, tagline, about/description, CTA) with platform-correct character limits and BADGR brand voice enforced. Returns image asset specs for profile photo and banner/cover. Writes output JSON to the platform post kit directory. Run once per platform for a full profile rollout.",
+    "failure_modes": [
+      "brand_context_path or voice_tone_path not found — ABORT, do not generate without brand context",
+      "Model fails structured output (returns instruction echo instead of content) — switch model per model_routing in badgr_brand_rules",
+      "Image conversion fails (ImageMagick missing or output dir not writable) — log failure in build_log.json, surface in validation block",
+      "Character limit exceeded post-generation — flag in validation violations, trim to limit with manual review",
+      "Platform not in enum — ABORT"
+    ],
+    "dependencies": [
+      "brand_context_path must exist: /home/t0n34781/Desktop/brand/badgr_branding_kit.json",
+      "voice_tone_path must exist: /home/t0n34781/Desktop/brand/voice_and_tone.md",
+      "logo_source_path must exist: /home/t0n34781/Desktop/brand/official_badgr-logo_px512.png",
+      "Ollama service must be running",
+      "ImageMagick must be installed",
+      "Platform post kit output directory must exist"
+    ],
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "model": { "type": "string", "description": "Local Ollama model to use for text generation. See badgr_brand_rules model_routing for correct model per task type." },
+        "platform": {
+          "type": "string",
+          "enum": ["tiktok", "x", "youtube", "instagram", "facebook", "linkedin"]
+        },
+        "brand_context_path": {
+          "type": "string",
+          "description": "Absolute path to badgr_branding_kit.json. Required for color, logo, and identity injection."
+        },
+        "voice_tone_path": {
+          "type": "string",
+          "description": "Absolute path to voice_and_tone.md. Required for BADGR tone enforcement."
+        },
+        "logo_source_path": {
+          "type": "string",
+          "description": "Absolute path to the source logo file (e.g. official_badgr-logo_px512.png). Used to generate image specs."
+        },
+        "output_dir": {
+          "type": "string",
+          "description": "Absolute path to the platform post kit directory where the profile JSON will be written (e.g. /home/t0n34781/Desktop/brand/tik_tok_post_kit)."
+        },
+        "overrides": {
+          "type": "object",
+          "description": "Optional field overrides. Any key provided here replaces the generated value (e.g. force a specific handle or tagline).",
+          "properties": {
+            "display_name": { "type": "string" },
+            "handle": { "type": "string" },
+            "bio": { "type": "string" },
+            "tagline": { "type": "string" },
+            "website_url": { "type": "string" },
+            "cta": { "type": "string" }
+          }
+        }
+      },
+      "required": ["model", "platform", "brand_context_path", "voice_tone_path"],
+      "platform_field_limits": {
+        "tiktok":    { "bio": 80,  "display_name": 30  },
+        "x":         { "bio": 160, "display_name": 50  },
+        "youtube":   { "description": 1000, "display_name": 100 },
+        "instagram": { "bio": 150, "display_name": 30  },
+        "facebook":  { "about": 255, "display_name": 75 },
+        "linkedin":  { "headline": 220, "about": 2600, "display_name": 100 }
+      },
+      "output_schema": {
+        "platform": "string",
+        "generated_at": "ISO8601 timestamp",
+        "text_fields": {
+          "display_name": "string — within platform char limit",
+          "handle": "string — @handle suggestion",
+          "bio_or_about": "string — within platform char limit, BADGR voice enforced",
+          "tagline": "string — CTRL+ALT+DELIVER variant or derivative",
+          "website_url": "string",
+          "cta": "string — always ends with DM us CTRL at @badgrtechnologies",
+          "hashtags": "array — 3-5 tags per voice_and_tone.md rules"
+        },
+        "image_assets": {
+          "profile_photo": {
+            "source": "string — logo_source_path value",
+            "required_dimensions": "object — from ollama_image_spec",
+            "output_path": "string — written to output_dir"
+          },
+          "banner_or_cover": {
+            "required_dimensions": "object — from ollama_image_spec or null if platform has no banner",
+            "output_path": "string or null"
+          }
+        },
+        "validation": {
+          "platform_compliance_pass": "boolean",
+          "brand_voice_pass": "boolean",
+          "character_limits_pass": "boolean",
+          "brand_naming_pass": "boolean",
+          "stats_fabrication_pass": "boolean",
+          "typography_map_complete": "boolean",
+          "image_specs_executable": "boolean",
+          "learning_loop_tags_present": "boolean",
+          "brand_alignment_score": "integer 0–100 — composite: brand voice + naming convention + stats compliance. Deduct: question openers (-15), forbidden name forms (-20 each), fabricated stats (-25), emoji use (-10)",
+          "compliance_score": "integer 0–100 — composite: char limits + image specs + platform link rules. Deduct: char limit breach (-30), missing image spec (-20), wrong link strategy for platform (-15)",
+          "copy_quality_score": "integer 0–100 — composite: hook strength + ICP match + CTA clarity + no fluff phrases. Deduct: weak hook (-20), ICP mismatch (-25), missing CTA (-15), forbidden phrases (-10 each)",
+          "violations": "array of strings — empty if all pass"
+        }
+      }
+    }
+  },
+
+  {
+    "name": "badgr_brand_rules",
+    "description": "Read-only reference block. Contains BADGRTechnologies LLC brand naming rules, ICP definition, Bolt beta links, content guardrails, and model routing map. Load once per session and cache. Do not re-derive any values in this block manually.",
+    "failure_modes": [
+      "section value not in enum — returns error, caller must use a valid section name",
+      "Reference data accessed as mutable — this block is READ ONLY, never write to it during generation"
+    ],
+    "dependencies": [],
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "section": {
+          "type": "string",
+          "enum": ["naming", "icp", "bolt_beta", "guardrails", "model_routing", "all"],
+          "description": "Which section to retrieve. Use 'all' to load full block into context."
+        }
+      },
+      "required": ["section"]
+    },
+    "reference_data": {
+      "naming": {
+        "short": "BADGRTech",
+        "formal": "BADGRTechnologies LLC",
+        "handle": "@badgrtechnologies",
+        "hashtag": "#BADGRTech",
+        "tagline": "CTRL+ALT+DELIVER",
+        "forbidden_forms": ["BADGR Technologies", "Badgr Tech", "badgr tech", "BADGR TECH", "Badgr Technologies"]
+      },
+      "icp": {
+        "phase": "Phase 1 — locked",
+        "verticals": ["ATL Metro law firms (5–25 person)", "ATL Metro medical/dental (small independent)"],
+        "geography": "Atlanta Metro only",
+        "offer": "14-Day Lead Leak & Compliance Fix",
+        "price_band": "$197–$500",
+        "free_cta": "Free 15-min site walkthrough — ATL businesses only",
+        "source": "BADGR_Phase1_FullOpsManual.pdf"
+      },
+      "bolt_beta": {
+        "status": "Beta — open to testers",
+        "platform": "Android",
+        "step_1_group":    "https://groups.google.com/g/testers_community_04",
+        "step_2_testing":  "https://play.google.com/apps/testing/com.badgr.orbreader",
+        "step_3_install":  "https://play.google.com/store/apps/details?id=com.badgr.orbreader",
+        "fallback_email":  "help@badgrtech.com",
+        "links_page":      "https://www.badgrtech.com/links",
+        "platform_link_rules": {
+          "tiktok":    "links not clickable in captions — direct to 'link in bio ↑'",
+          "x":         "links ARE clickable — use full URLs in tweet",
+          "facebook":  "links ARE clickable — use full URLs",
+          "youtube":   "links clickable in description — use full URLs with step labels",
+          "instagram": "links not clickable in captions — direct to 'link in bio ↑'"
+        }
+      },
+      "guardrails": {
+        "no_fabricated_stats": "Never use specific numbers (%, $, scores, times) unless sourced from real client work. Use 'results vary' or process-proof language instead.",
+        "no_question_openers": "Never open a caption, bio, or post with a question.",
+        "no_emojis": "Never use emojis in any output field. Brand standard: plain text only.",
+        "no_forbidden_phrases": ["hey guys", "welcome to", "today we", "ready for", "join the revolution", "as a leading provider"],
+        "cta_formula": "DM us CTRL at @badgrtechnologies",
+        "stats_fallback": ["results vary", "scan → fix → before/after report", "BADGR Bolt — live on the Play Store. We ship.", "ATL sites leak leads silently. We find it. We fix it."],
+        "content_priority": {
+          "primary": "Web Optimization (14-Day Lead Leak & Compliance Fix)",
+          "secondary": "BADGR Bolt beta"
+        }
+      },
+      "model_routing": {
+        "_note": "Codified 2026-04-20. Do not override without updating SYSTEM_CHANGELOG.md.",
+        "copy_generation": {
+          "model": "gemma3:4b",
+          "task_types": ["profile_bio", "profile_build", "write", "rewrite"],
+          "reason": "gemma3:4b delivers clean structured copy with correct brand voice. mistral:latest failed structured generation on X profile build — echoed instructions verbatim twice. Confirmed replacement 2026-04-20."
+        },
+        "summarization": {
+          "model": "mistral:latest",
+          "task_types": ["summarize"],
+          "reason": "7.2B parameter model handles long-form context compression reliably."
+        },
+        "code_and_structured_data": {
+          "model": "qwen2.5-coder:7b",
+          "task_types": ["format", "expand", "code"],
+          "reason": "Specialized code model. Use for JSON schema work, transform commands, structured output tasks."
+        },
+        "routing_and_utility": {
+          "model": "llama3.2:3b",
+          "task_types": ["classify", "route", "triage"],
+          "reason": "Lightweight 3B model. Use for fast classification, routing decisions, and pre-flight checks."
+        },
+        "fallback": "gemma3:4b",
+        "available_models": ["gemma3:4b", "mistral:latest", "llama3.1:8b", "qwen2.5-coder:7b", "llama3.2:3b"]
+      }
+    }
+  }
+]
