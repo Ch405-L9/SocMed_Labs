@@ -1,0 +1,424 @@
+[
+  {
+    "business_name": "Perimeter Clinic Atlanta",
+    "website": "https://www.perimeterclinicatlanta.com/",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "3867 Peachtree Dunwoody Rd NE, Atlanta, GA 30342",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Family Practice at Peachtree-Dunwoody",
+    "website": "https://drhickspractice.com/",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "6105 Peachtree Dunwoody Road, Building C, Suite 115, Sandy Springs, GA 30328",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Dunwoody Village Clinic",
+    "website": "https://www.dunwoodyvillageclinic.com/",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "5471 Chamblee Dunwoody Rd, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Family Practice Center",
+    "website": "https://familypracticecenterpc.com/",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "993 Johnson Ferry Rd NE, Suite 210, Atlanta, GA 30342",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Active Life & Health Center",
+    "website": "https://www.dunwoodychiropractic.com/",
+    "category": "Chiropractic",
+    "geo_area": "ZIP 30350",
+    "address": "6849 Peachtree-Dunwoody Road, Building B4, Suite 100, Sandy Springs, GA 30328",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Dunwoody Chiropractic Center",
+    "website": "https://www.dunwoodychiropracticcenter.com/",
+    "category": "Chiropractic",
+    "geo_area": "ZIP 30350",
+    "address": "1 Dunwoody Park, Suite 124, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Wilson Family Chiropractic",
+    "website": "https://wfc4health.com/",
+    "category": "Chiropractic",
+    "geo_area": "ZIP 30350",
+    "address": "1713 Mt Vernon Rd, Suite 3, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Dunwoody Dental Care",
+    "website": "https://dunwoodydentalcare.com/",
+    "category": "Dental",
+    "geo_area": "ZIP 30350",
+    "address": "1505 Mt Vernon Rd, Suite 150, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "The Whole Tooth",
+    "website": "https://www.wholetoothdunwoody.com/",
+    "category": "Dental",
+    "geo_area": "ZIP 30350",
+    "address": "1713 Mt Vernon Rd, Suite 2, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Plunkett & Chaw Dental",
+    "website": "https://drleeplunkett.com/",
+    "category": "Dental",
+    "geo_area": "ZIP 30350",
+    "address": "1713 Mt Vernon Rd, Suite 1, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Reagin Family Dentistry",
+    "website": "https://www.reaginfamilydentistry.com/",
+    "category": "Dental",
+    "geo_area": "ZIP 30350",
+    "address": "1370 Center Dr, Ste 101, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Sports Rehab Center",
+    "website": "https://www.sportsrehabcenter.com/locations/location_dunwoody/",
+    "category": "Physical Therapy",
+    "geo_area": "ZIP 30350",
+    "address": "4 Dunwoody Park, Suite 122, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Peachtree Dunwoody Medical Associates",
+    "website": "https://peachtreedunwoodymed.com/",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "5505 Peachtree Dunwoody Rd, Suite 460, Atlanta, GA 30342",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Dunwoody Urgent Care",
+    "website": "https://www.peachtreemed.com/location/dunwoody/",
+    "category": "Urgent Care",
+    "geo_area": "ZIP 30350",
+    "address": "4500 Olde Perimeter Way, Suite 100, Dunwoody, GA 30346",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Perimeter Dental",
+    "website": "https://www.perimeterdental.com/",
+    "category": "Dental",
+    "geo_area": "ZIP 30350",
+    "address": "110 Perimeter Center Terrace, Suite 250, Dunwoody, GA 30346",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Dunwoody Family & Cosmetic Dentistry",
+    "website": "https://www.dunwoodydentistry.com/",
+    "category": "Dental",
+    "geo_area": "ZIP 30350",
+    "address": "1 Dunwoody Park, Suite 125, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Atlanta Total Wellness",
+    "website": "https://www.atlantatotalwellness.com/",
+    "category": "Chiropractic",
+    "geo_area": "ZIP 30350",
+    "address": "110 Perimeter Center Terrace, Suite 100, Dunwoody, GA 30346",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Dunwoody Pediatrics",
+    "website": "https://www.dunwoodypediatrics.com/",
+    "category": "Pediatrics",
+    "geo_area": "ZIP 30350",
+    "address": "1 Dunwoody Park, Suite 120, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Sandy Springs Pediatrics",
+    "website": "https://www.sandyspringspediatrics.com/",
+    "category": "Pediatrics",
+    "geo_area": "ZIP 30350",
+    "address": "1100 Johnson Ferry Rd NE, Suite 400, Atlanta, GA 30342",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Dunwoody Wellness Center",
+    "website": "https://www.dunwoodywellnesscenter.com/",
+    "category": "Wellness",
+    "geo_area": "ZIP 30350",
+    "address": "1713 Mt Vernon Rd, Suite 4, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Dunwoody Physical Therapy",
+    "website": "https://www.dunwoodypt.com/",
+    "category": "Physical Therapy",
+    "geo_area": "ZIP 30350",
+    "address": "1713 Mt Vernon Rd, Suite 5, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Perimeter Orthopaedics",
+    "website": "https://www.perimeterortho.com/",
+    "category": "Specialty",
+    "geo_area": "ZIP 30350",
+    "address": "5673 Peachtree Dunwoody Rd, Suite 825, Atlanta, GA 30342",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Dunwoody Dermatology",
+    "website": "https://www.dunwoodydermatology.com/",
+    "category": "Specialty",
+    "geo_area": "ZIP 30350",
+    "address": "1 Dunwoody Park, Suite 121, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Dunwoody OBGYN",
+    "website": "https://www.dunwoodyobgyn.com/",
+    "category": "Specialty",
+    "geo_area": "ZIP 30350",
+    "address": "1 Dunwoody Park, Suite 123, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Atlanta Gastroenterology Associates",
+    "website": "https://www.atlantagastro.com/location/dunwoody/",
+    "category": "Specialty",
+    "geo_area": "ZIP 30350",
+    "address": "1140 Hammond Dr, Suite E-525, Atlanta, GA 30328",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Georgia Clinic",
+    "website": "https://gaclinicpc.com/",
+    "category": "Specialty",
+    "geo_area": "ZIP 30350",
+    "address": "6300 Hospital Pkwy, Johns Creek, GA 30097",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Northside Family Medicine",
+    "website": "https://www.northside.com/locations/northside-family-medicine-dunwoody",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "1140 Hammond Dr, Suite E-525, Atlanta, GA 30328",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Perimeter North Family Medicine",
+    "website": "https://www.perimeternorth.com/",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "Multiple locations",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Back 2 Back Chiropractic",
+    "website": "https://b2bchiro.net/",
+    "category": "Chiropractic",
+    "geo_area": "ZIP 30350",
+    "address": "1 Dunwoody Park, Suite 124, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import"
+  },
+  {
+    "business_name": "Medical Location Near You - Find Your Doctor Today",
+    "website": "https://duckduckgo.com/y.js?ad_domain=kaiserpermanente.org&ad_provider=bingv7aa&ad_type=txad&click_metadata=3uUPKYXmbG_q6HbuQXJBWJg7KWnefSec5gWkGrLy2AdLnVUMtso6Pvp43SjhVKmFVOjGrrtVyzvYaa0qwB%2Dnm9lUSYiZIfLOYai5eOrD%2DRFLArDRAued79P6CZSPdT9zHe_O_2Efuh_agWFnLq5mUHWvhX7uzumCW4UJ4_5hB3k.94oD%2DrmfaYMngoP262NCww&rut=d693188565fe31cd67b161fabc94d585257ba4f3d9471243082e883dcfd913be&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8ybRAeIpyxNlkuPICVYiQ2DVUCUw7sORMcrjaqPjZfJP59WEuhvIh%2DqXKLPpPYoLCIFJX0MFvzwXcybT7sCgKskyuv2e_u%2DfpwZ_voAPZi_Ret7Mct_j6NiVEtltBij4GhA1Itrk3iHeB_M1ARzAPNtHqMjOmfX_IG6RjzkC_DV0c6koGgqpAUkC2CjpLAMT2heQ4Lm0%2DNqNaHkKNTnqc6hooT%2DA%26u%3DaHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q0MzcwMDA4MjU2MTMzMjM1MyUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODk0NjYxNzc3MCUyNmRzX2FfY2lkJTNkNjU2MTA2OTMzNiUyNmRzX2FfY2FpZCUzZDIyOTQyOTM1MDAyJTI2ZHNfYV9hZ2lkJTNkMTg1NDA1NTQyOTk4JTI2ZHNfYV9saWQlM2Rrd2QtMzAwOTAzMDI1NTgzJTI2JTI2ZHNfZV9hZGlkJTNkODEzNjM5OTc1OTI1NjYlMjZkc19lX3RhcmdldF9pZCUzZGt3ZC04MTM2NDIzNTgyODM1OCUyNiUyNmRzX2VfbmV0d29yayUzZHMlMjZkc191cmxfdiUzZDIlMjZkc19kZXN0X3VybCUzZGh0dHBzJTNhJTJmJTJmaGVhbHRoeS5rYWlzZXJwZXJtYW5lbnRlLm9yZyUyZmRvY3RvcnMtbG9jYXRpb25zJTNmcHJvbW9faWQlM2QyMzklMjZXVC5tY19pZCUzZDIzOSUyNldULnNlZ18xJTNkQmluZy16enpCTkR6enpfQVdSLWMtLXAtY2xpbmljJTI1MjBsb2NhdGlvbnMtJTI2Y2lkJTNkY2EtYnAlN2NyZS1nYSU3Y2NoLXBzJTdjcGwtYmklN2N0YS1wcm9zJTdjYXUtNjQlN2Niby1hd3IlN2MlMjZhZF9pZCUzZCUyNnBzZCUzZGtjLSU3Y210LXAlN2Nrbi1jbGluaWMlMjUyMGxvY2F0aW9ucyU3Y2tpLWt3ZC04MTM2NDIzNTgyODM1OCU3Y2NpLTYyNzU2MzU4OCU3Y3NraS0zMDA5MDMwMjU1ODMlN2NzY2ktMjI5NDI5MzUwMDIlN2NhZHYtNDY4ODc1NTgwNSUyNmdjbGlkJTNkNjI0MDY3YmZiOWIzMWY1YWUwZDMwZTVhNGIyZWJmNjUlMjZnY2xzcmMlM2QzcC5kcyUyNm1zY2xraWQlM2Q2MjQwNjdiZmI5YjMxZjVhZTBkMzBlNWE0YjJlYmY2NSUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZEtQX0JORF9CTkRNS1RfUFNfQklOR19HQV9OT05fTk9OX0FXUl9OT05fTk9OX05CQ19QUk9TX1VORF9QaHJhc2VfRU5HX05PTl9VNjUlMjZ1dG1fdGVybSUzZGNsaW5pYyUyNTIwbG9jYXRpb25zJTI2dXRtX2NvbnRlbnQlM2RNZWRpY2FsJTI1MjBBY2Nlc3MlMjMlMmZzZWFyY2gtZm9ybQ%26rlid%3D624067bfb9b31f5ae0d30e5a4b2ebf65&vqd=4-191847510138266249311062973851071865403&iurl=%7B1%7DIG%3D90FADE8FBBCC4129AAA3B6D5A34F0A78%26CID%3D14DE08C39B7F6210009F1F829AD263B5%26ID%3DDevEx%2C5045.1",
+    "category": "Healthcare (All)",
+    "geo_area": "ZIP 30350",
+    "address": "Near 30350",
+    "phone": null,
+    "email": null,
+    "source": "duckduckgo",
+    "raw_snippet": "Our Doctors Are Dedicated To Providing You High-Quality, Comprehensive Care. Learn More. Access Quality Health Care With Online, In-Person, And 24/7 Virtual Care Options."
+  },
+  {
+    "business_name": "Urgent Care No Insurance Prices - Book Your Appointment Now",
+    "website": "https://duckduckgo.com/y.js?ad_domain=doctorsbeyond.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=H9DP0c3qJCXEQK_kQimRPbYVNRjl2uoNbIluODXO6bnUeD5Ba6Kf9qAywmat4cCXLp6A%2DiwMf280uohZNJOAujVtE7goPlf6JFKqf%2DhjTa6gcOBbwcV9ctqgMD2jEj7hfy96Lu1WfSEjZu3L0%2DDil%2DWDyMhpYPMycn%2Dj9tzO_Lc.gUx5G5UOp0Bx7OHhCx%2Dk8Q&rut=ab64f5613e427053bd6d7e3ed92a29fd5f95141acfa53961698cb85cdd309048&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8GCmZamtlth6pTgh1iZZDbTVUCUxcUhNW5%2Dy9RHGDRa3CD4NDnGFkqGwBBLF1l5RrLMvs12OjrU4lV3QPrXvOHqg8KaOVxzClxXJgQItxd4MIULAu68Pt9Xh0fJymQuQuMUuhOGdKY3dg8ggK5Q2IWdT00bpnFvozyk9zAJjQoHewK%2DXd7xEMNYqV9uksVB53WL9a3sgO0CkEppCdCeJqZZRQNr4%26u%3DaHR0cHMlM2ElMmYlMmZkb2N0b3JzYmV5b25kLmNvbSUzZm1zY2xraWQlM2QxMGNmOTkwODA1MmQxYTZiOTE3YmYwZWRmN2IwYWY5NQ%26rlid%3D10cf9908052d1a6b917bf0edf7b0af95&vqd=4-5479531450162011545884533147848968640&iurl=%7B1%7DIG%3D90FADE8FBBCC4129AAA3B6D5A34F0A78%26CID%3D14DE08C39B7F6210009F1F829AD263B5%26ID%3DDevEx%2C5049.1",
+    "category": "Healthcare (All)",
+    "geo_area": "ZIP 30350",
+    "address": "Near 30350",
+    "phone": null,
+    "email": null,
+    "source": "duckduckgo",
+    "raw_snippet": "Affordable Virtual ER or Urgent Care Doctor Appointment With Treatment & Work Excuse. ER, Urgent Care, or Primary Care Doctor Virtually with or without Insurance. Book Online"
+  },
+  {
+    "business_name": "Medical Plaza in Buford - Northeast Georgia Health System",
+    "website": "https://www.nghs.com/locations/medical-plaza-buford",
+    "category": "Healthcare (All)",
+    "geo_area": "ZIP 30350",
+    "address": "Near 30350",
+    "phone": null,
+    "email": null,
+    "source": "duckduckgo",
+    "raw_snippet": "People living in and around Buford have access to all the health care they could need in one convenient location. You'll find urgent care, orthopedic, cardiology, surgery, OB/GYN and imaging services in this new, state-of-the-art building."
+  },
+  {
+    "business_name": "NGPG Urgent Care in Buford, GA | Telehealth & Walk-in Clinic",
+    "website": "https://www.ngpg.org/urgent-care/buford",
+    "category": "Healthcare (All)",
+    "geo_area": "ZIP 30350",
+    "address": "Near 30350",
+    "phone": null,
+    "email": null,
+    "source": "duckduckgo",
+    "raw_snippet": "NGPG Urgent Care in Buford offers on-demand video visits and walk-inclinicoptions for fast access to board-certified providers."
+  },
+  {
+    "business_name": "Buford, GA Free Clinics",
+    "website": "https://www.freeclinics.com/cit/ga-buford",
+    "category": "Healthcare (All)",
+    "geo_area": "ZIP 30350",
+    "address": "Near 30350",
+    "phone": null,
+    "email": null,
+    "source": "duckduckgo",
+    "raw_snippet": "Find all the freeclinicsin Buford, GA including: Georgia Health Department - Buford Health Center. Getmedicalhelp now."
+  },
+  {
+    "business_name": "Locations | MedLife Clinics",
+    "website": "https://medlifeclinics.com/locations/",
+    "category": "Healthcare (All)",
+    "geo_area": "ZIP 30350",
+    "address": "2129 Friendship Rd Buford",
+    "phone": "(770) 209-2787",
+    "email": null,
+    "source": "duckduckgo",
+    "raw_snippet": "MedLife Flowery Branch Urgent Care & Primary Care 2129 Friendship Rd Buford, GA 30519 Phone: (770) 209-2787 Operating Hours Monday-Friday: 8am-8pm Saturday: 9am-6pm Sunday: 10am-5pm"
+  },
+  {
+    "business_name": "Piedmont Urgent Care - Buford, GA",
+    "website": "https://www.piedmonturgentcare.org/locations/buford-ga?location=0160",
+    "category": "Healthcare (All)",
+    "geo_area": "ZIP 30350",
+    "address": "Near 30350",
+    "phone": null,
+    "email": null,
+    "source": "duckduckgo",
+    "raw_snippet": "Piedmont Urgent Care in Buford offers exceptional care 7 days a week with extended hours. Walk in anytime or book ahead online!"
+  },
+  {
+    "business_name": "Walk-in Primary Care Clinic in Buford, GA | AllCare Georgia",
+    "website": "https://allcare-ga.com/location/hamilton-ridge/",
+    "category": "Healthcare (All)",
+    "geo_area": "ZIP 30350",
+    "address": "3320 Hamilton Mill Rd",
+    "phone": "(678) 821-2241",
+    "email": null,
+    "source": "duckduckgo",
+    "raw_snippet": "Located at 3320 Hamilton Mill Rd, Suite 103, Hamilton Ridge, AllCare Georgia offers primary and urgent care. We accept new patients\u2014call (678) 821-2241."
+  },
+  {
+    "business_name": "Urgent Care in Buford, GA | Walk-In Medical Clinic - Excelsior Healthcare",
+    "website": "https://excelsiorhealthcare.com/locations/buford-ga/",
+    "category": "Healthcare (All)",
+    "geo_area": "ZIP 30350",
+    "address": "Near 30350",
+    "phone": null,
+    "email": null,
+    "source": "duckduckgo",
+    "raw_snippet": "Looking for urgent care in Buford, GA? Excelsior Healthcare offers fast, walk-inmedicalservices for injuries, illness, testing & more. No appointment needed!"
+  },
+  {
+    "business_name": "Emory at Buford - Primary Care",
+    "website": "https://www.emoryhealthcare.org/locations/primary-care/emory-at-buford",
+    "category": "Healthcare (All)",
+    "geo_area": "ZIP 30350",
+    "address": "Near 30350",
+    "phone": null,
+    "email": null,
+    "source": "duckduckgo",
+    "raw_snippet": "Location Emory at Buford - Primary Care, Buford. Search contacts, and locations for Emory Healthcare hospitals and treatment centers. Emory Healthcare locations serve the Atlanta, GA community."
+  },
+  {
+    "business_name": "Gwinnett Clinic | Sugar Hill/Buford, GA",
+    "website": "https://www.gwinnettclinic.com/locations/sugar-hill-buford/",
+    "category": "Healthcare (All)",
+    "geo_area": "ZIP 30350",
+    "address": "Near 30350",
+    "phone": null,
+    "email": null,
+    "source": "duckduckgo",
+    "raw_snippet": "Visit GwinnettClinicat our location in Sugar Hill/Buford, Georgia."
+  },
+  {
+    "business_name": "North Fulton Health Center | Grady Health",
+    "website": "https://www.gradyhealth.org/locations/north-fulton-health-center/",
+    "category": "Healthcare (All)",
+    "geo_area": "ZIP 30350",
+    "address": "Near 30350",
+    "phone": null,
+    "email": null,
+    "source": "duckduckgo",
+    "raw_snippet": "North Fulton Health Center offers primary care, pediatrics & OB/GYN in Sandy Springs. Get same-day & video visits for your whole family. Schedule today!"
+  }
+]

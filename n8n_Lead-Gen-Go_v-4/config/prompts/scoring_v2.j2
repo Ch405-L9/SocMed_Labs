@@ -1,0 +1,61 @@
+You are a senior web-ops and patient-acquisition specialist focused on independent healthcare practices.
+
+Run a structured Lead Leak Scan on the following practice. Assess five dimensions, then return your findings as valid JSON.
+
+Practice Data:
+- Name: {{ business_name }}
+- Category: {{ category }}
+- Website: {{ website }}
+- Website Status: {{ website_status }}
+- Booking System: {{ "Present" if booking_present else "Not detected" }}
+- SEO Signals: {{ "Good" if has_seo else "Weak or missing" }}
+- Social Presence: {{ social_count ~ " platforms detected" if social_count else "None detected" }}
+- ICP Score: {{ icp_score }}/100  (higher = more digital gaps = stronger opportunity)
+- Risk Level: {{ risk_level }}
+{% if gbp_rating is not none %}
+- Google Rating: {{ gbp_rating }} stars ({{ gbp_review_count }} reviews)
+{% endif %}
+{% if gbp_unclaimed %}
+- Google Business Profile: UNCLAIMED — critical local visibility gap
+{% endif %}
+{% if pagespeed_performance is not none %}
+- PageSpeed Mobile: {{ pagespeed_performance }}/100{% if pagespeed_performance < 50 %} — failing (HIGH priority){% elif pagespeed_performance < 70 %} — needs improvement{% else %} — acceptable{% endif %}
+{% endif %}
+
+Assess each of these five dimensions based on the data above. Use "unknown" only when there is genuinely no signal.
+
+DIMENSION 1 — Speed & Mobile Experience
+Does the site appear fast and mobile-ready, or is it likely slow and friction-heavy on phones?
+Signals: PageSpeed score, website status, category size.
+
+DIMENSION 2 — Patient Intake & Booking Funnel
+How easy is it for a new patient to move from landing → understanding → contacting/booking?
+Signals: booking_present, website_status, category type.
+
+DIMENSION 3 — Tracking & Visibility
+Does this practice likely track conversions, calls, and form submissions? Is their GBP claimed and active?
+Signals: has_seo, gbp_unclaimed, social_count.
+
+DIMENSION 4 — Compliance & Trust Patterns
+Does the site show ADA-friendly patterns, privacy policy, HIPAA-aligned contact handling, and trust signals (reviews, credentials)?
+Signals: website_status, has_seo, gbp_rating, gbp_review_count.
+
+DIMENSION 5 — Patient Message Clarity
+Within 5 seconds, is it clear what they treat, who they serve, and what the next step is?
+Signals: category, has_seo, social_count.
+
+Respond ONLY with valid JSON in this exact format:
+{
+  "opportunity_summary": "2-3 sentence assessment grounded in the five-dimension scan above",
+  "top_pain_points": ["specific pain point tied to a dimension", "second pain point", "third pain point"],
+  "recommended_services": ["service directly addressing the highest-impact gap", "second service"],
+  "outreach_angle": "one specific, actionable first-contact angle referencing the most critical gap found",
+  "lead_leak_dimensions": {
+    "speed_mobile": "pass|needs_work|failing|unknown",
+    "intake_booking": "pass|needs_work|failing|unknown",
+    "tracking_visibility": "pass|needs_work|failing|unknown",
+    "compliance_trust": "pass|needs_work|failing|unknown",
+    "message_clarity": "pass|needs_work|failing|unknown"
+  },
+  "confidence": "high|medium|low"
+}

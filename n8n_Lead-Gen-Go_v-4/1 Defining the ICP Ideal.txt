@@ -1,0 +1,110 @@
+1. Defining the ICP (Ideal Customer Profile)  
+Target businesses are small independent doctor’s offices and law firms in the Atlanta metro area. In OSM terms, these are typically tagged amenity=doctors or healthcare=doctor for medical clinics
+, and office=lawyer for law offices
+. We should exclude large hospitals, chains or enterprise firms. Focus on single-location practices (mom-and-pop clinics, boutique law firms). Many OSM entries include contact details: typical tags include name, phone, website, and opening_hours
+. These fields will later help enrichment. (For doctors, amenity=doctors is the most common tag
+; for lawyers, use office=lawyer
+.)
+
+ICP criteria (example): small size (solo or few doctors/attorneys), local (Atlanta area), with a public web presence (website listed or findable), likely need technical fixes (e.g. outdated site, no HTTPS, missing form safeguards). As a bonus, we can target clinics or firms associated with Small Business Administration (SBA) programs or networks (if such data is available). In practice, we’ll filter OSM and web results for our industries in the ATL region.
+
+2. Gathering Candidate List (Discovery)  
+Use OpenStreetMap (OSM) Overpass API to find businesses by location and tag. Overpass lets us query the free OSM database by geographic area and tags
+. For Atlanta, define a query area by intersecting USA, Georgia state, and Atlanta city (e.g. via Overpass QL):
+
+scss
+Copy
+area["ISO3166-1"="US"][admin_level=2] -> .country;
+area["name"="Georgia"]["border_type"="state"] -> .state;
+area["name"="Atlanta"] -> .city;
+(node["amenity"="doctors"](area.country)(area.state)(area.city);
+ node["healthcare"="doctor"](area.country)(area.state)(area.city);
+ node["office"="lawyer"](area.country)(area.state)(area.city););
+out meta;
+This returns all nodes (and ways, if added) tagged as doctors or lawyers within Atlanta
+. Collect the results into a “discovery” CSV (name, address, coordinates, any phone/website fields). Also consider smaller metro areas around ATL (Fulton, DeKalb, Gwinnett, etc.) by adjusting the area or adding nearby city names. Ensure any query respects rate limits and pauses (don’t hammer the API)
+.
+
+Optionally, supplement OSM with Nominatim or other local address search if needed for geocoding, but Overpass is sufficient for extraction since it’s free and open. (If a business isn’t in OSM, one could fall back on a web search agent or a business directory, but we must stay within legal/ethical bounds and favor open sources.)
+
+3. Data Normalization 
+Combine and dedupe the OSM results. Many entries may refer to the same business (e.g. a clinic that’s both a node and a way). Normalize domains and names: if a website is listed (or later discovered), use a library (e.g. tldextract) to canonicalize the domain (strip “www”, track parameters, etc.). Hash keys like <normalized-name>+<domain> to dedupe. Filter out chain corporate offices by heuristics (e.g. remove entries with multi-location networks or corporation-style names if possible, since ICP is local/small). At this point we have a candidate list of leads (with name, category, location, phone/URL if any from OSM).
+
+4. Enrichment (Safe Crawling and Contact Mining)  
+For each candidate, fetch its website (if we have a URL from OSM or can construct it from the name/domain). Use a polite HTTP client (Python requests or httpx) with: a realistic user-agent string (identifying as a friendly crawler), respect for robots.txt, and rate-limiting (e.g. 1–2 requests/second)
+. First, read https://<domain>/robots.txt and skip any disallowed paths. Always obey robots.txt directives (disallowed paths) even if not legally binding
+. This is both ethical and reduces block risk.
+
+When fetching, record: HTTP status code, whether HTTPS was used (preferring https://), and load time. Parse the HTML (e.g. with BeautifulSoup or html5lib). Extract:
+
+Emails: Look for mailto: links and run a regex search for email patterns. Alternatively, use an OSINT tool like theHarvester (open-source) which auto-queries public sources (search engines, etc.) for email addresses and names from a domain
+. Combining regex plus a tool like theHarvester can improve coverage: “theHarvester… gathers emails, names, and domains from multiple public sources” using over 20 search modules (Google, Bing, LinkedIn, etc.)
+. We only target business email (info@, contact@, or person@company.com); avoid harvesting personal addresses.
+
+Phone/Social: Extract phone numbers from HTML text or images (regex for phone patterns). Many small business sites have a contact page listing phones and social media.
+
+Best Contact Person: If available, identify decision-makers. Look for “About Us” or “Team” pages; scan for titles like “Dr.” or “Attorney” followed by names. A local NLP/LLM could help parse “Our team includes Dr. Smith (CEO)” or “Contact: John Doe, Managing Attorney”. (This can be done later or manually if needed.)
+
+Business Hours: First, check OSM data for an opening_hours tag (if present). If not, attempt to scrape hours from the website (look for strings like “Mon-Fri”, “Open”, etc.). Many sites list hours on the contact page or footer; a targeted regex or keyword search (“Open”, “Hours”, “Monday”) can extract approximate schedule. Store any hours found.
+
+Store all new fields (primary email, all emails, site load time, HTTP status, has HTTPS?, opening_hours, etc.) into an enriched leads CSV.
+
+5. Lead Scoring & Prioritization 
+Assign simple rule-based scores to prioritize leads. For example:
+
+Fit score: +points if in the target industry (we already filtered for doctors/law), +more if business size seems right (e.g. name implies a small practice). We might also score higher if their site shows signs of outdated tech (no HTTPS, old CMS), since “patch data leaks with webops” is our service – a vulnerable-looking site increases urgency.
+
+Reachability score: +points for each valid contact found (email, phone). E.g. having a direct email or multiple addresses yields a high reach score.
+
+Urgency score: +points if site is insecure (no HTTPS) or missing visible privacy notices (indicating likely compliance gaps).
+
+Combine into a total score. (Using a local LLM at this stage is optional: one could prompt it to evaluate “How tech-savvy does this site look?” or “Is this business likely to need web security?”, but simple heuristics usually suffice.)
+
+Then sort the enriched list by total score. The goal is to produce 20 leads per day, of which the top ~5 are “highly likely” contacts. These top leads (with full contact info, best contact person, hours, etc.) go to outreach. Lower-scored leads can be deferred or re-evaluated later.
+
+6. Legal & Ethical Compliance 
+We use only public, business-related data. Scraping publicly accessible sites for business contact info is generally legal, especially outside strict jurisdictions. Per guidance, scraping publicly listed business emails/names (non-EU/CA personal data) is usually safe
+. We must still comply with site terms: obey robots.txt and respect rate limits
+. Always disclose a real or clear user-agent. Avoid aggressive crawling (heed any Crawl-delay). For email outreach, send only to business addresses (not personal) and honor opt-outs.
+
+Key compliance practices: check robots.txt (skip disallowed pages)
+, throttle requests (sleep between fetches)
+, and avoid password-protected areas. Don’t copy proprietary content – only gather minimal contact info. Since all sources are open (OSM, website HTML), and we use only non-copyrighted text and contact details, we stay within ethical and legal bounds
+.
+
+7. Tools & Technologies (all Open-Source) 
+Overpass API: Free OSM querying engine
+. We’ll call it via Python (e.g. using requests or a library).
+OSMPythonTools (optional): Python package to simplify Overpass/Nominatim queries
+. (It wraps Overpass calls into easier functions.)
+Requests/BeautifulSoup: For HTTP fetching and HTML parsing.
+theHarvester or similar OSINT tools: To augment email/name discovery
+. (TheHarvester is open-source and can be scripted.)
+tldextract or urllib: To normalize domains.
+Local LLM (optional): e.g. an offline LLaMA- or Qwen-based model via Ollama, for any NLP steps (like summarizing site content or parsing contact pages). This is optional; simple parsing often suffices.
+Pandas/CSV: For storing data between phases (discovery CSV → enriched CSV → scored CSV).
+Git for versioning: Keep the scripts/configs under source control.
+All these tools are free and FOSS (no paid APIs). We do not use Google Maps or paid directories. Overpass/Nominatim and direct HTTP crawl are entirely open. The leadgen pipeline need not be fast; even single-threaded with delays is fine since we only need 20 leads/day.
+
+8. Phase-by-Phase Build Plan 
+Phase 1 – Setup & ICP Definition: Install Python libs (requests, bs4, OSMPythonTools, etc.). Confirm Overpass queries for Atlanta. Define ICP filter logic (e.g. include only tags/doctors, office=lawyer). Document tags to search (amenity=doctors, office=lawyer, etc.)
+.
+Phase 2 – Discovery Extraction: Write a script to run the Overpass query (with area filters for ATL)
+. Export raw OSM results (name, address, coords, any available phone/website, opening_hours) to discovery_leads.csv. Throttle requests as needed (Overpass allows queries but respect fairness – add a short pause between large queries)
+. Verify contents manually for sanity.
+Phase 3 – Data Cleaning/Normalization: Load discovery_leads.csv into Python. Normalize business names (trim whitespace, unify case) and domains (e.g. from website tags). Remove duplicates and clear non-local or chain entries. Generate a unique ID per lead. Save cleaned leads list.
+Phase 4 – Website Crawling & Enrichment: For each lead with a website/domain, fetch the homepage. First, check robots.txt. If allowed, download content, record response code and load time. Parse HTML with BeautifulSoup: extract emails (regex + mailto), phone numbers, and look for pages like “Contact” or “About” by following links or scanning content. Also note if <meta name="viewport"> is present (site mobile-friendly) and whether tech stack info is inferable (optional). If no website is in OSM, optionally attempt a naive guess (e.g. www.<domain>.com). Append all found data to enriched_leads.csv.
+Phase 5 – Lead Scoring & Selection: Read the enriched CSV. Compute scores: e.g. +1 for each email found, +1 if HTTPS, +1 if phone found; -1 if no secure connection, etc. (Exact weights can be tuned.) Sort leads by score. The top-scoring ~20 leads become the “daily leads.” Mark the top ~5 as “high-potential” to pursue (highest fit and reach). Output scored_leads.csv with scores and rationale.
+Phase 6 – Verification & Updates: Manually review top leads (names match profession, website looks legitimate). If needed, run any last NLP pass (e.g. use an LLM to summarize “why is this a good lead?” for logging). Confirm contact info (e.g. send test email through an opt-out-safe provider or do a quick verify). Update pipeline logic based on any issues.
+Phase 7 – Automation & Iteration: Schedule the pipeline to run daily or weekly (e.g. a cron job). Each run appends new discovery results (with incremental resume logic). Track which businesses have been already contacted (to avoid repeats). Continuously refine filters (e.g. new keywords, exclude bogus entries).
+By following these phases with open-source tools, we can generate ~20 leads/day for Atlanta doctors and lawyers, all within legal and ethical boundaries.
+
+Citations: Public data and scraping best practices are supported by industry guidance. OSM’s free Overpass API allows querying by tag and area
+. OSM docs show that doctor and lawyer offices use amenity=doctors/healthcare=doctor and office=lawyer
+, often with phone, website, and opening_hours tags
+. Tools like theHarvester can automate email/name harvesting from public web sources
+. Ethical scraping requires obeying robots.txt and rate limits
+. Public business info (non-EU contacts, non-copyrighted) is generally legal to collect
+, as long as it’s used responsibly.
+
+Generated on 2026-04-13 15:37:52 (America/New_York). Confidence: 0.88.

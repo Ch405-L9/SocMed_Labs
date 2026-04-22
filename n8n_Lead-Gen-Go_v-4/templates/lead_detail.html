@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% block title %}{{ lead.business_name }} — ICP Dashboard{% endblock %}
+{% block content %}
+<div class="page">
+  <div style="margin-bottom:12px">
+    <a href="/" style="color:#636e72;font-size:13px">&larr; Back to leads</a>
+  </div>
+
+  <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:4px;flex-wrap:wrap">
+    <div class="page-title">{{ lead.business_name }}</div>
+    {% if lead.risk_level == 'high' %}<span class="badge badge-high" style="font-size:13px;padding:4px 12px">High Priority</span>
+    {% elif lead.risk_level == 'medium' %}<span class="badge badge-medium" style="font-size:13px;padding:4px 12px">Medium Priority</span>
+    {% elif lead.risk_level == 'low' %}<span class="badge badge-low" style="font-size:13px;padding:4px 12px">Low Priority</span>{% endif %}
+    {% if lead.human_verified %}<span class="badge" style="background:#ebf5fb;color:#1a5276;font-size:13px;padding:4px 12px">Human Verified</span>{% endif %}
+  </div>
+  <div class="page-sub">{{ lead.category or '' }} &middot; {{ lead.address or '' }}</div>
+
+  <div class="detail-grid">
+
+    <!-- ICP Score Card -->
+    <div class="card">
+      <div class="card-title">ICP Opportunity Score</div>
+      <div style="display:flex;align-items:flex-end;gap:16px;margin-bottom:12px">
+        <div>
+          <div class="score-big" style="color:{% if (lead.final_score or 0) >= 70 %}#e74c3c{% elif (lead.final_score or 0) >= 40 %}#f39c12{% else %}#27ae60{% endif %}">
+            {{ lead.final_score or lead.icp_score or '?' }}
+          </div>
+          <div class="score-context">out of 100 &middot; model: {{ lead.icp_score or '?' }}
+            {% if lead.final_score and lead.icp_score and lead.final_score != lead.icp_score %}
+            &rarr; human override: {{ lead.final_score }}{% endif %}
+          </div>
+        </div>
+        <div style="flex:1">
+          <div style="background:#f0f2f5;border-radius:6px;height:12px;overflow:hidden">
+            <div style="width:{{ [lead.final_score or 0, 100]|min }}%;height:12px;border-radius:6px;background:{% if (lead.final_score or 0) >= 70 %}#e74c3c{% elif (lead.final_score or 0) >= 40 %}#f39c12{% else %}#27ae60{% endif %}"></div>
+          </div>
+        </div>
+      </div>
+      {% if lead.ollama_summary %}
+      <div class="alert alert-info" style="margin-top:12px">
+        <strong>LLM Summary:</strong> {{ lead.ollama_summary }}
+      </div>
+      {% endif %}
+      {% if lead.human_action %}
+      <div class="alert alert-warn" style="margin-top:8px">
+        <strong>Human Decision:</strong> {{ lead.human_action }}
+        {% if lead.human_notes %} &mdash; {{ lead.human_notes }}{% endif %}
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- Contact Info Card -->
+    <div class="card">
+      <div class="card-title">Contact Information</div>
+      <table class="kv-table" style="width:100%">
+        <tr><td>Website</td><td>
+          {% if lead.website %}<a href="{{ lead.website }}" target="_blank">{{ lead.website }}</a>{% else %}—{% endif %}
+        </td></tr>
+        <tr><td>Status</td><td>
+          {% set ws = lead.website_status or '' %}
+          {% if ws == 'reachable' %}<span class="check">&#10003;</span> Reachable
+          {% elif ws == 'dns_failed' %}<span class="cross">&#10007;</span> DNS Failed
+          {% elif ws == 'blocked' %}<span class="warn">&#9888;</span> Blocked (403)
+          {% elif ws == 'no_url' %}<span class="cross">&#10007;</span> No URL
+          {% else %}<span class="warn">&#126;</span> {{ ws }}{% endif %}
+        </td></tr>
+        <tr><td>Phone</td><td>{{ lead.primary_phone or lead.phone or '—' }}</td></tr>
+        <tr><td>Email</td><td>{{ lead.primary_email or lead.email or '—' }}</td></tr>
+        <tr><td>MX Verified</td><td>{% if lead.mx_verified %}<span class="check">&#10003;</span> Yes{% else %}—{% endif %}</td></tr>
+        <tr><td>Address</td><td>{{ lead.address or '—' }}</td></tr>
+        <tr><td>Geo Area</td><td>{{ lead.geo_area or '—' }}</td></tr>
+      </table>
+    </div>
+
+    <!-- Digital Presence Card -->
+    <div class="card">
+      <div class="card-title">Digital Presence Signals</div>
+      <table class="kv-table" style="width:100%">
+        <tr><td>Online Booking</td><td>{% if lead.booking_present %}<span class="check">&#10003; Present</span>{% else %}<span class="cross">&#10007; Missing</span>{% endif %}</td></tr>
+        <tr><td>SEO Metadata</td><td>{% if lead.has_seo %}<span class="check">&#10003; Present</span>{% else %}<span class="cross">&#10007; Missing</span>{% endif %}</td></tr>
+        <tr><td>Social Platforms</td><td>{{ lead.social_count or 0 }} detected</td></tr>
+        <tr><td>HTTPS</td><td>{% if lead.is_https %}<span class="check">&#10003;</span>{% else %}—{% endif %}</td></tr>
+        {% if lead.pagespeed_performance is not none %}
+        <tr><td>PageSpeed (mobile)</td><td>
+          <span style="font-weight:700;color:{% if lead.pagespeed_performance < 50 %}#e74c3c{% elif lead.pagespeed_performance < 70 %}#f39c12{% else %}#27ae60{% endif %}">
+            {{ lead.pagespeed_performance }}/100
+          </span>
+        </td></tr>
+        {% endif %}
+        {% if lead.pagespeed_seo is not none %}
+        <tr><td>PageSpeed SEO</td><td>{{ lead.pagespeed_seo }}/100</td></tr>
+        {% endif %}
+        {% if lead.last_crawled %}
+        <tr><td>Last Crawled</td><td style="font-size:12px;color:#636e72">{{ lead.last_crawled[:10] }}</td></tr>
+        {% endif %}
+      </table>
+    </div>
+
+    <!-- GBP Card -->
+    <div class="card">
+      <div class="card-title">Google Business Profile</div>
+      {% if lead.gbp_rating or lead.gbp_review_count is not none %}
+      <table class="kv-table" style="width:100%">
+        {% if lead.gbp_rating %}<tr><td>Star Rating</td><td><strong>{{ "%.1f"|format(lead.gbp_rating) }}</strong> &#9733;</td></tr>{% endif %}
+        {% if lead.gbp_review_count is not none %}<tr><td>Review Count</td><td>{{ lead.gbp_review_count }}</td></tr>{% endif %}
+        <tr><td>Verified</td><td>{% if lead.gbp_verified %}<span class="check">&#10003;</span>{% else %}—{% endif %}</td></tr>
+        <tr><td>Unclaimed</td><td>{% if lead.gbp_unclaimed %}<span class="cross">&#10007; Appears unclaimed</span>{% else %}—{% endif %}</td></tr>
+      </table>
+      {% else %}
+      <div style="color:#636e72;font-size:13px">GBP lookup not run. Use <code>--gbp</code> flag during crawl.</div>
+      {% endif %}
+    </div>
+
+  </div><!-- /detail-grid -->
+
+  <!-- Score Reasoning -->
+  {% if reasoning %}
+  <div class="card">
+    <div class="card-title">Score Reasoning Breakdown</div>
+    <div class="tbl-wrap">
+      <table style="width:100%">
+        <thead><tr>
+          <th>Signal</th><th>Flag</th><th style="text-align:right">Points</th>
+        </tr></thead>
+        <tbody>
+        {% for key, val in reasoning.items() %}
+        <tr>
+          <td style="font-weight:600;text-transform:capitalize">{{ key }}</td>
+          <td style="font-size:12px;color:#636e72">{{ val.flag or '—' }}
+            {% if val.score is defined %} &middot; score: {{ val.score }}{% endif %}
+            {% if val.rating is defined and val.rating %} &middot; rating: {{ val.rating }}&#9733;{% endif %}
+          </td>
+          <td class="reasoning-pts {% if (val.points or 0) > 0 %}pos{% elif (val.points or 0) < 0 %}neg{% else %}zero{% endif %}">
+            {% if (val.points or 0) > 0 %}+{% endif %}{{ val.points or 0 }}
+          </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Outreach History -->
+  {% if outreach %}
+  <div class="card">
+    <div class="card-title">Outreach History ({{ outreach|length }} contact{{ 's' if outreach|length != 1 }})</div>
+    {% for entry in outreach %}
+    <div class="history-item">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <strong>{{ entry.channel or 'other' }}</strong>
+        <span class="resp-tag resp-{{ (entry.response or 'no_response')|replace(' ','_') }}">{{ entry.response or 'no_response' }}</span>
+        <span class="history-meta">{{ (entry.contacted_at or '')[:10] }}</span>
+        {% if entry.contact_person %}<span class="history-meta">&middot; {{ entry.contact_person }}</span>{% endif %}
+        {% if entry.follow_up_date %}<span class="history-meta">&middot; follow-up: {{ entry.follow_up_date }}</span>{% endif %}
+      </div>
+      {% if entry.notes %}<div class="history-meta" style="margin-top:4px">{{ entry.notes }}</div>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="alert alert-info">No outreach logged for this lead yet. Use the cadence CLI to log contact attempts.</div>
+  {% endif %}
+
+</div>
+{% endblock %}

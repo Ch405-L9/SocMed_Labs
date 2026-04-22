@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Charts — ICP Dashboard{% endblock %}
+{% block content %}
+<div class="page">
+  <div class="page-title">Visualizations</div>
+  <div class="page-sub">Generated from current lead data &middot; Re-run <code>python scripts/run_pipeline.py viz</code> to refresh</div>
+
+  {% if charts %}
+  <div class="chart-grid">
+    {% for chart in charts %}
+    <div class="chart-card">
+      <img src="/chart/{{ chart.filename }}" alt="{{ chart.label }}">
+      <div class="chart-card-label">{{ chart.label }}</div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="alert alert-warn">
+    No charts found in <code>viz/output/</code>.
+    Run <code>python scripts/run_pipeline.py viz</code> to generate them.
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

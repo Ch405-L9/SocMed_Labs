@@ -1,0 +1,63 @@
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=admin123
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - GENERIC_TIMEZONE=America/New_York
+      - EXECUTIONS_DATA_SAVE_ON_SUCCESS=all
+      - EXECUTIONS_DATA_SAVE_ON_ERROR=all
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ./workflows:/workflows
+      - ./n8n:/n8n
+      - ./data:/data
+      - ./scripts:/scripts
+      - ./apps:/apps
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    # GPU support (uncomment if using NVIDIA GPU):
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    volumes:
+      - ./apps:/apps
+      - ./scripts:/scripts
+      - ./data:/data
+      - ./viz:/viz
+      - ./config:/config
+    working_dir: /scripts
+    environment:
+      - OLLAMA_URL=http://ollama:11434
+      - PYTHONPATH=/apps/collector:/apps/crawler:/apps/scoring:/apps/storage
+    depends_on:
+      - ollama
+    command: tail -f /dev/null
+
+volumes:
+  n8n_data:
+  ollama_data:

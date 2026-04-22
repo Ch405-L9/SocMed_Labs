@@ -1,0 +1,92 @@
+search:
+  default_zip: "30350"
+  default_category: "healthcare"
+  max_results: 30
+  ddg_pause_seconds: 2
+  # Multi-ZIP options (override default_zip when set)
+  # zip_list: "30350,30342,30328,30338"
+  # center_zip: "30350"
+  # radius_miles: 10
+
+crawler:
+  timeout: 10
+  max_retries: 2
+  user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+  use_playwright: false
+  crawl_window_days: 7      # Skip re-crawling sites fetched within this many days
+  force_crawl: false        # Set true to bypass crawl cache
+
+gbp:
+  enabled: false            # Set true to fetch Google Business Profile signals via DDG
+  pause_seconds: 2.5        # Pause between GBP lookups to avoid rate limiting
+
+pagespeed:
+  enabled: false        # Set true to call PageSpeed Insights API during crawl step
+  api_key: ""           # Optional Google API key; empty = anonymous tier (~400 req/day/IP)
+  strategy: mobile      # mobile or desktop
+  timeout: 30           # Seconds to wait for PageSpeed API response
+
+contact_extraction:
+  extract_phones: true  # Extract phone numbers from crawled HTML
+  extract_emails: true  # Extract and verify email addresses from crawled HTML
+  verify_mx: true       # Verify email domain has MX records before including
+
+ollama:
+  base_url: "http://localhost:11434"
+  scoring_model: "qwen2.5-coder:7b"
+  reasoning_model: "llama3.1:8b"
+  fallback_model: "phi3:mini"
+  timeout: 60
+  enabled: true
+  prompt_templates:
+    scoring: "scoring_v1"   # Jinja2 template in config/prompts/ (without .j2)
+    reasoning: "reasoning_v1"
+
+scoring:
+  weights:
+    website_missing: 30
+    no_booking: 15
+    weak_seo: 20
+    no_social: 10
+    independent_practice: 15
+    strong_digital_maturity: -20
+    poor_performance: 10      # PageSpeed performance score < 50 on mobile
+    mediocre_performance: 5   # PageSpeed performance score 50-69 on mobile
+    gbp_unclaimed: 10         # No GBP listing or unclaimed (no reviews detected)
+    gbp_low_rating: 5         # GBP rating below 3.5 stars
+    gbp_no_reviews: 5         # GBP listing has 0 reviews
+  risk_thresholds:
+    high: 70
+    medium: 40
+    low: 0
+
+storage:
+  data_dir: "data"
+  raw_leads: "data/raw_leads.json"
+  enriched_leads: "data/enriched_leads.json"
+  scored_leads: "data/scored_leads.csv"
+  cadence_export: "data/outreach_cadence.csv"
+  sqlite_db: "data/leads.db"
+  use_sqlite: true
+
+viz:
+  output_dir: "viz/output"
+  dpi: 150
+  style: "seaborn-v0_8-darkgrid"
+
+n8n:
+  webhook_url: "http://localhost:5678/webhook/icp-trigger"
+  enabled: false
+
+notifications:
+  slack_webhook_url: ""        # Set to Slack Incoming Webhook URL to enable
+  reviewer_email: ""           # Email address for review request notifications
+  google_sheet_id: ""          # Google Sheets document ID for lead sync
+
+dashboard:
+  host: "127.0.0.1"
+  port: 8080
+
+calibration:
+  min_overrides: 5             # Minimum human overrides before calibration runs
+  auto_apply: false            # Set true to auto-apply calibrated weights to config

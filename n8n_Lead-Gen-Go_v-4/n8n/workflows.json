@@ -1,0 +1,253 @@
+{
+  "name": "ICP Lead Generation Pipeline",
+  "nodes": [
+    {
+      "id": "cron-trigger",
+      "name": "Nightly Schedule (2 AM)",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [250, 200],
+      "parameters": {
+        "triggerTimes": {
+          "item": [{ "mode": "everyDay", "hour": 2, "minute": 0 }]
+        }
+      }
+    },
+    {
+      "id": "webhook-trigger",
+      "name": "Webhook Trigger (Manual)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 380],
+      "parameters": {
+        "path": "icp-trigger",
+        "httpMethod": "POST",
+        "responseMode": "onReceived",
+        "responseData": "allEntries"
+      }
+    },
+    {
+      "id": "merge-triggers",
+      "name": "Merge Trigger Sources",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2,
+      "position": [480, 290],
+      "parameters": { "mode": "passThrough", "output": "first" }
+    },
+    {
+      "id": "extract-params",
+      "name": "Extract Parameters",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [680, 290],
+      "parameters": {
+        "values": {
+          "string": [
+            { "name": "zip_code",  "value": "={{$json.body.zip_code || '30350'}}" },
+            { "name": "category",  "value": "={{$json.body.category || 'healthcare'}}" },
+            { "name": "use_ollama","value": "={{$json.body.ollama || 'false'}}" }
+          ]
+        }
+      }
+    },
+    {
+      "id": "run-collector",
+      "name": "Step 1: Collect Leads",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [900, 200],
+      "parameters": {
+        "command": "cd /home/ubuntu/n8n-icp-stack && source .venv/bin/activate && python scripts/run_pipeline.py collect --zip={{$json.zip_code}} --category={{$json.category}} 2>&1"
+      }
+    },
+    {
+      "id": "run-crawler",
+      "name": "Step 2: Crawl Websites",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1100, 200],
+      "parameters": {
+        "command": "cd /home/ubuntu/n8n-icp-stack && source .venv/bin/activate && python scripts/run_pipeline.py crawl 2>&1"
+      }
+    },
+    {
+      "id": "run-scoring",
+      "name": "Step 3: Score Leads",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1300, 200],
+      "parameters": {
+        "command": "cd /home/ubuntu/n8n-icp-stack && source .venv/bin/activate && python scripts/run_pipeline.py score 2>&1"
+      }
+    },
+    {
+      "id": "run-export",
+      "name": "Step 4: Export CSV",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1500, 200],
+      "parameters": {
+        "command": "cd /home/ubuntu/n8n-icp-stack && source .venv/bin/activate && python scripts/run_pipeline.py export 2>&1"
+      }
+    },
+    {
+      "id": "read-summary",
+      "name": "Read Pipeline Summary",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1700, 200],
+      "parameters": {
+        "command": "python3 -c \"\nimport sys, json\nsys.path.insert(0,'apps/storage')\nfrom db import get_conn, get_all_leads_full\nconn = get_conn('data/leads.db')\nleads = get_all_leads_full(conn)\nconn.close()\nhigh = sum(1 for l in leads if (l.get('final_score') or 0) >= 70)\nmed  = sum(1 for l in leads if 40 <= (l.get('final_score') or 0) < 70)\nlow  = sum(1 for l in leads if (l.get('final_score') or 0) < 40)\nprint(json.dumps({'total':len(leads),'high':high,'medium':med,'low':low}))\n\" 2>/dev/null || echo '{\"total\":0,\"high\":0,\"medium\":0,\"low\":0}'"
+      }
+    },
+    {
+      "id": "parse-summary",
+      "name": "Parse Summary JSON",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [1900, 200],
+      "parameters": {
+        "values": {
+          "number": [
+            { "name": "total",  "value": "={{JSON.parse($json.stdout).total}}" },
+            { "name": "high",   "value": "={{JSON.parse($json.stdout).high}}" },
+            { "name": "medium", "value": "={{JSON.parse($json.stdout).medium}}" },
+            { "name": "low",    "value": "={{JSON.parse($json.stdout).low}}" }
+          ]
+        }
+      }
+    },
+    {
+      "id": "check-high-priority",
+      "name": "Any High-Priority Leads?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [2100, 200],
+      "parameters": {
+        "conditions": {
+          "number": [{ "value1": "={{$json.high}}", "operation": "larger", "value2": 0 }]
+        }
+      }
+    },
+    {
+      "id": "slack-notify-high",
+      "name": "Slack: High-Priority Alert",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [2300, 120],
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.SLACK_WEBHOOK_URL}}",
+        "sendBody": true,
+        "contentType": "json",
+        "body": {
+          "text": "ICP Pipeline Complete — *{{$json.high}} high-priority leads* ready for review",
+          "blocks": [
+            {
+              "type": "section",
+              "text": {
+                "type": "mrkdwn",
+                "text": "*BADGR ICP Pipeline Run Complete*\n*Date:* {{ new Date().toLocaleDateString() }}\n\n*Lead Summary:*\n• Total: {{$json.total}}\n• High Priority (score ≥70): *{{$json.high}}*\n• Medium Priority: {{$json.medium}}\n• Low Priority: {{$json.low}}\n\nLaunch review: `python apps/human_loop/review_cli.py --pending`"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "slack-notify-standard",
+      "name": "Slack: Standard Completion",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [2300, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.SLACK_WEBHOOK_URL}}",
+        "sendBody": true,
+        "contentType": "json",
+        "body": {
+          "text": "ICP Pipeline complete — {{$json.total}} leads processed. No new high-priority leads this run."
+        }
+      }
+    },
+    {
+      "id": "google-sheets-sync",
+      "name": "Google Sheets: Sync High-Priority",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [2500, 120],
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": { "value": "={{$env.GOOGLE_SHEET_ID}}" },
+        "sheetName": "ICP Leads",
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "business_name": "={{ $json.business_name }}",
+            "icp_score":     "={{ $json.icp_score }}",
+            "risk_level":    "={{ $json.risk_level }}",
+            "website":       "={{ $json.website }}",
+            "primary_phone": "={{ $json.primary_phone }}",
+            "primary_email": "={{ $json.primary_email }}",
+            "address":       "={{ $json.address }}"
+          }
+        },
+        "options": { "cellFormat": "USER_ENTERED" }
+      },
+      "notes": "Requires Google Sheets OAuth credential configured in n8n. Set GOOGLE_SHEET_ID env var."
+    },
+    {
+      "id": "review-request-email",
+      "name": "Email: Review Request",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [2700, 120],
+      "parameters": {
+        "toEmail": "={{$env.REVIEWER_EMAIL}}",
+        "subject": "Action Required: {{$json.high}} High-Priority Leads Ready for ICP Review",
+        "emailType": "text",
+        "message": "The ICP pipeline ran successfully.\n\n{{$json.high}} leads scored 70+ and are ready for your review.\n\nRun this command to start:\n  python apps/human_loop/review_cli.py --pending\n\nOr open the dashboard:\n  python scripts/serve_dashboard.py\n  Then visit http://localhost:8080\n\nLead Summary:\n  Total:  {{$json.total}}\n  High:   {{$json.high}}\n  Medium: {{$json.medium}}\n  Low:    {{$json.low}}"
+      },
+      "notes": "Requires SMTP credential configured in n8n. Set REVIEWER_EMAIL env var."
+    }
+  ],
+  "connections": {
+    "Nightly Schedule (2 AM)":      { "main": [[{ "node": "Merge Trigger Sources",    "type": "main", "index": 0 }]] },
+    "Webhook Trigger (Manual)":     { "main": [[{ "node": "Merge Trigger Sources",    "type": "main", "index": 1 }]] },
+    "Merge Trigger Sources":        { "main": [[{ "node": "Extract Parameters",        "type": "main", "index": 0 }]] },
+    "Extract Parameters":           { "main": [[{ "node": "Step 1: Collect Leads",    "type": "main", "index": 0 }]] },
+    "Step 1: Collect Leads":        { "main": [[{ "node": "Step 2: Crawl Websites",   "type": "main", "index": 0 }]] },
+    "Step 2: Crawl Websites":       { "main": [[{ "node": "Step 3: Score Leads",      "type": "main", "index": 0 }]] },
+    "Step 3: Score Leads":          { "main": [[{ "node": "Step 4: Export CSV",        "type": "main", "index": 0 }]] },
+    "Step 4: Export CSV":           { "main": [[{ "node": "Read Pipeline Summary",    "type": "main", "index": 0 }]] },
+    "Read Pipeline Summary":        { "main": [[{ "node": "Parse Summary JSON",        "type": "main", "index": 0 }]] },
+    "Parse Summary JSON":           { "main": [[{ "node": "Any High-Priority Leads?", "type": "main", "index": 0 }]] },
+    "Any High-Priority Leads?": {
+      "main": [
+        [{ "node": "Slack: High-Priority Alert",  "type": "main", "index": 0 }],
+        [{ "node": "Slack: Standard Completion",  "type": "main", "index": 0 }]
+      ]
+    },
+    "Slack: High-Priority Alert":   { "main": [[{ "node": "Google Sheets: Sync High-Priority", "type": "main", "index": 0 }]] },
+    "Google Sheets: Sync High-Priority": { "main": [[{ "node": "Email: Review Request", "type": "main", "index": 0 }]] }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": ""
+  },
+  "env_vars_required": {
+    "SLACK_WEBHOOK_URL": "Incoming Webhook URL from Slack App configuration",
+    "GOOGLE_SHEET_ID":   "ID from the Google Sheets URL (the long alphanumeric string)",
+    "REVIEWER_EMAIL":    "Email address to send review request notifications"
+  },
+  "setup_notes": [
+    "1. Import this file into n8n via Settings → Import Workflow",
+    "2. Configure Google Sheets OAuth2 credential in n8n Credentials",
+    "3. Configure SMTP credential in n8n Credentials (for review request emails)",
+    "4. Set environment variables in n8n Settings → Environment Variables",
+    "5. Update the pipeline command paths to match your deployment directory",
+    "6. Activate the workflow — the Cron trigger fires nightly at 2:00 AM"
+  ]
+}

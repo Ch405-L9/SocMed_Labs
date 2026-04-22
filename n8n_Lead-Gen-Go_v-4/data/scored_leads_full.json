@@ -1,0 +1,2976 @@
+[
+  {
+    "business_name": "Dunwoody Village Clinic",
+    "website": "https://www.dunwoodyvillageclinic.com/",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "5471 Chamblee Dunwoody Rd, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.dunwoodyvillageclinic.com/",
+      "website_status": "dns_failed",
+      "http_code": null,
+      "is_https": true,
+      "booking_present": false,
+      "contact_form": false,
+      "seo_title": null,
+      "seo_description": null,
+      "has_seo": false,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": null,
+      "raw_html_len": 0,
+      "phone_numbers": [],
+      "primary_phone": null,
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": null,
+      "content_hash": null,
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 75,
+      "risk_level": "high",
+      "reasoning": {
+        "website": {
+          "flag": "missing_or_broken",
+          "points": 30
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "weak_seo",
+          "points": 20
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "chain_or_unknown",
+          "points": 0
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "dns_failed",
+        "booking_present": false,
+        "has_seo": false,
+        "social_count": 0,
+        "is_independent": false,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Dunwoody Village Clinic is a primary care provider with a low ICP score and high risk level, indicating it may not be an ideal fit for our digital marketing agency's target audience.",
+        "top_pain_points": [
+          "DNS failure preventing website access",
+          "Lack of booking system making online appointment scheduling difficult",
+          "Poor SEO quality reducing visibility in search results",
+          "No social media presence limiting engagement opportunities"
+        ],
+        "recommended_services": [
+          "Website optimization and DNS resolution services",
+          "Booking system integration to enhance patient convenience",
+          "SEO audit and optimization to improve search engine rankings",
+          "Social media management and content creation to build online presence"
+        ],
+        "outreach_angle": "We understand the challenges you face with your current website and booking process. Let's work together to streamline your operations and increase your visibility, making it easier for patients to find and engage with your clinic.",
+        "confidence": "low",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "Here is a summary of the outreach opportunity for Dunwoody Village Clinic:\n\nDunwoody Village Clinic has significant digital gaps, including missing or broken online presence, weak search engine optimization (SEO), and no social media presence. This creates an opportunity to improve their online visibility, drive bookings, and enhance their reputation through targeted marketing efforts. By addressing these gaps, the clinic can increase its ICP score and attract more patients.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Dunwoody Family & Cosmetic Dentistry",
+    "website": "https://www.dunwoodydentistry.com/",
+    "category": "Dental",
+    "geo_area": "ZIP 30350",
+    "address": "1 Dunwoody Park, Suite 125, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.dunwoodydentistry.com/",
+      "website_status": "not_found",
+      "http_code": 404,
+      "is_https": false,
+      "booking_present": false,
+      "contact_form": false,
+      "seo_title": null,
+      "seo_description": null,
+      "has_seo": false,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": null,
+      "raw_html_len": 0,
+      "phone_numbers": [],
+      "primary_phone": null,
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": null,
+      "content_hash": null,
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 75,
+      "risk_level": "high",
+      "reasoning": {
+        "website": {
+          "flag": "not_found",
+          "points": 15
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "weak_seo",
+          "points": 20
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "not_found",
+        "booking_present": false,
+        "has_seo": false,
+        "social_count": 0,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Dunwoody Family & Cosmetic Dentistry has a low ICP score and high risk level, indicating it may not be an ideal fit for our digital marketing efforts at this time.",
+        "top_pain_points": [
+          "Poor/Missing SEO quality",
+          "No social media presence",
+          "Booking system not present"
+        ],
+        "recommended_services": [
+          "Enhanced online presence through SEO optimization",
+          "Social media management and engagement"
+        ],
+        "outreach_angle": "Highlighting the benefits of improved digital visibility and customer engagement to drive business growth",
+        "confidence": "low",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "Here is a summary of the outreach opportunity for Dunwoody Family & Cosmetic Dentistry:\n\nDunwoody Family & Cosmetic Dentistry has an untapped online presence, with opportunities to improve their booking process, SEO, social media engagement, and overall digital marketing strategy. By addressing these gaps, the practice can increase visibility, attract new patients, and drive revenue growth. With a moderate ICP score of 75/100, there is potential for significant improvement in conversion rates and patient acquisition through targeted outreach efforts.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Dunwoody Dermatology",
+    "website": "https://www.dunwoodydermatology.com/",
+    "category": "Specialty",
+    "geo_area": "ZIP 30350",
+    "address": "1 Dunwoody Park, Suite 121, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.dunwoodydermatology.com/",
+      "website_status": "dns_failed",
+      "http_code": null,
+      "is_https": true,
+      "booking_present": false,
+      "contact_form": false,
+      "seo_title": null,
+      "seo_description": null,
+      "has_seo": false,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": null,
+      "raw_html_len": 0,
+      "phone_numbers": [],
+      "primary_phone": null,
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": null,
+      "content_hash": null,
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 75,
+      "risk_level": "high",
+      "reasoning": {
+        "website": {
+          "flag": "missing_or_broken",
+          "points": 30
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "weak_seo",
+          "points": 20
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "chain_or_unknown",
+          "points": 0
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "dns_failed",
+        "booking_present": false,
+        "has_seo": false,
+        "social_count": 0,
+        "is_independent": false,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Dunwoody Dermatology has a low ICP score and high risk level, indicating it may not be the best fit for our digital marketing agency's target audience of independent healthcare providers.",
+        "top_pain_points": [
+          "DNS failure preventing website accessibility",
+          "Lack of booking system",
+          "Poor or missing SEO",
+          "No social media presence"
+        ],
+        "recommended_services": [
+          "Website optimization and DNS resolution",
+          "Booking system integration",
+          "SEO audit and optimization",
+          "Social media management and marketing"
+        ],
+        "outreach_angle": "We specialize in helping independent healthcare providers enhance their online presence and streamline their operations. Let's discuss how we can improve your website, booking process, SEO, and social media to better serve your patients.",
+        "confidence": "low",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "Dunwoody Dermatology has a significant outreach opportunity to improve its online presence and drive bookings. By addressing the current digital gaps, including missing or broken website content, weak SEO, lack of social media presence, and no booking system, the practice can increase visibility, attract new patients, and ultimately boost revenue. With an ICP score of 75/100, there is a clear need for targeted digital marketing efforts to elevate the practice's online reputation and patient acquisition.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Northside Family Medicine",
+    "website": "https://www.northside.com/locations/northside-family-medicine-dunwoody",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "1140 Hammond Dr, Suite E-525, Atlanta, GA 30328",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.northside.com/locations/northside-family-medicine-dunwoody",
+      "website_status": "blocked",
+      "http_code": 403,
+      "is_https": true,
+      "booking_present": false,
+      "contact_form": false,
+      "seo_title": null,
+      "seo_description": null,
+      "has_seo": false,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": null,
+      "raw_html_len": 0,
+      "phone_numbers": [],
+      "primary_phone": null,
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": null,
+      "content_hash": null,
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 66,
+      "risk_level": "medium",
+      "reasoning": {
+        "website": {
+          "flag": "inaccessible",
+          "points": 21
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "weak_seo",
+          "points": 20
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "chain_or_unknown",
+          "points": 0
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "blocked",
+        "booking_present": false,
+        "has_seo": false,
+        "social_count": 0,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Northside Family Medicine has a low ICP score and is at medium risk, indicating it may not be the best fit for our digital marketing efforts. However, there are opportunities to improve its online presence and SEO quality.",
+        "top_pain_points": [
+          "Poor/missing SEO",
+          "Lack of booking system",
+          "No social media presence"
+        ],
+        "recommended_services": [
+          "SEO optimization services",
+          "Booking system integration",
+          "Social media management"
+        ],
+        "outreach_angle": "We understand the challenges you're facing with your online presence and would love to help improve your search engine rankings, streamline your booking process, and increase your social media engagement.",
+        "confidence": "medium",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "Northside Family Medicine has a significant outreach opportunity to improve their online presence, increase accessibility, and enhance patient engagement. By addressing their digital gaps, including inaccessible website, no booking system, weak SEO, and lack of social media presence, the practice can attract more patients, improve operational efficiency, and ultimately boost revenue. With an ICP Score of 66/100, there is a clear need for strategic digital transformation to elevate their online reputation and patient acquisition capabilities.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Atlanta Gastroenterology Associates",
+    "website": "https://www.atlantagastro.com/location/dunwoody/",
+    "category": "Specialty",
+    "geo_area": "ZIP 30350",
+    "address": "1140 Hammond Dr, Suite E-525, Atlanta, GA 30328",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.atlantagastro.com/location/dunwoody/",
+      "website_status": "not_found",
+      "http_code": 404,
+      "is_https": true,
+      "booking_present": false,
+      "contact_form": false,
+      "seo_title": null,
+      "seo_description": null,
+      "has_seo": false,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": null,
+      "raw_html_len": 0,
+      "phone_numbers": [],
+      "primary_phone": null,
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": null,
+      "content_hash": null,
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 60,
+      "risk_level": "medium",
+      "reasoning": {
+        "website": {
+          "flag": "not_found",
+          "points": 15
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "weak_seo",
+          "points": 20
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "chain_or_unknown",
+          "points": 0
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "not_found",
+        "booking_present": false,
+        "has_seo": false,
+        "social_count": 0,
+        "is_independent": false,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Atlanta Gastroenterology Associates appears to be a mid-tier opportunity due to its poor SEO quality and lack of social media presence, which could indicate limited visibility and engagement in digital marketing efforts. However, the low risk level suggests that there may still be potential for growth.",
+        "top_pain_points": [
+          "Poor website status",
+          "Lack of booking system",
+          "No social media presence"
+        ],
+        "recommended_services": [
+          "Website optimization",
+          "Social media management",
+          "Booking system integration"
+        ],
+        "outreach_angle": "We understand the importance of a strong online presence in today's digital landscape. Let's discuss how we can help Atlanta Gastroenterology Associates improve its visibility and streamline its operations through advanced web solutions.",
+        "confidence": "medium",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "Atlanta Gastroenterology Associates is an opportunity to target a high-demand specialty in the healthcare industry with a focus on improving online visibility, booking capabilities, and social media presence. By addressing their current digital gaps, we can increase their ICP score and establish a strong foundation for attracting new patients and growing revenue.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Perimeter North Family Medicine",
+    "website": "https://www.perimeternorth.com/",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "Multiple locations",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.perimeternorth.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": false,
+      "contact_form": true,
+      "seo_title": "PerimeterNorth.com is for sale | HugeDomains",
+      "seo_description": "Choose a memorable domain name. Professional, friendly customer support. Start using your domain right away.",
+      "has_seo": false,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": "PerimeterNorth.com\nThis domain is for sale: $3,295\nBuy now for $3,295 or pay $137.29 per month for 24 months\nThis domain is for sale: $3,295\n-\nEnjoy zero percent financing\n-\nQuick delivery of the domain\n-\nSafe and secure shopping\nSince 2005, we've helped thousands of people get the perfect domain name\nI made many proposals to buy my domain, until we found the right way on both sides. I bought my domain and after 24 hours it was already on my personal hosting. Easy, fast and I'm not a web master... Top\n- Giuseppe Antonio Intelisano, February 23, 2026I had a very smooth experience buying my domain. Everything went quickly and without any issues. Very satisfied!\n- Abdullahi Shire, February 23, 2026I have been wanting this site for so long and it was EZ Breazy with HugeDomains.\n- Gregory Hardy, February 18, 2026Love your interest-free payment plans! This is my 3rd or 4th domain purchase with you, quick, trustable and easy, thank you!\n- Dmitri Sennikov, February 10, 2026The team was helpful",
+      "raw_html_len": 44363,
+      "phone_numbers": [
+        "1-303-893-0552",
+        "303-893-0552"
+      ],
+      "primary_phone": "1-303-893-0552",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:23:00Z",
+      "content_hash": "5bafe41af9779070",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 60,
+      "risk_level": "medium",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "weak_seo",
+          "points": 20
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": false,
+        "has_seo": false,
+        "social_count": 0,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Perimeter North Family Medicine has a low ICP score and medium risk level, indicating it may not be the best fit for our digital marketing efforts at this time.",
+        "top_pain_points": [
+          "Poor SEO quality",
+          "Lack of booking system",
+          "No social media presence"
+        ],
+        "recommended_services": [
+          "SEO optimization",
+          "Booking system integration",
+          "Social media management"
+        ],
+        "outreach_angle": "We understand the challenges you're facing with your online presence. Let's help you improve your search engine rankings and streamline your practice operations.",
+        "confidence": "low",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "Perimeter North Family Medicine has a significant outreach opportunity to improve their online presence, increase bookings, and enhance patient engagement. By addressing their current digital gaps, including no booking system, weak SEO, and lack of social media presence, they can attract more patients, reduce wait times, and ultimately drive revenue growth. With an ICP score of 60/100, this is a high-priority opportunity to elevate their online reputation and competitiveness in the primary care market.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Family Practice at Peachtree-Dunwoody",
+    "website": "https://drhickspractice.com/",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "6105 Peachtree Dunwoody Road, Building C, Suite 115, Sandy Springs, GA 30328",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://drhickspractice.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": false,
+      "seo_title": "Family Practice at Peachtree-Dunwoody \u2013 Dr. Kevin B. Hicks",
+      "seo_description": null,
+      "has_seo": false,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": "Schedule Appointment\nFamily Practice at Peachtree-Dunwoody Welcomes You!\n- Family Practice at Peachtree-Dunwoody welcomes you to our website. Our office promises to provide excellent medical services to all that pass through our doors. Your health is our number one priority. We're available anytime to schedule an appointment or consultation. Call (770) 481-0019 / Schedule Appointment Schedule TeleMedicine Session / Directions to Office\n- About Dr. Hicks",
+      "raw_html_len": 72825,
+      "phone_numbers": [
+        "7704810019",
+        "(770) 481-0019"
+      ],
+      "primary_phone": "7704810019",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:21:54Z",
+      "content_hash": "4c73d9e668fc4228",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 45,
+      "risk_level": "medium",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "weak_seo",
+          "points": 20
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": false,
+        "social_count": 0,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Family Practice at Peachtree-Dunwoody is a primary care provider that could benefit from improved SEO and social media presence to increase visibility and attract more patients. However, their booking system being present indicates they are already leveraging digital tools for patient management.",
+        "top_pain_points": [
+          "Poor/missing SEO",
+          "Lack of social media presence"
+        ],
+        "recommended_services": [
+          "SEO optimization services",
+          "Social media management"
+        ],
+        "outreach_angle": "Highlighting how improved online visibility and engagement can help them attract more patients and enhance their digital footprint",
+        "confidence": "medium",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "The outreach opportunity for this healthcare business is to leverage targeted online marketing efforts to improve its digital presence, specifically through search engine optimization (SEO) and social media campaigns. By addressing the identified digital gaps, the practice can increase visibility, attract new patients, and ultimately boost its ICP score. This will require a strategic approach to content creation, social media advertising, and local SEO to effectively target the primary care market in the Peachtree-Dunwoody area.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Perimeter Orthopaedics",
+    "website": "https://www.perimeterortho.com/",
+    "category": "Specialty",
+    "geo_area": "ZIP 30350",
+    "address": "5673 Peachtree Dunwoody Rd, Suite 825, Atlanta, GA 30342",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.perimeterortho.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": false,
+      "contact_form": false,
+      "seo_title": null,
+      "seo_description": null,
+      "has_seo": false,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": null,
+      "raw_html_len": 114,
+      "phone_numbers": [],
+      "primary_phone": null,
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:48Z",
+      "content_hash": "6dc9c7fc93bb488b",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 45,
+      "risk_level": "medium",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "weak_seo",
+          "points": 20
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "chain_or_unknown",
+          "points": 0
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": false,
+        "has_seo": false,
+        "social_count": 0,
+        "is_independent": false,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Perimeter Orthopaedics scores a moderate ICP fit with an opportunity score of 45/100, indicating it may be a potential client but requires further engagement to determine alignment. The lack of a booking system and social media presence is concerning.",
+        "top_pain_points": [
+          "Lack of booking system",
+          "No social media presence"
+        ],
+        "recommended_services": [
+          "Booking System Implementation",
+          "Social Media Strategy"
+        ],
+        "outreach_angle": "Highlight the benefits of integrating a user-friendly booking system and establishing an online presence to enhance patient engagement and drive more business.",
+        "confidence": "medium",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "Here is a summary of the outreach opportunity for Perimeter Orthopaedics:\n\nPerimeter Orthopaedics has a significant digital gap in its online presence, with a low ICP score indicating an untapped market. To capitalize on this opportunity, we recommend developing a comprehensive digital strategy that includes a booking system, SEO optimization, social media marketing, and content creation to attract new patients and establish the practice as a thought leader in orthopaedics. By addressing these gaps, Perimeter Orthopaedics can increase visibility, drive website traffic, and ultimately grow its patient base.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Back 2 Back Chiropractic",
+    "website": "https://b2bchiro.net/",
+    "category": "Chiropractic",
+    "geo_area": "ZIP 30350",
+    "address": "1 Dunwoody Park, Suite 124, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://b2bchiro.net/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": true,
+      "seo_title": "Back 2 Back Chiropractic",
+      "seo_description": null,
+      "has_seo": false,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": "Back 2 Back Chiropractic\nExperience Optimal Wellness with Expert Chiropractic Care\nWelcome to Back 2 Back Chiropractic\nCrisis Care. Lifestyle Care. Performance Care.\nNew Patients Welcome\nWe welcome the opportunity to help you and your family heal and reach your health goals.\nOur Community\nWe care about our community and enjoy working with companies, organizations, schools and sports teams.\nServices We Offer\nChiropractic Care\nOur office delivers quality chiropractic in a caring supportive environment. We personalize your care to help your body heal so you can reach your health goals.\nFamily Chiropractic\nA healthy spine and nervous system is essential for a healthy life. Our office provides family chiropractic care for newborns to 100-year-olds and everyone in between.\nPediatric Chiropractic\nOur office is a leader in pediatric chiropractic locally, and nationally. We love working with kids and welcome the opportunity to help yours get and stay healthy.\nSports Chiropractic\nAthletes utiliz",
+      "raw_html_len": 271927,
+      "phone_numbers": [
+        "7703912771",
+        "7702138890",
+        "(770) 391-2771",
+        "(770) 213-8890"
+      ],
+      "primary_phone": "7703912771",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:23:02Z",
+      "content_hash": "d7e09ed7be06c10e",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 45,
+      "risk_level": "medium",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "weak_seo",
+          "points": 20
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": false,
+        "social_count": 0,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Back 2 Back Chiropractic is a moderate fit as an ICP due to its current low SEO quality and lack of social media presence, which could hinder organic growth and engagement. However, the booking system present indicates some level of operational readiness.",
+        "top_pain_points": [
+          "low online visibility",
+          "lack of digital marketing efforts",
+          "need for brand awareness"
+        ],
+        "recommended_services": [
+          "SEO optimization services",
+          "social media management"
+        ],
+        "outreach_angle": "Highlighting how a strong online presence can significantly improve patient engagement and booking rates, while also showcasing the existing booking system to address operational readiness.",
+        "confidence": "medium",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "Here's a summary of the outreach opportunity for Back 2 Back Chiropractic:\n\nBack 2 Back Chiropractic has a significant digital gap in SEO, social media presence, and overall online visibility, presenting an opportunity to improve their ICP (Ideal Customer Profile) score from 45/100. By developing a comprehensive digital strategy, including search engine optimization, social media marketing, and content creation, the practice can increase brand awareness, attract new patients, and enhance its reputation in the local healthcare market. This outreach opportunity requires targeted efforts to establish Back 2 Back Chiropractic as a trusted and authoritative provider of chiropractic services in Dunwoody, GA.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Dunwoody Wellness Center",
+    "website": "https://www.dunwoodywellnesscenter.com/",
+    "category": "Wellness",
+    "geo_area": "ZIP 30350",
+    "address": "1713 Mt Vernon Rd, Suite 4, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.dunwoodywellnesscenter.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": false,
+      "contact_form": false,
+      "seo_title": "Dunwoody Wellness Center: Chiropractic | Medical Massage | Skincare 404.590.392",
+      "seo_description": "Dunwoody Wellness Center provides *Holistic Wellness & DermaSkin Therapies* | Our philosophy begins with a commitment to your individual needs...",
+      "has_seo": true,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": null,
+      "raw_html_len": 1072,
+      "phone_numbers": [],
+      "primary_phone": null,
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:43Z",
+      "content_hash": "95e0476f567ce733",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 40,
+      "risk_level": "medium",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": false,
+        "has_seo": true,
+        "social_count": 0,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Dunwoody Wellness Center shows promise as a strong ICP fit due to its good SEO quality and high ICP score, indicating it has potential for growth. However, the lack of a booking system and social media presence limits its current reach and engagement.",
+        "top_pain_points": [
+          "Lack of booking system",
+          "No social media presence"
+        ],
+        "recommended_services": [
+          "Booking System Implementation",
+          "Social Media Marketing Strategy"
+        ],
+        "outreach_angle": "Highlighting how our advanced booking system can streamline their operations and improve patient experience, while also discussing the importance of building a strong online presence through social media.",
+        "confidence": "medium",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "Here's a summary of the outreach opportunity for Dunwoody Wellness Center:\n\nDunwoody Wellness Center has a significant digital gap, with no online booking system, limited social media presence, and outdated website. This presents an opportunity to establish a strong online foundation, improve patient engagement, and increase bookings through targeted marketing efforts. By addressing these gaps, the center can boost its ICP score from 40/100 to a more competitive level, ultimately driving growth and revenue.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Dunwoody Dental Care",
+    "website": "https://dunwoodydentalcare.com/",
+    "category": "Dental",
+    "geo_area": "ZIP 30350",
+    "address": "1505 Mt Vernon Rd, Suite 150, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://dunwoodydentalcare.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": false,
+      "contact_form": true,
+      "seo_title": "Home | Dunwoody, GA | Dunwoody Dental Care",
+      "seo_description": "You will feel at ease the moment you enter our Dunwoody Dental Care office. Welcomed by friendly and caring staff, you will know we value the trust and",
+      "has_seo": true,
+      "social_links": [
+        "https://www.facebook.com/thetoothtaylor/",
+        "https://twitter.com/TheToothTaylor",
+        "https://www.instagram.com/thetoothtaylor/",
+        "https://www.youtube.com/channel/UCHcNDJYXxK0WpmRrQxoxGcA/featured"
+      ],
+      "social_count": 4,
+      "page_summary": "You will feel at ease the moment you enter our Dunwoody Dental Care office. Welcomed by friendly and caring staff, you will know we value the trust and confidence you place in us. We will treat you as the unique person you are and deserve. It is always our goal to provide you exceptional preventive and restorative care, as well as meet your cosmetic desires.\nDr. Benjamin Taylor is a third-generation dentist who knew from an early age that he was interested in dental care. With an extensive education and years of experience, patients all over Dunwoody and surrounding areas can trust Dr. Taylor with their oral health.\nDr. Taylor believes in building relationships with patients and improving their lives through bettering dental health.\nOur gentle approach to care will make your visit a positive experience. We offer refreshments, headphones, television, videos, warm blankets, neck pillows, lip balm, among other niceties to make your visit pleasant. If you are one who feels uneasy about den",
+      "raw_html_len": 150072,
+      "phone_numbers": [
+        "7703931524",
+        "770.393.1524"
+      ],
+      "primary_phone": "7703931524",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:07Z",
+      "content_hash": "f41cbaf68bd76b74",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 30,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "social_present",
+          "points": 0
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": false,
+        "has_seo": true,
+        "social_count": 4,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Dunwoody Dental Care is a well-established dental practice with a good SEO presence and multiple social media platforms, indicating a decent level of online engagement. However, the lack of a booking system suggests potential for improvement in digital appointment scheduling.",
+        "top_pain_points": [
+          "Lack of booking system",
+          "Potential need for enhanced online booking capabilities"
+        ],
+        "recommended_services": [
+          "Digital appointment scheduling software",
+          "Online patient portal"
+        ],
+        "outreach_angle": "Highlighting how your agency can help streamline their online presence and improve patient convenience through advanced digital tools.",
+        "confidence": "medium",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "Here is a summary of the outreach opportunity for Dunwoody Dental Care:\n\nDunwoody Dental Care has significant opportunities to improve its online presence and patient engagement through strategic digital marketing efforts. By addressing its current booking and digital gaps, the practice can increase visibility, drive more qualified leads, and ultimately boost revenue. With an ICP score of 30/100, this is a high-priority target for investment in order to elevate their position in the market.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Sports Rehab Center",
+    "website": "https://www.sportsrehabcenter.com/locations/location_dunwoody/",
+    "category": "Physical Therapy",
+    "geo_area": "ZIP 30350",
+    "address": "4 Dunwoody Park, Suite 122, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.sportsrehabcenter.com/locations/location_dunwoody/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": false,
+      "contact_form": false,
+      "seo_title": "Dunwoody | Sports Rehab Center",
+      "seo_description": null,
+      "has_seo": true,
+      "social_links": [
+        "https://twitter.com/SportsRehabATL",
+        "https://www.facebook.com/sportsrehabcenter"
+      ],
+      "social_count": 2,
+      "page_summary": "Sports Rehab Center\nAbout Us\nHistory\nOur Team\nBrian Tovin, PT, DPT, MMSC, SCS, ATC, FAAOMPT\nJason Reiss, PT, DPT, OCS\nChris Olson, PT, MSPT\nRebecca Anderson, PT, DPT, Cert. DN\nSarah Hedrick, PT, DPT\nKatharine Wells Campagna, PT, DPT, OCS\nMax Sterenson PT, DPT, OCS, ATC\nShelley Smith DiCecco, PT, PhD, CLT-LANA\nLori Tran PT, DPT\nCaroline Kelly, PT, DPT\nDamir Dra\u010di\u0107 PT, DPT, XPS\nAndres Rosero, PT, DPT\nWhat We Treat\nWhy Us?\nServices\nManual Therapy\nSport Specific Rehabilitation and Training\nTrigger-point Dry Needling\nAquatic Therapy\nKinesiotaping\nFall Prevention & Balance Training\nPediatric Physical Therapy\nInjury Prevention\nFor Patients\nForms\nInsurance\nFAQ\nTestimonials\nEvents\nBlog\nContact\nDunwoody\nServices\nManual Therapy\nSports-Specific Rehabilitation & Therapy\nTrigger-Point Dry Needling\nAquatic Therapy\nKinesiotaping\nMore Services",
+      "raw_html_len": 31420,
+      "phone_numbers": [
+        "404.477.8888",
+        "404.477.7777",
+        "404.477.5555"
+      ],
+      "primary_phone": "404.477.8888",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:21Z",
+      "content_hash": "877a26777e876ea0",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 30,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "social_present",
+          "points": 0
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": false,
+        "has_seo": true,
+        "social_count": 2,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "The Sports Rehab Center is a strong fit as an ICP due to its focus on physical therapy and good SEO, indicating potential customer interest. However, the lack of a booking system may be a barrier for conversion.",
+        "top_pain_points": [
+          "No booking system available",
+          "Limited social media presence"
+        ],
+        "recommended_services": [
+          "Online booking solution",
+          "Social media management"
+        ],
+        "outreach_angle": "Highlighting the benefits of an online booking system and how it can improve patient experience and operational efficiency",
+        "confidence": "medium",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "The outreach opportunity for this healthcare business is to leverage targeted online marketing efforts to bridge the significant digital gap, specifically focusing on improving their website's user experience, search engine optimization (SEO), and booking functionality. By doing so, they can increase visibility, drive organic traffic, and ultimately boost bookings from potential patients searching for physical therapy services in the Dunwoody area.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Atlanta Total Wellness",
+    "website": "https://www.atlantatotalwellness.com/",
+    "category": "Chiropractic",
+    "geo_area": "ZIP 30350",
+    "address": "110 Perimeter Center Terrace, Suite 100, Dunwoody, GA 30346",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.atlantatotalwellness.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": false,
+      "contact_form": true,
+      "seo_title": "Atlanta Total Wellness: Atlanta Chiropractor",
+      "seo_description": "CHIROPRACTIC AND AUTO ACCIDENT INJURY CENTER.",
+      "has_seo": true,
+      "social_links": [
+        "https://www.facebook.com/pages/Atlanta-Total-Wellness/133313133373150?sk=wall",
+        "https://www.instagram.com/atlantatotalwellness/",
+        "https://www.yelp.com/biz/atlanta-total-wellness-sandy-springs-2"
+      ],
+      "social_count": 3,
+      "page_summary": "Atlanta Total Wellness\nDr. Sereda established the ATLANTA TOTAL WELLNESS CENTER in 2001 and has treated thousands of patients from all over the city.\nMake an Appointment:\nWhy suffer through more pain and discomfort? Call us Now or schedule an interview right from our website by clicking the button below. Depending on the type of appointment you need, we can even confirm your appointment instantly!\nSo even if you\u2019re at work and can\u2019t speak on the phone, complete our short for, tell us the date and time you\u2019d like to come in, even if its later today and we\u2019ll get back to you in seconds with a confirmation or a short email that we will call you to confirm.\nMeet :\nDr.Dmitry Sereda, Atlanta Chiropractor\nBoard Certified Chiropractor\nSpecializing in Non-Surgical Spinal & Disc Rehabilitation and Auto Injury Rehabilitation\nCheck out our Medical Services\nOur most important medical departments, but just a few of what our clinic offers:\nSpinal Disk Decompression\nAuto Injury Rehabilitation\nCold Las",
+      "raw_html_len": 270882,
+      "phone_numbers": [
+        "+17703941336",
+        "77020394201336",
+        "770.394.1336",
+        "770 394 1336"
+      ],
+      "primary_phone": "+17703941336",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:35Z",
+      "content_hash": "d50efe378a5dd162",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 30,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "social_present",
+          "points": 0
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": false,
+        "has_seo": true,
+        "social_count": 3,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Atlanta Total Wellness is a strong ICP fit as it operates in the Chiropractic category, has a good SEO presence, and shows a basic social media presence. However, its low booking system score suggests there may be room for improvement in customer engagement and conversion rates.",
+        "top_pain_points": [
+          "Limited booking system",
+          "Potential for improved customer engagement"
+        ],
+        "recommended_services": [
+          "Enhanced booking system integration",
+          "Social media marketing strategy"
+        ],
+        "outreach_angle": "Highlighting the practice's SEO success and suggesting ways to improve patient bookings through a robust online presence",
+        "confidence": "medium",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "Here is a summary of the outreach opportunity for Atlanta Total Wellness:\n\nAtlanta Total Wellness has a significant online presence gap, with no booking system in place and weak digital marketing efforts, making it an ideal target for a sales strategist to capitalize on by offering a comprehensive digital transformation solution that includes a user-friendly booking system, improved website design, and targeted online advertising. This opportunity allows for a high-impact, low-cost investment to drive conversions and increase revenue. By addressing these gaps, Atlanta Total Wellness can improve its ICP (Ideal Customer Profile) score from 30/100 to a more attractive range, positioning the business for long-term growth and success.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Dunwoody Physical Therapy",
+    "website": "https://www.dunwoodypt.com/",
+    "category": "Physical Therapy",
+    "geo_area": "ZIP 30350",
+    "address": "1713 Mt Vernon Rd, Suite 5, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.dunwoodypt.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": false,
+      "contact_form": true,
+      "seo_title": "Dunwoody History & Heritage | Dunwoody Preservation Trust",
+      "seo_description": "Dunwoody Preservation Trust is a non-profit organization that preserves the history and heritage in Dunwoody, Georgia.",
+      "has_seo": true,
+      "social_links": [
+        "https://www.facebook.com/DunwoodyPreservationTrust",
+        "https://www.instagram.com/dunwoodypt/",
+        "https://www.montag.com/"
+      ],
+      "social_count": 3,
+      "page_summary": "We believe people are happiest where they feel the greatest connection \u2013 not just to the past but also to the present and the future. As the Dunwoody Preservation Trust (DPT), we do more than just save historic properties. We rehabilitate them so people can enjoy them now. We also host a range of community celebrations and educational events as well as Dunwoody\u2019s only history camp. Our goal is to sustain our superior quality of life by preserving the past, celebrating the present and building the future. If this is the kind of community you want to live in, please join us.\nPreserving the Past\nDPT was born out of the efforts to save the Cheek-Spruill Farmouse, an historic Dunwoody landmark, from becoming a parking lot. In 2018, the Donaldson-Bannister Farm, our most ambitious project, became a public park and special event venue. We also preserve cemeteries, such as the Stephen Martin Cemetery located near Perimeter Mall.\nCelebrating the Present\nThroughout the year, we host community ev",
+      "raw_html_len": 81548,
+      "phone_numbers": [],
+      "primary_phone": null,
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:46Z",
+      "content_hash": "33f383ea0fd100ea",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 30,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "social_present",
+          "points": 0
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": false,
+        "has_seo": true,
+        "social_count": 3,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Dunwoody Physical Therapy is a solid fit as an ICP due to its good SEO and presence on multiple social media platforms, indicating a strong online presence. However, the lack of a booking system may be a barrier to conversion.",
+        "top_pain_points": [
+          "Lack of booking system",
+          "Potential for missed appointments"
+        ],
+        "recommended_services": [
+          "Booking System Implementation",
+          "Online Appointment Scheduling"
+        ],
+        "outreach_angle": "Highlighting how our advanced booking system can streamline their operations and improve patient experience",
+        "confidence": "medium",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "Dunwoody Physical Therapy has a significant outreach opportunity to improve their online presence, as they currently lack a booking system and have a weak digital foundation. With an ICP (Ideal Customer Profile) score of 30/100, the practice is likely missing opportunities to engage with potential patients who are searching for physical therapy services in the area. By addressing these digital gaps, the practice can increase visibility, attract new patients, and ultimately drive business growth.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Georgia Clinic",
+    "website": "https://gaclinicpc.com/",
+    "category": "Specialty",
+    "geo_area": "ZIP 30350",
+    "address": "6300 Hospital Pkwy, Johns Creek, GA 30097",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://gaclinicpc.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": true,
+      "seo_title": "Primary Care Practice Serving Atlanta, Newnan, & Tucker, GA \u2013 Georgia Clinic: Primary Care, Specialty Care, Serving All of Atlanta, Georgia",
+      "seo_description": null,
+      "has_seo": false,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": "We build long-term relationships with our patients to help prevent, diagnose, and treat your health challenges.\nWe focus on the health of your heart and blood vessels with advanced diagnostic imaging and treatment.\nWe diagnose and treat hormonal imbalances and gland disorders so to optimally regulate your body.\nWe implement strategies to help you alleviate symptoms, improve joint function, and enhance quality of life.\nPainful joints? Nerve issues? Break a bone? Muscle weakness? We\u2019ll get you back to doing what you love.\nAging comes with aches. We\u2019ll help you maintain your health, ensuring you can keep doing the things you love.\nOur experts cover all of your kidney disease care, including affiliations with top-quality dialysis centers.\nGood foot health is essential to daily activity and function, so attending to your foot care is important.\nWhether you are struggling with anxiety, depression, or other mental health disorder, we are here to help\nOur podiatry team attends to and optimizes",
+      "raw_html_len": 220264,
+      "phone_numbers": [
+        "7709030120",
+        "4042229914",
+        "4043446000",
+        "6782926606",
+        "7702514120"
+      ],
+      "primary_phone": "7709030120",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:56Z",
+      "content_hash": "45e6cdb695e041b9",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 30,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "weak_seo",
+          "points": 20
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "chain_or_unknown",
+          "points": 0
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": false,
+        "social_count": 0,
+        "is_independent": false,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      },
+      "ollama_analysis": {
+        "opportunity_summary": "Georgia Clinic is a specialty healthcare provider that could benefit from improved SEO and social media presence to increase visibility and attract more patients. The booking system is present, which is a positive indicator.",
+        "top_pain_points": [
+          "Poor/missing SEO",
+          "No social media presence"
+        ],
+        "recommended_services": [
+          "SEO optimization",
+          "Social media management"
+        ],
+        "outreach_angle": "We specialize in helping healthcare providers improve their online presence and attract more patients. Let's discuss how we can enhance Georgia Clinic's digital footprint.",
+        "confidence": "high",
+        "prompt_version": "scoring_v1_fallback"
+      },
+      "ollama_summary": "The outreach opportunity for Georgia Clinic is to establish a strong online presence through SEO optimization, social media marketing, and targeted digital campaigns to increase visibility and attract new patients. By addressing the existing digital gaps, the clinic can improve its ICP (Ideal Customer Profile) score from 30/100 to a more competitive range, ultimately driving business growth and revenue. This will require a strategic approach to content creation, social media engagement, and paid advertising to effectively reach and engage with potential patients in the local market.",
+      "model_used": "qwen2.5-coder:7b"
+    }
+  },
+  {
+    "business_name": "Perimeter Clinic Atlanta",
+    "website": "https://www.perimeterclinicatlanta.com/",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "3867 Peachtree Dunwoody Rd NE, Atlanta, GA 30342",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.perimeterclinicatlanta.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": false,
+      "contact_form": true,
+      "seo_title": "Perimeter Clinic Atlanta | Primary Care on Peachtree Dunwoody",
+      "seo_description": "Family-owned primary care clinic conveniently locating on Peachtree Dunwoody Rd offering a wide range of services provided by our accomplished physicians.",
+      "has_seo": true,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": "Perimeter Clinic Atlanta is passionately committed to improving our patients\u2019 health outcomes through personally tailored and compassionate care.\nPreventative care is a key in detecting and/or preventing serious diseases and medical problems. We provide full preventative care services.\nA new feature allowing healthcare providers to evaluate, diagnose, and treat patients using easily accessible telecommunication technologies.\nTravelers immunizations are individually tailored vaccines recom-mended by the latest guidelines based on the patient's destination.\nPerimeter Clinic Atlanta provides evaluation, management and follow ups on many chronic conditions.\nWe are a family owned practice opening our doors nearly twenty years ago, ideally located in the Sandy Springs area. As a private practice, we focus on creating personal relationships with all of our patients. We are proud to serve a diverse population of patients, many of which have been with us since the beginning. Our doctors are foc",
+      "raw_html_len": 18501,
+      "phone_numbers": [
+        "7703510900",
+        "(770) 351-0900",
+        "(770) 351-0330"
+      ],
+      "primary_phone": "7703510900",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:21:52Z",
+      "content_hash": "d34ac5850ed59d36",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 25,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "chain_or_unknown",
+          "points": 0
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": false,
+        "has_seo": true,
+        "social_count": 0,
+        "is_independent": false,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  },
+  {
+    "business_name": "Active Life & Health Center",
+    "website": "https://www.dunwoodychiropractic.com/",
+    "category": "Chiropractic",
+    "geo_area": "ZIP 30350",
+    "address": "6849 Peachtree-Dunwoody Road, Building B4, Suite 100, Sandy Springs, GA 30328",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.dunwoodychiropractic.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": true,
+      "seo_title": "Active Life & Health Center: Chiropractors: Sandy Springs, GA",
+      "seo_description": "Trusted Chiropractors serving Sandy Springs, GA. Contact us at 770-824-1909 or visit us at 6849 Peachtree-Dunwoody Road, Building B4, Suite 100, Sandy Springs, GA 30328: Active Life & Health Center",
+      "has_seo": true,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": "Chiropractic Part 2- Safety First\nNext is safety. So when I talk to my MD friends I always get the safety question. They have all heard stories of some brothers', cousins', aunts' roommate who had a horrible injury.\nActive Life & Health Center in Sandy Springs/Dunwoody, Georgia, offers comprehensive chiropractic care for patients of all ages and needs.Using well-researched, well-founded methods, board-certified chiropractor Judd Weinberg, DC, helps his patients achieve their health and wellness goals through conservative, yet effective methods. He wants to not only relieve his patient\u2019s pain but also improve their overall quality of life.\nThe chiropractic practice specializes in many common pain conditions, including back and neck pain, headaches, herniated discs, and arthritis. Active Life & Health Center also provides comprehensive care for those suffering from injuries related to auto accidents, as well as sports injuries. Dr. Weinberg is board certified in physical therapy modaliti",
+      "raw_html_len": 107794,
+      "phone_numbers": [
+        "7708241909",
+        "770-824-1909",
+        "(770) 522-9878",
+        "770-522-9800"
+      ],
+      "primary_phone": "7708241909",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:01Z",
+      "content_hash": "d071e7c20b3d22e1",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 25,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": true,
+        "social_count": 0,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  },
+  {
+    "business_name": "Perimeter Dental",
+    "website": "https://www.perimeterdental.com/",
+    "category": "Dental",
+    "geo_area": "ZIP 30350",
+    "address": "110 Perimeter Center Terrace, Suite 250, Dunwoody, GA 30346",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.perimeterdental.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": false,
+      "seo_title": "Atlanta & Sandy Springs Dentist \u2013 Perimeter Dental \u2013 2 Convenient Locations",
+      "seo_description": "Looking for a dentist in Atlanta or Sandy Springs, GA? Look no further. Perimeter Dental offers comfortable family and cosmetic dental services.",
+      "has_seo": true,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": "Perimeter Dental\nWhere Healthy Smiles Begin\nWe Welcome All Smiles In Atlanta & Sandy Springs, GA.\nSelect A Location\nAdvanced Technology\nSame-Day Care\nInvisalign\u00ae & Smile Makeovers\nWelcome To\nPerimeter Dental\nAt Perimeter Dental, we believe every visit should feel welcoming, personalized, and stress-free. Our team takes the time to listen, explain your options, and create a treatment plan that aligns with your goals and comfort level. Whether you\u2019re here for a routine check-up or a full-arch dental implant restoration, we treat you like family\u2014not just another appointment.\nWe proudly serve patients from Sandy Springs, Atlanta, and nearby communities with a full range of preventive, cosmetic, restorative, and emergency dental services. From our advanced equipment to our compassionate approach, we\u2019re here to make oral health easier, more affordable, and more enjoyable for every patient.\nNEW PATIENT OFFER\n$XX Cleaning, Exam, & X-Ray*\n*This offer is for new patients without insurance and in",
+      "raw_html_len": 496560,
+      "phone_numbers": [],
+      "primary_phone": null,
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:30Z",
+      "content_hash": "3fe17061c32a03fc",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 25,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": true,
+        "social_count": 0,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  },
+  {
+    "business_name": "Dunwoody Chiropractic Center",
+    "website": "https://www.dunwoodychiropracticcenter.com/",
+    "category": "Chiropractic",
+    "geo_area": "ZIP 30350",
+    "address": "1 Dunwoody Park, Suite 124, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.dunwoodychiropracticcenter.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": true,
+      "seo_title": "Dunwoody Chiropractic Center - Dunwoody, GA - Chiropractic Care for All Ages",
+      "seo_description": "Serving the community since 1978, Family Chiropractic Center is a community beacon for conservative Chiropractic care, nutrition, and rehabilitation.",
+      "has_seo": true,
+      "social_links": [
+        "https://www.youtube.com/watch?v=32ycg9z0RB4"
+      ],
+      "social_count": 1,
+      "page_summary": "We accept most insurance as well as Medicare and work with patients involved in auto collisions working with their attorney or having Medpay.\nWe will gladly assist in filing insurance claims on your behalf.\nRead our glowing Google reviews here!\nThe purpose of chiropractic is to reduce neurological pressure, what chiropractors call a subluxation, as well as structural imbalance.\nThe adjustment is a conservative and mechanical method to increase nerve flow by reducing the subluxation complex and re-establishing spinal integrity. It also is a method to reduce segmental misalignment within various joints of the body. Along with the adjustment, we use various adjunctive therapies that help rehabilitate the area and reduce pain.",
+      "raw_html_len": 83026,
+      "phone_numbers": [
+        "(770) 551-9767"
+      ],
+      "primary_phone": "(770) 551-9767",
+      "email_addresses": [
+        "dunwoodychiropracticcenter@gmail.com"
+      ],
+      "primary_email": "dunwoodychiropracticcenter@gmail.com",
+      "mx_verified": true,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:03Z",
+      "content_hash": "240113e617fc907a",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 20,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "minimal_social",
+          "points": 5
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": true,
+        "social_count": 1,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  },
+  {
+    "business_name": "Sandy Springs Pediatrics",
+    "website": "https://www.sandyspringspediatrics.com/",
+    "category": "Pediatrics",
+    "geo_area": "ZIP 30350",
+    "address": "1100 Johnson Ferry Rd NE, Suite 400, Atlanta, GA 30342",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.sandyspringspediatrics.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": false,
+      "contact_form": true,
+      "seo_title": "Sandy Springs Pediatrics. Best-in-class Pediatric care from infancy to young adulthood",
+      "seo_description": "Sandy Springs Pediatrics \u2014 group of seven pediatricians committed to providing excellent medical care to children for over 50 years. Founded in 1968.",
+      "has_seo": true,
+      "social_links": [
+        "https://www.facebook.com/SandySpringsPediatrics",
+        "https://www.instagram.com/sandyspringspediatrics/"
+      ],
+      "social_count": 2,
+      "page_summary": "We provide well child visits & sick child visits so you can always have the peace of mind your child is healthy.\nWe take care of your child throughout their adolescent years,\nso feel free to schedule a well teen visit with us.\nSandy Springs Pediatrics starts your child care with a prenatal visit to help prepare you for your new family member.\nThe Sandy Springs Pediatrics Difference\nWe are a dedicated team of five board-certified pediatricians, proudly providing exceptional medical care to children for over 50 years.\nEstablished in 1968, our practice relocated to the Northside Hospital / Children\u2019s Healthcare of Atlanta at Scottish Rite area in 1980. In 2016, we returned to the heart of Sandy Springs, where we now serve our patients at 6100 Lake Forrest Drive, Suite 100, Atlanta, GA 30328.\nOur longstanding commitment to the health and well-being of children continues to be the cornerstone of our practice.\nWe Care for Each and Every Patient\nOur Approach to Patient Care\nAt the heart of ou",
+      "raw_html_len": 302008,
+      "phone_numbers": [
+        "404-252-4611",
+        "4042524611",
+        "+14042524611",
+        "4042561759",
+        "404-256-1759"
+      ],
+      "primary_phone": "404-252-4611",
+      "email_addresses": [
+        "nhishaw@sandyspringspediatrics.com",
+        "contact@sandyspringspediatrics.com"
+      ],
+      "primary_email": "nhishaw@sandyspringspediatrics.com",
+      "mx_verified": true,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:41Z",
+      "content_hash": "ca929fee914932e7",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 15,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "no_booking",
+          "points": 15
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "social_present",
+          "points": 0
+        },
+        "practice_type": {
+          "flag": "chain_or_unknown",
+          "points": 0
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": false,
+        "has_seo": true,
+        "social_count": 2,
+        "is_independent": false,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  },
+  {
+    "business_name": "Peachtree Dunwoody Medical Associates",
+    "website": "https://peachtreedunwoodymed.com/",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "5505 Peachtree Dunwoody Rd, Suite 460, Atlanta, GA 30342",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://peachtreedunwoodymed.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": true,
+      "seo_title": "Home | Peachtree Dunwoody Medical Associates",
+      "seo_description": "",
+      "has_seo": true,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": "Effective April 6, 2026, the Atlanta location of Perimeter North Medical Associates will be closing, however, Dr. Alexander Moore and Dr. Shetal Patel will be joining Peachtree Dunwoody Medical Associates, less than a half-mile from our current office. Tamara Murray, CNP, will be joining Mount Vernon Internal Medicine. Click here for more info.\nWelcome to Peachtree Dunwoody Medical Associates\nPeachtree Dunwoody Medical Associates is a full-service primary care Internal Medicine practice. We are dedicated to serving adult patients in the Greater Atlanta area with compassionate, high quality medical care. Each one of our physicians is highly\nexperienced, board-certified and is committed to providing each patient with the attentive, personalized care needed to maintain good health. We offer comprehensive primary care services for both men and women, including chronic disease management,\npreventive care and acute illness care.\nPeachtree Dunwoody Medical Associates is welcoming new patients",
+      "raw_html_len": 39877,
+      "phone_numbers": [
+        "4044971020",
+        "404-497-1020"
+      ],
+      "primary_phone": "4044971020",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:23Z",
+      "content_hash": "c9db47bf3d955218",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 10,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "chain_or_unknown",
+          "points": 0
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": true,
+        "social_count": 0,
+        "is_independent": false,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  },
+  {
+    "business_name": "Dunwoody Urgent Care",
+    "website": "https://www.peachtreemed.com/location/dunwoody/",
+    "category": "Urgent Care",
+    "geo_area": "ZIP 30350",
+    "address": "4500 Olde Perimeter Way, Suite 100, Dunwoody, GA 30346",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.peachtreemed.com/location/dunwoody/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": true,
+      "seo_title": "Dunwoody Urgent Care \u2022 Peachtree Immediate Care",
+      "seo_description": "Dunwoody urgent care open 8:00am to 8:00pm, 7 days a week for urgent care, COVID-19 testing, and occ health. Walk-in or check-in online.",
+      "has_seo": true,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": "Today\u2019s\nAvailability\n11 time slots\nWalk-ins Welcome\nOpen \u00b7 Closes 8:00pm\nWe are a walk-in clinic, so you never need an appointment.\nWalk-in wait\nNOT TOO BUSY\n4 people in line\nBook a virtual visit with a healthcare professional.\nTelehealthPlease confirm that you don\u2019t need any of the following:\nAge\nCare for patients under age 8 or UTIs care for women over 45 or under 18.\nInjuries\nCare for ATV or car accidents, large cuts/lacerations that may require stitches, or injuries that require X-rays.\nExams\nWe cannot provide physical exams such as: physicals, sport physicals, pelvic, genital, rectal, or breast exams, STD/STI screenings, evaluation of UTI symptoms in males, or issues requiring lab testing through telehealth.\nEmergent Symptoms\nIf you have chest pain, Shortness of Breath, Anaphylaxis, Choking, Altered Level of Consciousness, Abdominal Pain (Moderate or Severe) please seek help immediately or call 911.\nPsychiatric\nNew/Unstable Psychiatric Conditions including Trauma/Physical Abuse/Se",
+      "raw_html_len": 136165,
+      "phone_numbers": [
+        "678-284-2067",
+        "678-870-5041"
+      ],
+      "primary_phone": "678-284-2067",
+      "email_addresses": [
+        "dunwoody@peachtreemed.com"
+      ],
+      "primary_email": "dunwoody@peachtreemed.com",
+      "mx_verified": true,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:28Z",
+      "content_hash": "7827dd2f25da18be",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 10,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "chain_or_unknown",
+          "points": 0
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": true,
+        "social_count": 0,
+        "is_independent": false,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  },
+  {
+    "business_name": "Dunwoody OBGYN",
+    "website": "https://www.dunwoodyobgyn.com/",
+    "category": "Specialty",
+    "geo_area": "ZIP 30350",
+    "address": "1 Dunwoody Park, Suite 123, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.dunwoodyobgyn.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": true,
+      "seo_title": "Dunwoody OBGYN: OBGYNs: North Atlanta Dunwoody, GA",
+      "seo_description": "Trusted OBGYNs serving North Atlanta Dunwoody, GA. Contact us at 770-551-9616 or visit us at 1829 Independence Square, Suite One, Dunwoody, GA 30338: Dunwoody OBGYN",
+      "has_seo": true,
+      "social_links": [],
+      "social_count": 0,
+      "page_summary": "What's Your Pelvic Pain Trying to Signal?\nPelvic pain can interrupt your day and leave you wondering what your body\u2019s trying to tell you. Learn what may cause it, when to seek care, and how the right evaluation can bring relief.\nFounded in 1989 to service the Dunwoody and bustling North Atlanta Community, we have expanded along with Atlanta to now serving the entire Metropolitan Atlanta Area. We strive to provide the highest levels of service, compassion and quality healthcare to our patients, their families and the community in which we serve. We pride ourselves in providing personalized medical care to each patient that comes through our practice for a lifetime. It is our goal to develop a deep understanding of our patients, their backgrounds, history and healthcare goals. Together, we endeavor to walk with them from adolescence through the reproductive years into the climacteric period and beyond.\nSince our practice\u2019s inception, we have intentionally remained a small office with no ",
+      "raw_html_len": 159690,
+      "phone_numbers": [
+        "7705519616",
+        "770-551-9616",
+        "770-394-3647"
+      ],
+      "primary_phone": "7705519616",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:52Z",
+      "content_hash": "eac10aa08f7f9245",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 10,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "no_social",
+          "points": 10
+        },
+        "practice_type": {
+          "flag": "chain_or_unknown",
+          "points": 0
+        },
+        "digital_maturity": {
+          "flag": "weak_digital",
+          "points": 0
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": true,
+        "social_count": 0,
+        "is_independent": false,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  },
+  {
+    "business_name": "Family Practice Center",
+    "website": "https://familypracticecenterpc.com/",
+    "category": "Primary Care",
+    "geo_area": "ZIP 30350",
+    "address": "993 Johnson Ferry Rd NE, Suite 210, Atlanta, GA 30342",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://familypracticecenterpc.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": true,
+      "seo_title": "Family Health Care Atlanta | Primary & Preventative Medicine",
+      "seo_description": "Family health care Atlanta is found right here at the Family Practice Center the source for your primary care and preventative medicine.",
+      "has_seo": true,
+      "social_links": [
+        "//www.facebook.com/familypracticecenterpc",
+        "https://www.instagram.com/familypracticecenter",
+        "https://www.youtube.com/channel/UCbxfIGCms3rk7mNkItv0hmw"
+      ],
+      "social_count": 3,
+      "page_summary": "FAMILY PRACTICE CENTER\nATLANTA\nBetter providers, better care!\nJim Wheeler, M.D.\nC. Steven Schramm, M.D.\nTyler Wheeler, M.D.\nKreena Patel, MD, MPH\nCassandra Barnes, MD\nJustin D. Kappel, MD, MPH\nBryan Vo, MD\nSmita Kapoor, MD\nLeah Macklin, DO FAAFP DipABLM MS\nAyesha Niazy, MD, DABOM\nGrace Koehler, MD\nErnestina French, MD\nJeff Trawick, DO\nRochenarda Joseph, DO\nRebecca Cox, MD\nSranita Devarasetty, MD\nMissy Keith, RN, BSN, MSN, FNP-C\nSara Mauldin, FNP-C\nAlaina Grant, MSN, FNP-C\nRachel Spagnoli, FNP-C\nKaitlyn Freeman, PA-C\nDylan Jenkins, PA-C\nNicole Kjosa, PA-C\nAllie Morris, FNP-C\nChristian Gibbs, DNP, FNP-C\nKelly Pierannunzi, MSN, FNP-C\nMolly Sullivan, MSN, FNP-C\nLisa Culpepper, FNP-C\nDina Saipova, FNP-BC\nMarisa Blake-Raut, DNP, MSN, FNP-C, ENP-C, CWOCN-AP\nBrandon Giullian, PA-C\nDaniel Cannon, PA-C\nMikaela Gray, PA-C\nMary Kate Fennelly, PA-C\nMeet Our Staff\nPatient Center\nAward Winning Practice\nWhat are patients saying about us that makes our team the highest rated primary clinic in Georgia\nO",
+      "raw_html_len": 213881,
+      "phone_numbers": [
+        "404-256-1727",
+        "4042561727",
+        "4702910605",
+        "4702971310",
+        "4702151920"
+      ],
+      "primary_phone": "404-256-1727",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:21:59Z",
+      "content_hash": "e22fdb9754661748",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 0,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "social_present",
+          "points": 0
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "strong_digital",
+          "points": -20
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": true,
+        "social_count": 3,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  },
+  {
+    "business_name": "Wilson Family Chiropractic",
+    "website": "https://wfc4health.com/",
+    "category": "Chiropractic",
+    "geo_area": "ZIP 30350",
+    "address": "1713 Mt Vernon Rd, Suite 3, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://wfc4health.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": true,
+      "seo_title": "Chiropractor Dunwoody GA | Wilson Family Chiropractic",
+      "seo_description": "Voted Best Chiropractor in Dunwoody 2024 & 2025. Expert family, prenatal & pediatric care from Dr. Jake & Dr. Kat Wilson. Book your new patient special today.",
+      "has_seo": true,
+      "social_links": [
+        "https://www.facebook.com/WFC4health",
+        "https://www.instagram.com/wilsonfamilychiropractic/"
+      ],
+      "social_count": 2,
+      "page_summary": "CHIROPRACTOR DUNWOODY GA\nHeal Faster with Regenerative Chiropractic Care\nExperience a modern pain relief approach that pairs expert adjustments with regenerative therapies to help your body recover quicker and build lasting resilience.\n\u2b50\ufe0f\u2b50\ufe0f\u2b50\ufe0f\u2b50\ufe0f\u2b50\ufe0f from 314+ reviews\n15+ Years of Trusted Care for Perimeter Families and Athletes\nChiropractic\nSports Chiropractic\nShockwave Therapy\nLaser Therapy\nAbout & Team\nContact\nClinical Excellence in Regenerative Recovery\nIf you\u2019ve been dealing with chronic pain, recurring injuries, or a condition that hasn\u2019t responded to traditional treatment, you\u2019re not alone. And you\u2019re not out of options.\nAt Wilson Family Chiropractic, we bridge the gap between hands-on chiropractic expertise and advanced regenerative technology to help your body repair damaged tissue faster and achieve a more complete, lasting recovery.\nWhile that combination is unmatched, what truly sets us apart is our clinical standard:\nEvery therapy is administered by a doctor on our team. Not a",
+      "raw_html_len": 389464,
+      "phone_numbers": [
+        "16782051573",
+        "+16782051573",
+        "(678) 205-1573",
+        "678-205-1573"
+      ],
+      "primary_phone": "16782051573",
+      "email_addresses": [
+        "wilsonfamilychiropractic@gmail.com"
+      ],
+      "primary_email": "wilsonfamilychiropractic@gmail.com",
+      "mx_verified": true,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:05Z",
+      "content_hash": "5eb238e8bef76a35",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 0,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "social_present",
+          "points": 0
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "strong_digital",
+          "points": -20
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": true,
+        "social_count": 2,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  },
+  {
+    "business_name": "The Whole Tooth",
+    "website": "https://www.wholetoothdunwoody.com/",
+    "category": "Dental",
+    "geo_area": "ZIP 30350",
+    "address": "1713 Mt Vernon Rd, Suite 2, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.wholetoothdunwoody.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": true,
+      "seo_title": "Dentist in Dunwoody GA | The Whole Tooth",
+      "seo_description": "Our Dunwoody GA Dentist office is currently accepting new patients. Book your appointment with The Whole Tooth today.",
+      "has_seo": true,
+      "social_links": [
+        "https://www.facebook.com/The-Whole-Tooth-118700923327339",
+        "https://www.facebook.com/profile.php?id=100063756382611",
+        "https://www.yelp.com/biz/the-whole-tooth-dunwoody-2",
+        "https://www.instagram.com/thewholetoothdunwoody/?hl=en"
+      ],
+      "social_count": 4,
+      "page_summary": "Welcome to Our Practice\nWelcome to The Whole Tooth, the practice of Dr. Ashley Starnes and Dr. Jason Bongiovi, located conveniently in the Shops of Dunwoody on Chamblee Dunwoody Rd.\nOur patient's health and happiness are our top priority here at The Whole Tooth. We treat people, NOT a set of teeth! We care for every person that walks through our doors and understand that each has a unique history. Dentistry is not one-size-fits-all, and we will work together to meet your dental goals.\nDentistry for Adults and Children of All Ages\nDr. Bongiovi is a board-certified pediatric dentist with years of additional specialized training beyond dental school. Before opening The Whole Tooth, Dr. Bongiovi had parents asking all the time if they could see him as well!\nBy establishing a new practice with Dr. Starnes as our general dentist, we can offer comprehensive dentistry for patients of all ages in one comfortable location. Whether you have baby teeth, permanent teeth or no teeth, everyone can be",
+      "raw_html_len": 325041,
+      "phone_numbers": [
+        "6783291116",
+        "(678) 329-1116",
+        "(678) 329-1115"
+      ],
+      "primary_phone": "6783291116",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:09Z",
+      "content_hash": "167b3478fd1b13c5",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 0,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "social_present",
+          "points": 0
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "strong_digital",
+          "points": -20
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": true,
+        "social_count": 4,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  },
+  {
+    "business_name": "Plunkett & Chaw Dental",
+    "website": "https://drleeplunkett.com/",
+    "category": "Dental",
+    "geo_area": "ZIP 30350",
+    "address": "1713 Mt Vernon Rd, Suite 1, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://drleeplunkett.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": true,
+      "seo_title": "Family Dentists in Dunwoody | Dunwoody Dentists - Plunkett & Chaw Dental",
+      "seo_description": "Drs. Plunkett & Chaw, Atlanta area dentists in Dunwoody - We've cared for people, teeth & smiles at our dental office for 45+ years. Call us today.",
+      "has_seo": true,
+      "social_links": [
+        "https://www.facebook.com/plunkettchawdental",
+        "https://www.yelp.com/biz/plunkett-and-chaw-dental-atlanta"
+      ],
+      "social_count": 2,
+      "page_summary": "The Most Trusted & Gentle Dunwoody Dentists\nOur independent Atlanta area dental office will give you and your family the gentle personalized dental care you deserve!\nGentle Dentistry & Personalized Care\nGentle Dentistry & Personalized Care\nDunwoody, GA 30338\nSerious About Beautiful Smiles\nRenewing Dental Implants, Veneers and Teeth Whitening Treatments\nAesthetic Smiles\nAesthetic Smiles\nDunwoody, GA 30338\nExceptional Quality Dental Care\nOur Friendly & Caring Staff & Dentists in Dunwoody Will Provide You With Exceptional Care\nExceptional Quality Dentistry\nExceptional Quality Dentistry\nFriendly & Caring Staff Providing Exceptional Care\nDunwoody, GA 30338\nWelcome toPlunkett & Chaw Dental\nDentists in Dunwoody\nWhere We TRULY Care About You & Your Smile\nDr. Janice Chaw is one of the few truly devoted Dunwoody dentists in Duwoody, Georgia providing compassionate and top quality care to her patients. Dr. Janice Chaw continuously advances her skills by pursuing additional ongoing dental educatio",
+      "raw_html_len": 298173,
+      "phone_numbers": [
+        "+1-770-452-0222",
+        "+1770-452-0222",
+        "(770) 452-0222",
+        "770-452-0222"
+      ],
+      "primary_phone": "+1-770-452-0222",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:14Z",
+      "content_hash": "9adedafe8a4b7e5a",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 0,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "social_present",
+          "points": 0
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "strong_digital",
+          "points": -20
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": true,
+        "social_count": 2,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  },
+  {
+    "business_name": "Reagin Family Dentistry",
+    "website": "https://www.reaginfamilydentistry.com/",
+    "category": "Dental",
+    "geo_area": "ZIP 30350",
+    "address": "1370 Center Dr, Ste 101, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.reaginfamilydentistry.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": true,
+      "seo_title": "Reagin Family Dentistry Dunwoody, GA - Dental Care for Healthy Smiles",
+      "seo_description": "Welcome to Reagin Family Dentistry, where we prioritize your oral health and smile. Visit us for a dental experience that feels like family.",
+      "has_seo": true,
+      "social_links": [
+        "https://www.facebook.com/ReaginFamilyDentistry/",
+        "https://www.yelp.com/biz/reagin-family-dentistry-dunwoody",
+        "https://www.instagram.com/reaginfamilydentistry/"
+      ],
+      "social_count": 3,
+      "page_summary": "Experienced Practitioners\nOur dedicated staff has undergone extensive training in the dental field and is specially skilled in oral healthcare. You\u2019ll be comfortable knowing that you are in great hands. We want our patients to find both comfort and confidence in our warm, nurturing and professional environment.\nDiscover Exceptional Dental Care at Reagin Family Dentistry\nWelcome to Reagin Family Dentistry. We pride ourselves in offering restorative and cosmetic dentistry for the entire family in the most comfortable manner possible. Our Dunwoody Dentists, Doctors Todd, Lauren and William Reagin treat each dental patient as carefully and skillfully as they would like members of their own family to be treated. Over 80 combined years of experience. We combine the power of current dental technology with a traditional view of medicine to provide sophisticated service and care. Reagin Family Dentistry offers comprehensive dental treatment for patients ages 3 and older. We provide the followin",
+      "raw_html_len": 317061,
+      "phone_numbers": [
+        "7706719199",
+        "(770) 671-9199"
+      ],
+      "primary_phone": "7706719199",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:17Z",
+      "content_hash": "bf9957d9e425479c",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 0,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "social_present",
+          "points": 0
+        },
+        "practice_type": {
+          "flag": "independent_practice",
+          "points": 15
+        },
+        "digital_maturity": {
+          "flag": "strong_digital",
+          "points": -20
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": true,
+        "social_count": 3,
+        "is_independent": true,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  },
+  {
+    "business_name": "Dunwoody Pediatrics",
+    "website": "https://www.dunwoodypediatrics.com/",
+    "category": "Pediatrics",
+    "geo_area": "ZIP 30350",
+    "address": "1 Dunwoody Park, Suite 120, Dunwoody, GA 30338",
+    "phone": null,
+    "email": null,
+    "source": "manual_import",
+    "enrichment": {
+      "url": "https://www.dunwoodypediatrics.com/",
+      "website_status": "reachable",
+      "http_code": 200,
+      "is_https": true,
+      "booking_present": true,
+      "contact_form": true,
+      "seo_title": "Pediatrician | Dunwoody Pediatrics | Dunwoody, GA | Alpharetta, GA",
+      "seo_description": "Find an expert pediatrician at Dunwoody Pediatrics! With locations in Dunwoody & Alpharetta, GA, we offer comprehensive healthcare for children of all ages.",
+      "has_seo": true,
+      "social_links": [
+        "https://facebook.com/DunwoodyPediatrics",
+        "https://instagram.com/dunwoody_pediatrics"
+      ],
+      "social_count": 2,
+      "page_summary": "Serving families from Atlanta to Cumming and beyond for over 40 years!\n*ALL PROVIDERS ARE ACCEPTING NEW PATIENTS*\nWelcome To Our Office!\nOur goal is to provide you with the best in pediatric care in Alpharetta and Dunwoody. We are here to serve you and your children. In order to familiarize yourself with our practice, please take a few minutes to read through the following information.\n- Atlanta Parent Magazine \"MOM-APPROVED Atlanta Pediatricians\"\n- Multiple Castle Connolly and Atlanta Magazine Top Doctor recognitions\n- In-house experts in newborn care, chronic medical conditions, adoption medicine, mental health, and more - please see our provider bios to learn more!\nWhat Our Parents Say\nGreat experience for my new born. Dr. Torres is amazing \ud83d\udc4f\nNeeraj R\nWe absolutely adore Dunwoody Pediatrics. When first meeting Dr. Gfroerer, we could tell he was warm, personable, and extremely patient. He answers all of our questions at each appointment and never makes us feel rushed. When our younge",
+      "raw_html_len": 209461,
+      "phone_numbers": [
+        "800-555-1212",
+        "770-394-2358",
+        "770-664-9299",
+        "954-963-5437",
+        "770-394-3055"
+      ],
+      "primary_phone": "800-555-1212",
+      "email_addresses": [],
+      "primary_email": null,
+      "mx_verified": false,
+      "pagespeed_performance": null,
+      "pagespeed_seo": null,
+      "pagespeed_accessibility": null,
+      "last_crawled": "2026-04-16T20:22:37Z",
+      "content_hash": "8af76c0d2197c676",
+      "gbp_rating": null,
+      "gbp_review_count": null,
+      "gbp_photo_count": null,
+      "gbp_verified": false,
+      "gbp_unclaimed": false
+    },
+    "score": {
+      "icp_score": 0,
+      "risk_level": "low",
+      "reasoning": {
+        "website": {
+          "flag": "reachable",
+          "points": 0
+        },
+        "booking": {
+          "flag": "booking_present",
+          "points": 0
+        },
+        "seo": {
+          "flag": "seo_present",
+          "points": 0
+        },
+        "social": {
+          "flag": "social_present",
+          "points": 0
+        },
+        "practice_type": {
+          "flag": "chain_or_unknown",
+          "points": 0
+        },
+        "digital_maturity": {
+          "flag": "strong_digital",
+          "points": -20
+        },
+        "gbp": {
+          "flag": "gbp_not_checked",
+          "points": 0
+        },
+        "performance": {
+          "flag": "not_measured",
+          "points": 0
+        }
+      },
+      "signal_flags": {
+        "website_status": "reachable",
+        "booking_present": true,
+        "has_seo": true,
+        "social_count": 2,
+        "is_independent": false,
+        "pagespeed_performance": null,
+        "gbp_rating": null,
+        "gbp_review_count": null,
+        "gbp_unclaimed": false
+      }
+    }
+  }
+]

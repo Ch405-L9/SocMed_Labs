@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% block title %}Leads — ICP Dashboard{% endblock %}
+{% block content %}
+<div class="page">
+  <div class="page-title">Lead Pipeline</div>
+  <div class="page-sub">{{ leads|length }} total leads &middot; sorted by final score</div>
+
+  <div class="stats">
+    <div class="stat total">
+      <div class="stat-num">{{ leads|length }}</div>
+      <div class="stat-label">Total Leads</div>
+    </div>
+    <div class="stat high">
+      <div class="stat-num">{{ leads|selectattr("risk_level","eq","high")|list|length }}</div>
+      <div class="stat-label">High Priority</div>
+    </div>
+    <div class="stat medium">
+      <div class="stat-num">{{ leads|selectattr("risk_level","eq","medium")|list|length }}</div>
+      <div class="stat-label">Medium Priority</div>
+    </div>
+    <div class="stat low">
+      <div class="stat-num">{{ leads|selectattr("risk_level","eq","low")|list|length }}</div>
+      <div class="stat-label">Low Priority</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">{{ leads|selectattr("human_verified")|list|length }}</div>
+      <div class="stat-label">Human Verified</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="filter-bar">
+      <input type="text" id="search" placeholder="Search by name, address, category..." oninput="applyFilters()">
+      <select id="risk-filter" onchange="applyFilters()">
+        <option value="">All risk levels</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <select id="status-filter" onchange="applyFilters()">
+        <option value="">All website statuses</option>
+        <option value="reachable">Reachable</option>
+        <option value="blocked">Blocked</option>
+        <option value="dns_failed">DNS Failed</option>
+        <option value="no_url">No URL</option>
+      </select>
+      <select id="reviewed-filter" onchange="applyFilters()">
+        <option value="">All review states</option>
+        <option value="verified">Human Verified</option>
+        <option value="unreviewed">Not Reviewed</option>
+      </select>
+      <span class="filter-label" id="count-label"></span>
+    </div>
+
+    <div class="tbl-wrap">
+      <table id="leads-table">
+        <thead>
+          <tr>
+            <th>Business</th>
+            <th>Category</th>
+            <th>Score</th>
+            <th>Risk</th>
+            <th>Website</th>
+            <th>Booking</th>
+            <th>SEO</th>
+            <th>Social</th>
+            <th>GBP</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Reviewed</th>
+          </tr>
+        </thead>
+        <tbody id="leads-body">
+        {% for lead in leads %}
+        <tr
+          data-name="{{ (lead.business_name or '')|lower }}"
+          data-category="{{ (lead.category or '')|lower }}"
+          data-address="{{ (lead.address or '')|lower }}"
+          data-risk="{{ lead.risk_level or '' }}"
+          data-status="{{ lead.website_status or '' }}"
+          data-reviewed="{{ '1' if lead.human_verified else '0' }}"
+        >
+          <td class="td-name">
+            <a href="/lead/{{ lead.id }}">{{ lead.business_name or '—' }}</a>
+            {% if lead.address %}<div class="history-meta">{{ lead.address[:50] }}</div>{% endif %}
+          </td>
+          <td>{{ lead.category or '—' }}</td>
+          <td>
+            <div class="score-bar">
+              <div class="score-bar-track">
+                <div class="score-bar-fill" style="width:{{ [lead.final_score or 0, 100]|min }}%;background:{% if (lead.final_score or 0) >= 70 %}#e74c3c{% elif (lead.final_score or 0) >= 40 %}#f39c12{% else %}#27ae60{% endif %}"></div>
+              </div>
+              <span class="score-num">{{ lead.final_score or '?' }}</span>
+            </div>
+          </td>
+          <td>
+            {% if lead.risk_level == 'high' %}<span class="badge badge-high">High</span>
+            {% elif lead.risk_level == 'medium' %}<span class="badge badge-medium">Medium</span>
+            {% elif lead.risk_level == 'low' %}<span class="badge badge-low">Low</span>
+            {% else %}<span class="badge badge-default">—</span>{% endif %}
+          </td>
+          <td>
+            {% set ws = lead.website_status or '' %}
+            {% if ws == 'reachable' %}<span class="status-icon check" title="Reachable">&#10003;</span>
+            {% elif ws in ['dns_failed','no_url'] %}<span class="status-icon cross" title="{{ ws }}">&#10007;</span>
+            {% elif ws == 'blocked' %}<span class="status-icon warn" title="Blocked (403)">&#9888;</span>
+            {% else %}<span class="status-icon warn" title="{{ ws }}">&#126;</span>{% endif %}
+            <span style="font-size:11px;color:#636e72"> {{ ws }}</span>
+          </td>
+          <td class="text-center">{% if lead.booking_present %}<span class="check">&#10003;</span>{% else %}<span class="cross">&#10007;</span>{% endif %}</td>
+          <td class="text-center">{% if lead.has_seo %}<span class="check">&#10003;</span>{% else %}<span class="cross">&#10007;</span>{% endif %}</td>
+          <td class="text-center">{{ lead.social_count or 0 }}</td>
+          <td>
+            {% if lead.gbp_rating %}<span title="{{ lead.gbp_review_count }} reviews">{{ "%.1f"|format(lead.gbp_rating) }}&#9733;</span>
+            {% elif lead.gbp_unclaimed %}<span class="warn" title="Unclaimed">unclaimed</span>
+            {% else %}<span style="color:#bdc3c7">—</span>{% endif %}
+          </td>
+          <td style="font-size:12px;color:#636e72">{{ lead.primary_phone or '—' }}</td>
+          <td style="font-size:12px;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
+            {{ lead.primary_email or '—' }}
+          </td>
+          <td>{% if lead.human_verified %}<span class="check" title="Verified">&#10003;</span>
+              {% elif lead.human_action %}<span class="badge badge-default">{{ lead.human_action }}</span>
+              {% else %}<span style="color:#bdc3c7">—</span>{% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+function applyFilters() {
+  const search = document.getElementById('search').value.toLowerCase();
+  const risk   = document.getElementById('risk-filter').value;
+  const status = document.getElementById('status-filter').value;
+  const rev    = document.getElementById('reviewed-filter').value;
+  const rows   = document.querySelectorAll('#leads-body tr');
+  let visible  = 0;
+  rows.forEach(row => {
+    const nameMatch   = !search || row.dataset.name.includes(search) ||
+                        row.dataset.category.includes(search) || row.dataset.address.includes(search);
+    const riskMatch   = !risk   || row.dataset.risk === risk;
+    const statusMatch = !status || row.dataset.status.includes(status);
+    const revMatch    = !rev    || (rev === 'verified' ? row.dataset.reviewed === '1'
+                                                       : row.dataset.reviewed === '0');
+    const show = nameMatch && riskMatch && statusMatch && revMatch;
+    row.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  document.getElementById('count-label').textContent = visible + ' results shown';
+}
+applyFilters();
+</script>
+{% endblock %}

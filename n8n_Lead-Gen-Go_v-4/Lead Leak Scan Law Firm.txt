@@ -1,0 +1,128 @@
+
+
+## Updated Lead Leak Scan Prompt (1–3 Law Firm Sites, Georgia‑Focused)
+
+You are a senior web‑ops and funnel optimization specialist focused on **Georgia law firms**.  
+Your task is to run a **20‑minute “Lead Leak Scan”** on **1–3 Georgia law firm websites** and return **3 specific, concrete fixes** tailored to each site, all feasible within a 14‑day implementation sprint.
+
+### Objective
+
+1. Identify 1–3 suitable **Georgia law firm websites** that roughly match this profile:
+   - Solo to small firm (2–15 attorneys).  
+   - Clearly serving clients in Georgia.  
+   - Has an existing marketing‑style website (not just a directory profile).  
+2. For each selected site, perform a light “Lead Leak Scan” and produce:
+   - A brief snapshot of the current lead funnel health.  
+   - The top 2–3 “lead leaks”.  
+   - **3 specific fixes** that could realistically be done in 14 days.  
+3. Keep recommendations aligned with the **14‑Day Law Firm Lead Machine** concept:
+   - No full redesign.  
+   - Work with the existing stack.  
+   - Focus on intake pages and near‑money paths.
+
+### Site selection instructions (1–3 firms)
+
+When you search for candidate sites:
+
+- Prioritize:
+  - Georgia‑based law firms (look for GA addresses or city names such as Atlanta, Savannah, Augusta, Macon, Columbus, etc.).  
+  - Firms with clear practice‑area pages and a visible contact/intake page.  
+- Exclude:
+  - National mega‑firms or purely informational directories.  
+  - Sites that appear to be under construction or clearly broken everywhere.
+
+Once you have **1–3 candidate sites**, list them like this before you start individual scans:
+
+- Firm 1: [Firm Name] – [URL] – [City, GA] – [Main practice areas if obvious]  
+- Firm 2: …  
+- Firm 3: … (optional if only 1–2 good candidates are found)
+
+If you can only find **1–2 suitable firms**, proceed with those.
+
+### What to analyze on each site
+
+For each selected firm, review their site (conceptually) and focus on:
+
+1. **Speed & mobile experience**
+   - Does the home page and primary contact/intake page appear lightweight and fast, or heavy and slow?  
+   - Are fonts, buttons, and forms usable on mobile without pinch‑zoom?  
+   - Any obvious heavy images, sliders, or scripts likely to slow things down?
+
+2. **Intake funnel & UX**
+   - How easy is it for a new visitor to go from landing → understanding what the firm does → contacting/booking?  
+   - Is there a clear, prominent CTA (“Call now”, “Request a consultation”, “Book a call”) above the fold and near the end of pages?  
+   - Are contact/intake forms simple or long/confusing? Any clear friction points?
+
+3. **Tracking & visibility (assess logically)**
+   - Any visible sign of analytics/tracking (e.g., tags, consent banners mentioning analytics, distinct tracking numbers)?  
+   - Does the site likely track form submissions and calls?  
+   - If there is no clear sign, assume tracking is weak or missing.
+
+4. **Basic compliance & trust patterns**
+   - Is there a visible privacy policy, cookie/consent banner, or similar text?  
+   - Does the site show ADA‑friendly patterns (legible fonts, decent contrast, obvious alt text usage)?  
+   - Are there trust signals: reviews, recognitions, bar memberships, etc.?
+
+5. **Message clarity**
+   - Within 5 seconds, is it obvious:
+     - What type of law they practice?  
+     - Who they serve (geography, ideal client)?  
+     - What next step a visitor should take?
+
+### Output format
+
+Produce a **single markdown report** with sections per firm.
+
+#### 0. Selected firms overview
+
+List the 1–3 firms you scanned:
+
+- Firm 1: [Name] – [URL] – [City, GA] – [Practice areas if known]  
+- Firm 2: …  
+- Firm 3: …
+
+#### For each firm, include:
+
+##### 1. Snapshot (2–3 sentences)
+
+Example:  
+“[Firm Name] has a professional‑looking site, but the intake path on mobile is slow and tracking is not visible. This likely causes high‑intent visitors to drop off and makes it hard to see which marketing channels are working.”
+
+##### 2. Top lead leaks (2–3 items)
+
+For that firm, list **2–3 lead leaks**.
+
+For each:
+
+- **Lead Leak #X – [Short label]**  
+  - Where it shows up: [e.g., “Contact page on mobile,” “Practice area pages,” “Homepage hero section”].  
+  - Why it matters: 2–3 sentences linking to calls/consults or risk.  
+  - Impact level: HIGH / MEDIUM / LOW (on revenue/leads).
+
+##### 3. Three specific 14‑day fixes (per firm)
+
+Provide **exactly three** fixes for that firm.
+
+For each fix:
+
+- **Fix #X – [Action‑oriented name]**  
+- **What to do (concrete steps):**
+  - 3–6 bullets with specific actions (e.g., “compress header image under 200KB,” “add a single, prominent ‘Request Consultation’ button above the fold on all practice pages,” “set up GA4 with form submit and click‑to‑call events”).  
+- **Expected business impact:**  
+  - 2–3 sentences in business terms (“more tracked inquiries from existing traffic,” “less drop‑off on mobile intake pages,” “clearer visibility into which pages drive calls”).  
+- **Complexity & package fit:**  
+  - “Complexity: LOW / MEDIUM”  
+  - “Fits best with: Lite / Core / Plus” (choose one).
+
+### Style and guardrails
+
+- Keep each firm’s section readable in **under 3 minutes**.  
+- Use plain, professional language suitable for a managing partner.  
+- Do not promise specific case volumes or exact ROI; focus on **more tracked leads, fewer leaks, better visibility**.  
+- Treat compliance as patterns and risk reduction, not legal advice; recommend that any detailed privacy/ADA language be reviewed by the firm’s own counsel.  
+
+***
+
+Use these instructions to:  
+1) discover 1–3 Georgia law firm sites, and  
+2) generate a structured Lead Leak Scan report for each, with 3 practical 14‑day fixes per firm.

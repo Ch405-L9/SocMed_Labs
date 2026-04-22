@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}ICP Lead Dashboard{% endblock %}</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+           background: #f0f2f5; color: #2d3436; font-size: 14px; line-height: 1.5; }
+    a { color: #2980b9; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Nav */
+    nav { background: #1a252f; padding: 0 24px; display: flex; align-items: center;
+          gap: 0; height: 52px; position: sticky; top: 0; z-index: 100;
+          box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+    nav .brand { color: #ecf0f1; font-weight: 700; font-size: 16px; margin-right: 32px;
+                 letter-spacing: .5px; white-space: nowrap; }
+    nav a { color: #bdc3c7; padding: 0 16px; height: 52px; display: flex;
+            align-items: center; font-size: 13px; font-weight: 500; transition: color .15s; }
+    nav a:hover, nav a.active { color: #ecf0f1; text-decoration: none;
+                                border-bottom: 3px solid #3498db; }
+    nav .spacer { flex: 1; }
+    nav .version { color: #636e72; font-size: 11px; }
+
+    /* Page */
+    .page { max-width: 1400px; margin: 0 auto; padding: 24px 24px 48px; }
+    .page-title { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+    .page-sub { color: #636e72; margin-bottom: 24px; font-size: 13px; }
+
+    /* Cards */
+    .card { background: #fff; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.08);
+            padding: 20px; margin-bottom: 20px; }
+    .card-title { font-size: 13px; font-weight: 600; text-transform: uppercase;
+                  letter-spacing: .5px; color: #636e72; margin-bottom: 16px; }
+
+    /* Stat row */
+    .stats { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+    .stat { background: #fff; border-radius: 8px; padding: 16px 24px; flex: 1; min-width: 120px;
+            box-shadow: 0 1px 4px rgba(0,0,0,.08); border-left: 4px solid #bdc3c7; }
+    .stat.high { border-left-color: #e74c3c; }
+    .stat.medium { border-left-color: #f39c12; }
+    .stat.low { border-left-color: #27ae60; }
+    .stat.total { border-left-color: #3498db; }
+    .stat-num { font-size: 28px; font-weight: 700; line-height: 1; }
+    .stat-label { font-size: 12px; color: #636e72; margin-top: 4px; }
+
+    /* Badges */
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px;
+             font-weight: 600; text-transform: uppercase; letter-spacing: .4px; }
+    .badge-high { background: #fdecea; color: #c0392b; }
+    .badge-medium { background: #fef9e7; color: #d68910; }
+    .badge-low { background: #eafaf1; color: #1e8449; }
+    .badge-default { background: #ecf0f1; color: #636e72; }
+
+    /* Score bar */
+    .score-bar { display: flex; align-items: center; gap: 8px; }
+    .score-bar-track { flex: 1; height: 6px; background: #ecf0f1; border-radius: 3px; max-width: 80px; }
+    .score-bar-fill { height: 6px; border-radius: 3px; }
+    .score-num { font-weight: 700; min-width: 28px; text-align: right; }
+
+    /* Table */
+    .tbl-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    th { text-align: left; padding: 10px 12px; border-bottom: 2px solid #e0e0e0;
+         font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: #636e72;
+         white-space: nowrap; background: #f8f9fa; }
+    td { padding: 10px 12px; border-bottom: 1px solid #f0f2f5; vertical-align: middle; }
+    tr:hover td { background: #f8f9fa; }
+    .td-name { font-weight: 600; max-width: 200px; }
+    .td-name a { color: #2d3436; }
+    .td-name a:hover { color: #2980b9; text-decoration: none; }
+    .td-url { max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+              font-size: 12px; color: #636e72; }
+    .status-icon { font-size: 15px; }
+    .check { color: #27ae60; }
+    .cross { color: #e74c3c; }
+    .warn { color: #f39c12; }
+
+    /* Filter bar */
+    .filter-bar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+                  margin-bottom: 20px; }
+    .filter-bar input, .filter-bar select {
+      padding: 8px 12px; border: 1px solid #dfe6e9; border-radius: 6px; font-size: 13px;
+      outline: none; background: #fff; }
+    .filter-bar input:focus, .filter-bar select:focus { border-color: #3498db; }
+    .filter-bar input { min-width: 220px; }
+    .filter-label { font-size: 12px; color: #636e72; }
+    .btn { padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600;
+           cursor: pointer; border: none; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-primary { background: #2980b9; color: #fff; }
+    .btn-primary:hover { background: #2471a3; }
+    .btn-outline { background: #fff; color: #2d3436; border: 1px solid #dfe6e9; }
+    .btn-outline:hover { background: #f8f9fa; }
+
+    /* Detail grid */
+    .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 768px) { .detail-grid { grid-template-columns: 1fr; } }
+    .kv-table td:first-child { font-weight: 600; width: 40%; color: #636e72; padding-right: 12px; }
+    .kv-table td { padding: 7px 0; border-bottom: 1px solid #f0f2f5; vertical-align: top; }
+
+    /* Score big */
+    .score-big { font-size: 48px; font-weight: 800; line-height: 1; }
+    .score-context { font-size: 13px; color: #636e72; margin-top: 4px; }
+
+    /* Reasoning table */
+    .reasoning-pts { font-weight: 700; text-align: right; }
+    .reasoning-pts.pos { color: #e74c3c; }
+    .reasoning-pts.neg { color: #27ae60; }
+    .reasoning-pts.zero { color: #bdc3c7; }
+
+    /* Alert */
+    .alert { padding: 12px 16px; border-radius: 6px; margin-bottom: 16px; font-size: 13px; }
+    .alert-info { background: #ebf5fb; border-left: 4px solid #3498db; color: #1a5276; }
+    .alert-warn { background: #fef9e7; border-left: 4px solid #f39c12; color: #784212; }
+
+    /* Charts */
+    .chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 20px; }
+    .chart-card { background: #fff; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.08);
+                  overflow: hidden; }
+    .chart-card img { width: 100%; display: block; }
+    .chart-card-label { padding: 12px 16px; font-size: 12px; font-weight: 600;
+                        color: #636e72; text-transform: uppercase; letter-spacing: .5px; }
+
+    /* Outreach history */
+    .history-item { padding: 12px 0; border-bottom: 1px solid #f0f2f5; }
+    .history-item:last-child { border-bottom: none; }
+    .history-meta { font-size: 12px; color: #636e72; margin-top: 4px; }
+    .resp-tag { display: inline-block; padding: 2px 7px; border-radius: 10px; font-size: 11px;
+                font-weight: 600; }
+    .resp-interested { background: #eafaf1; color: #1e8449; }
+    .resp-scheduled { background: #ebf5fb; color: #1a5276; }
+    .resp-not_interested { background: #fdecea; color: #c0392b; }
+    .resp-bounced { background: #fef9e7; color: #d68910; }
+    .resp-no_response { background: #ecf0f1; color: #636e72; }
+  </style>
+</head>
+<body>
+<nav>
+  <span class="brand">BADGR ICP Dashboard</span>
+  <a href="/" class="{% if request.url.path == '/' %}active{% endif %}">Leads</a>
+  <a href="/charts" class="{% if request.url.path == '/charts' %}active{% endif %}">Charts</a>
+  <a href="/export" class="btn-outline" style="margin-left:8px;padding:6px 14px;border-radius:4px;color:#ecf0f1;border:1px solid #4a6275;font-size:12px;">Export CSV</a>
+  <div class="spacer"></div>
+  <span class="version">v1.3.0</span>
+</nav>
+{% block content %}{% endblock %}
+</body>
+</html>

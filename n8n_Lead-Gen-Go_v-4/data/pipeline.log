@@ -1,0 +1,403 @@
+2026-04-16 15:18:22,378 [INFO] === STEP 1: COLLECT ===
+2026-04-16 15:18:22,379 [INFO] Searching: healthcare provider near 30350
+2026-04-16 15:18:24,318 [INFO] Searching: medical clinic near 30350
+2026-04-16 15:18:26,056 [INFO] Searching: doctor office 30350 GA
+2026-04-16 15:18:27,799 [INFO] Searching: independent medical practice 30350
+2026-04-16 15:18:29,561 [INFO] Collected 0 unique leads for ZIP 30350 / category 'healthcare'
+2026-04-16 15:18:29,563 [INFO] Collected 30 total leads (0 new) → /home/t0n34781/n8n-icp-stack/data/raw_leads.json
+2026-04-16 15:18:29,826 [INFO] === STEP 2: CRAWL ===
+2026-04-16 15:18:29,827 [INFO] [1/30] Crawling: Perimeter Clinic Atlanta — https://www.perimeterclinicatlanta.com/
+2026-04-16 15:18:31,971 [INFO] [2/30] Crawling: Family Practice at Peachtree-Dunwoody — https://drhickspractice.com/
+2026-04-16 15:18:34,038 [INFO] [3/30] Crawling: Dunwoody Village Clinic — https://www.dunwoodyvillageclinic.com/
+2026-04-16 15:18:35,581 [INFO] [4/30] Crawling: Family Practice Center — https://familypracticecenterpc.com/
+2026-04-16 15:18:39,124 [INFO] [5/30] Crawling: Active Life & Health Center — https://www.dunwoodychiropractic.com/
+2026-04-16 15:18:41,527 [INFO] [6/30] Crawling: Dunwoody Chiropractic Center — https://www.dunwoodychiropracticcenter.com/
+2026-04-16 15:18:43,945 [INFO] [7/30] Crawling: Wilson Family Chiropractic — https://wfc4health.com/
+2026-04-16 15:18:46,285 [INFO] [8/30] Crawling: Dunwoody Dental Care — https://dunwoodydentalcare.com/
+2026-04-16 15:18:48,936 [INFO] [9/30] Crawling: The Whole Tooth — https://www.wholetoothdunwoody.com/
+2026-04-16 15:18:50,680 [INFO] [10/30] Crawling: Plunkett & Chaw Dental — https://drleeplunkett.com/
+2026-04-16 15:18:52,936 [INFO] [11/30] Crawling: Reagin Family Dentistry — https://www.reaginfamilydentistry.com/
+2026-04-16 15:18:55,669 [INFO] [12/30] Crawling: Sports Rehab Center — https://www.sportsrehabcenter.com/locations/location_dunwoody/
+2026-04-16 15:18:59,382 [INFO] [13/30] Crawling: Peachtree Dunwoody Medical Associates — https://peachtreedunwoodymed.com/
+2026-04-16 15:19:01,271 [INFO] [14/30] Crawling: Dunwoody Urgent Care — https://www.peachtreemed.com/location/dunwoody/
+2026-04-16 15:19:06,753 [INFO] [15/30] Crawling: Perimeter Dental — https://www.perimeterdental.com/
+2026-04-16 15:19:08,970 [INFO] [16/30] Crawling: Dunwoody Family & Cosmetic Dentistry — https://www.dunwoodydentistry.com/
+2026-04-16 15:19:10,859 [INFO] [17/30] Crawling: Atlanta Total Wellness — https://www.atlantatotalwellness.com/
+2026-04-16 15:19:13,028 [INFO] [18/30] Crawling: Dunwoody Pediatrics — https://www.dunwoodypediatrics.com/
+2026-04-16 15:19:14,823 [INFO] [19/30] Crawling: Sandy Springs Pediatrics — https://www.sandyspringspediatrics.com/
+2026-04-16 15:19:18,982 [INFO] [20/30] Crawling: Dunwoody Wellness Center — https://www.dunwoodywellnesscenter.com/
+2026-04-16 15:19:19,169 [WARNING] discarding data: None
+2026-04-16 15:19:20,670 [INFO] [21/30] Crawling: Dunwoody Physical Therapy — https://www.dunwoodypt.com/
+2026-04-16 15:19:23,553 [INFO] [22/30] Crawling: Perimeter Orthopaedics — https://www.perimeterortho.com/
+2026-04-16 15:19:23,764 [WARNING] discarding data: None
+2026-04-16 15:19:25,265 [INFO] [23/30] Crawling: Dunwoody Dermatology — https://www.dunwoodydermatology.com/
+2026-04-16 15:19:26,803 [INFO] [24/30] Crawling: Dunwoody OBGYN — https://www.dunwoodyobgyn.com/
+2026-04-16 15:19:29,385 [INFO] [25/30] Crawling: Atlanta Gastroenterology Associates — https://www.atlantagastro.com/location/dunwoody/
+2026-04-16 15:19:32,169 [INFO] [26/30] Crawling: Georgia Clinic — https://gaclinicpc.com/
+2026-04-16 15:19:34,175 [INFO] [27/30] Crawling: Northside Family Medicine — https://www.northside.com/locations/northside-family-medicine-dunwoody
+2026-04-16 15:19:35,865 [INFO] [28/30] Crawling: Perimeter North Family Medicine — https://www.perimeternorth.com/
+2026-04-16 15:19:37,834 [INFO] [29/30] Crawling: Back 2 Back Chiropractic — https://b2bchiro.net/
+2026-04-16 15:19:39,936 [INFO] [30/30] Crawling: Dunwoody Village Clinic — https://www.dunwoodyvillageclinic.com/
+2026-04-16 15:19:41,485 [INFO] Enriched 30 leads → /home/t0n34781/n8n-icp-stack/data/enriched_leads.json
+2026-04-16 15:19:41,509 [INFO] === STEP 3: SCORE ===
+2026-04-16 15:19:41,509 [INFO] Loaded leads from /home/t0n34781/n8n-icp-stack/data/enriched_leads.json
+2026-04-16 15:19:41,511 [INFO] Scored 30 leads → /home/t0n34781/n8n-icp-stack/data/scored_leads_full.json
+2026-04-16 15:19:41,511 [INFO] Score summary — High: 4 | Medium: 7 | Low: 19
+2026-04-16 15:19:41,536 [INFO] === STEP 4: EXPORT ===
+2026-04-16 15:19:41,538 [INFO] Exported → /home/t0n34781/n8n-icp-stack/data/scored_leads.csv
+2026-04-16 15:19:41,539 [INFO] === STEP 5: VISUALIZE ===
+2026-04-16 15:19:43,559 [INFO] Dashboard generated successfully
+2026-04-16 15:19:43,559 [INFO] Pipeline complete in 81.3s
+2026-04-16 16:21:45,443 [INFO] === STEP 1: COLLECT ===
+2026-04-16 16:21:45,444 [INFO] Collecting for ZIP 30350 — healthcare ...
+2026-04-16 16:21:45,444 [INFO] Searching: healthcare provider near 30350
+2026-04-16 16:21:47,185 [INFO] Searching: medical clinic near 30350
+2026-04-16 16:21:48,915 [INFO] Searching: doctor office 30350 GA
+2026-04-16 16:21:50,579 [INFO] Searching: independent medical practice 30350
+2026-04-16 16:21:52,257 [INFO] Collected 0 unique leads for ZIP 30350 / category 'healthcare'
+2026-04-16 16:21:52,258 [INFO] Collected 30 total leads (0 new across 1 ZIP(s)) → /home/t0n34781/n8n-icp-stack/data/raw_leads.json
+2026-04-16 16:21:52,541 [INFO] === STEP 2: CRAWL ===
+2026-04-16 16:21:52,542 [INFO] Loaded 0 cached crawl timestamps for incremental mode
+2026-04-16 16:21:52,542 [INFO] [1/30] Crawling: Perimeter Clinic Atlanta — https://www.perimeterclinicatlanta.com/
+2026-04-16 16:21:54,445 [INFO] [2/30] Crawling: Family Practice at Peachtree-Dunwoody — https://drhickspractice.com/
+2026-04-16 16:21:56,485 [INFO] [3/30] Crawling: Dunwoody Village Clinic — https://www.dunwoodyvillageclinic.com/
+2026-04-16 16:21:58,023 [INFO] [4/30] Crawling: Family Practice Center — https://familypracticecenterpc.com/
+2026-04-16 16:22:00,716 [INFO] [5/30] Crawling: Active Life & Health Center — https://www.dunwoodychiropractic.com/
+2026-04-16 16:22:03,265 [INFO] [6/30] Crawling: Dunwoody Chiropractic Center — https://www.dunwoodychiropracticcenter.com/
+2026-04-16 16:22:05,224 [INFO] [7/30] Crawling: Wilson Family Chiropractic — https://wfc4health.com/
+2026-04-16 16:22:07,470 [INFO] [8/30] Crawling: Dunwoody Dental Care — https://dunwoodydentalcare.com/
+2026-04-16 16:22:09,374 [INFO] [9/30] Crawling: The Whole Tooth — https://www.wholetoothdunwoody.com/
+2026-04-16 16:22:11,315 [INFO] [10/30] Crawling: Plunkett & Chaw Dental — https://drleeplunkett.com/
+2026-04-16 16:22:15,753 [INFO] [11/30] Crawling: Reagin Family Dentistry — https://www.reaginfamilydentistry.com/
+2026-04-16 16:22:18,985 [INFO] [12/30] Crawling: Sports Rehab Center — https://www.sportsrehabcenter.com/locations/location_dunwoody/
+2026-04-16 16:22:23,014 [INFO] [13/30] Crawling: Peachtree Dunwoody Medical Associates — https://peachtreedunwoodymed.com/
+2026-04-16 16:22:25,095 [INFO] [14/30] Crawling: Dunwoody Urgent Care — https://www.peachtreemed.com/location/dunwoody/
+2026-04-16 16:22:30,063 [INFO] [15/30] Crawling: Perimeter Dental — https://www.perimeterdental.com/
+2026-04-16 16:22:32,464 [INFO] [16/30] Crawling: Dunwoody Family & Cosmetic Dentistry — https://www.dunwoodydentistry.com/
+2026-04-16 16:22:34,651 [INFO] [17/30] Crawling: Atlanta Total Wellness — https://www.atlantatotalwellness.com/
+2026-04-16 16:22:37,099 [INFO] [18/30] Crawling: Dunwoody Pediatrics — https://www.dunwoodypediatrics.com/
+2026-04-16 16:22:39,026 [INFO] [19/30] Crawling: Sandy Springs Pediatrics — https://www.sandyspringspediatrics.com/
+2026-04-16 16:22:43,245 [INFO] [20/30] Crawling: Dunwoody Wellness Center — https://www.dunwoodywellnesscenter.com/
+2026-04-16 16:22:43,498 [WARNING] discarding data: None
+2026-04-16 16:22:45,000 [INFO] [21/30] Crawling: Dunwoody Physical Therapy — https://www.dunwoodypt.com/
+2026-04-16 16:22:47,843 [INFO] [22/30] Crawling: Perimeter Orthopaedics — https://www.perimeterortho.com/
+2026-04-16 16:22:48,038 [WARNING] discarding data: None
+2026-04-16 16:22:49,539 [INFO] [23/30] Crawling: Dunwoody Dermatology — https://www.dunwoodydermatology.com/
+2026-04-16 16:22:51,077 [INFO] [24/30] Crawling: Dunwoody OBGYN — https://www.dunwoodyobgyn.com/
+2026-04-16 16:22:53,699 [INFO] [25/30] Crawling: Atlanta Gastroenterology Associates — https://www.atlantagastro.com/location/dunwoody/
+2026-04-16 16:22:56,211 [INFO] [26/30] Crawling: Georgia Clinic — https://gaclinicpc.com/
+2026-04-16 16:22:58,177 [INFO] [27/30] Crawling: Northside Family Medicine — https://www.northside.com/locations/northside-family-medicine-dunwoody
+2026-04-16 16:22:59,865 [INFO] [28/30] Crawling: Perimeter North Family Medicine — https://www.perimeternorth.com/
+2026-04-16 16:23:02,237 [INFO] [29/30] Crawling: Back 2 Back Chiropractic — https://b2bchiro.net/
+2026-04-16 16:23:04,521 [INFO] [30/30] Crawling: Dunwoody Village Clinic — https://www.dunwoodyvillageclinic.com/
+2026-04-16 16:23:06,063 [INFO] Enriched 30 leads → /home/t0n34781/n8n-icp-stack/data/enriched_leads.json
+2026-04-16 16:23:06,063 [INFO] === STEP 3: SCORE ===
+2026-04-16 16:23:06,063 [INFO] Loaded leads from /home/t0n34781/n8n-icp-stack/data/enriched_leads.json
+2026-04-16 16:23:06,066 [INFO] Scored 30 leads → /home/t0n34781/n8n-icp-stack/data/scored_leads_full.json
+2026-04-16 16:23:06,066 [INFO] Score summary — High: 4 | Medium: 7 | Low: 19
+2026-04-16 16:23:06,068 [INFO] === STEP 4: EXPORT ===
+2026-04-16 16:23:06,070 [INFO] Exported → /home/t0n34781/n8n-icp-stack/data/scored_leads.csv
+2026-04-16 16:23:06,071 [INFO] === STEP 5: VISUALIZE ===
+2026-04-16 16:23:08,312 [INFO] Dashboard generated successfully
+2026-04-16 16:23:08,312 [INFO] Pipeline complete in 83.1s
+2026-04-16 16:24:48,778 [INFO] === STEP 1: COLLECT ===
+2026-04-16 16:24:48,779 [INFO] Collecting for ZIP 30350 — healthcare ...
+2026-04-16 16:24:48,779 [INFO] Searching: healthcare provider near 30350
+2026-04-16 16:24:50,466 [INFO] Searching: medical clinic near 30350
+2026-04-16 16:24:52,241 [INFO] Searching: doctor office 30350 GA
+2026-04-16 16:24:53,984 [INFO] Searching: independent medical practice 30350
+2026-04-16 16:24:55,679 [INFO] Collected 0 unique leads for ZIP 30350 / category 'healthcare'
+2026-04-16 16:24:55,680 [INFO] Collected 30 total leads (0 new across 1 ZIP(s)) → /home/t0n34781/n8n-icp-stack/data/raw_leads.json
+2026-04-16 16:24:55,944 [INFO] === STEP 2: CRAWL ===
+2026-04-16 16:24:55,944 [INFO] Loaded 24 cached crawl timestamps for incremental mode
+2026-04-16 16:24:55,944 [INFO] [1/30] SKIP (crawled 0d ago): Perimeter Clinic Atlanta
+2026-04-16 16:24:55,944 [INFO] [2/30] SKIP (crawled 0d ago): Family Practice at Peachtree-Dunwoody
+2026-04-16 16:24:55,944 [INFO] [3/30] Crawling: Dunwoody Village Clinic — https://www.dunwoodyvillageclinic.com/
+2026-04-16 16:24:57,482 [INFO] [4/30] SKIP (crawled 0d ago): Family Practice Center
+2026-04-16 16:24:57,482 [INFO] [5/30] SKIP (crawled 0d ago): Active Life & Health Center
+2026-04-16 16:24:57,482 [INFO] [6/30] SKIP (crawled 0d ago): Dunwoody Chiropractic Center
+2026-04-16 16:24:57,482 [INFO] [7/30] SKIP (crawled 0d ago): Wilson Family Chiropractic
+2026-04-16 16:24:57,482 [INFO] [8/30] SKIP (crawled 0d ago): Dunwoody Dental Care
+2026-04-16 16:24:57,483 [INFO] [9/30] SKIP (crawled 0d ago): The Whole Tooth
+2026-04-16 16:24:57,483 [INFO] [10/30] SKIP (crawled 0d ago): Plunkett & Chaw Dental
+2026-04-16 16:24:57,483 [INFO] [11/30] SKIP (crawled 0d ago): Reagin Family Dentistry
+2026-04-16 16:24:57,483 [INFO] [12/30] SKIP (crawled 0d ago): Sports Rehab Center
+2026-04-16 16:24:57,483 [INFO] [13/30] SKIP (crawled 0d ago): Peachtree Dunwoody Medical Associates
+2026-04-16 16:24:57,483 [INFO] [14/30] SKIP (crawled 0d ago): Dunwoody Urgent Care
+2026-04-16 16:24:57,483 [INFO] [15/30] SKIP (crawled 0d ago): Perimeter Dental
+2026-04-16 16:24:57,483 [INFO] [16/30] Crawling: Dunwoody Family & Cosmetic Dentistry — https://www.dunwoodydentistry.com/
+2026-04-16 16:24:59,344 [INFO] [17/30] SKIP (crawled 0d ago): Atlanta Total Wellness
+2026-04-16 16:24:59,345 [INFO] [18/30] SKIP (crawled 0d ago): Dunwoody Pediatrics
+2026-04-16 16:24:59,345 [INFO] [19/30] SKIP (crawled 0d ago): Sandy Springs Pediatrics
+2026-04-16 16:24:59,345 [INFO] [20/30] SKIP (crawled 0d ago): Dunwoody Wellness Center
+2026-04-16 16:24:59,345 [INFO] [21/30] SKIP (crawled 0d ago): Dunwoody Physical Therapy
+2026-04-16 16:24:59,345 [INFO] [22/30] SKIP (crawled 0d ago): Perimeter Orthopaedics
+2026-04-16 16:24:59,345 [INFO] [23/30] Crawling: Dunwoody Dermatology — https://www.dunwoodydermatology.com/
+2026-04-16 16:25:00,879 [INFO] [24/30] SKIP (crawled 0d ago): Dunwoody OBGYN
+2026-04-16 16:25:00,879 [INFO] [25/30] Crawling: Atlanta Gastroenterology Associates — https://www.atlantagastro.com/location/dunwoody/
+2026-04-16 16:25:04,494 [INFO] [26/30] SKIP (crawled 0d ago): Georgia Clinic
+2026-04-16 16:25:04,495 [INFO] [27/30] Crawling: Northside Family Medicine — https://www.northside.com/locations/northside-family-medicine-dunwoody
+2026-04-16 16:25:06,208 [INFO] [28/30] SKIP (crawled 0d ago): Perimeter North Family Medicine
+2026-04-16 16:25:06,208 [INFO] [29/30] SKIP (crawled 0d ago): Back 2 Back Chiropractic
+2026-04-16 16:25:06,208 [INFO] [30/30] Crawling: Dunwoody Village Clinic — https://www.dunwoodyvillageclinic.com/
+2026-04-16 16:25:07,748 [INFO] Incremental crawl: 24 leads skipped (within 7-day window)
+2026-04-16 16:25:07,749 [INFO] === STEP 2b: GBP SIGNALS ===
+2026-04-16 16:25:07,751 [INFO] [1/30] GBP lookup: Perimeter Clinic Atlanta
+2026-04-16 16:25:07,940 [INFO] [2/30] GBP lookup: Family Practice at Peachtree-Dunwoody
+2026-04-16 16:25:08,128 [INFO] [3/30] GBP lookup: Dunwoody Village Clinic
+2026-04-16 16:25:08,309 [INFO] [4/30] GBP lookup: Family Practice Center
+2026-04-16 16:25:08,549 [INFO] [5/30] GBP lookup: Active Life & Health Center
+2026-04-16 16:25:08,795 [INFO] [6/30] GBP lookup: Dunwoody Chiropractic Center
+2026-04-16 16:25:08,954 [INFO] [7/30] GBP lookup: Wilson Family Chiropractic
+2026-04-16 16:25:09,192 [INFO] [8/30] GBP lookup: Dunwoody Dental Care
+2026-04-16 16:25:09,383 [INFO] [9/30] GBP lookup: The Whole Tooth
+2026-04-16 16:25:09,638 [INFO] [10/30] GBP lookup: Plunkett & Chaw Dental
+2026-04-16 16:25:09,834 [INFO] [11/30] GBP lookup: Reagin Family Dentistry
+2026-04-16 16:25:10,091 [INFO] [12/30] GBP lookup: Sports Rehab Center
+2026-04-16 16:25:10,335 [INFO] [13/30] GBP lookup: Peachtree Dunwoody Medical Associates
+2026-04-16 16:25:10,555 [INFO] [14/30] GBP lookup: Dunwoody Urgent Care
+2026-04-16 16:25:10,740 [INFO] [15/30] GBP lookup: Perimeter Dental
+2026-04-16 16:25:10,989 [INFO] [16/30] GBP lookup: Dunwoody Family & Cosmetic Dentistry
+2026-04-16 16:25:11,198 [INFO] [17/30] GBP lookup: Atlanta Total Wellness
+2026-04-16 16:25:11,394 [INFO] [18/30] GBP lookup: Dunwoody Pediatrics
+2026-04-16 16:25:11,652 [INFO] [19/30] GBP lookup: Sandy Springs Pediatrics
+2026-04-16 16:25:11,832 [INFO] [20/30] GBP lookup: Dunwoody Wellness Center
+2026-04-16 16:25:12,027 [INFO] [21/30] GBP lookup: Dunwoody Physical Therapy
+2026-04-16 16:25:12,275 [INFO] [22/30] GBP lookup: Perimeter Orthopaedics
+2026-04-16 16:25:12,456 [INFO] [23/30] GBP lookup: Dunwoody Dermatology
+2026-04-16 16:25:12,704 [INFO] [24/30] GBP lookup: Dunwoody OBGYN
+2026-04-16 16:25:12,934 [INFO] [25/30] GBP lookup: Atlanta Gastroenterology Associates
+2026-04-16 16:25:13,122 [INFO] [26/30] GBP lookup: Georgia Clinic
+2026-04-16 16:25:13,377 [INFO] [27/30] GBP lookup: Northside Family Medicine
+2026-04-16 16:25:13,572 [INFO] [28/30] GBP lookup: Perimeter North Family Medicine
+2026-04-16 16:25:13,740 [INFO] [29/30] GBP lookup: Back 2 Back Chiropractic
+2026-04-16 16:25:13,933 [INFO] [30/30] GBP lookup: Dunwoody Village Clinic
+2026-04-16 16:25:14,203 [INFO] Enriched 30 leads → /home/t0n34781/n8n-icp-stack/data/enriched_leads.json
+2026-04-16 16:25:14,204 [INFO] === STEP 3: SCORE ===
+2026-04-16 16:25:14,204 [INFO] Loaded leads from /home/t0n34781/n8n-icp-stack/data/enriched_leads.json
+2026-04-16 16:25:14,286 [INFO] Using Ollama models: scoring=qwen2.5-coder:7b reasoning=llama3.2:3b
+2026-04-16 16:25:14,286 [INFO] [1/30] LLM enriching: Dunwoody Village Clinic (score=75)
+2026-04-16 16:26:06,491 [INFO] [2/30] LLM enriching: Dunwoody Family & Cosmetic Dentistry (score=75)
+2026-04-16 16:26:40,780 [INFO] [3/30] LLM enriching: Dunwoody Dermatology (score=75)
+2026-04-16 16:27:19,429 [INFO] [4/30] LLM enriching: Dunwoody Village Clinic (score=75)
+2026-04-16 16:27:54,567 [INFO] [5/30] LLM enriching: Northside Family Medicine (score=66)
+2026-04-16 16:28:31,663 [INFO] [6/30] LLM enriching: Atlanta Gastroenterology Associates (score=60)
+2026-04-16 16:29:13,612 [INFO] [7/30] LLM enriching: Perimeter North Family Medicine (score=60)
+2026-04-16 16:29:46,634 [INFO] [8/30] LLM enriching: Family Practice at Peachtree-Dunwoody (score=45)
+2026-04-16 16:30:19,955 [INFO] [9/30] LLM enriching: Perimeter Orthopaedics (score=45)
+2026-04-16 16:30:53,408 [INFO] [10/30] LLM enriching: Back 2 Back Chiropractic (score=45)
+2026-04-16 16:31:28,468 [INFO] [11/30] LLM enriching: Dunwoody Wellness Center (score=40)
+2026-04-16 16:32:03,245 [INFO] [12/30] LLM enriching: Dunwoody Dental Care (score=30)
+2026-04-16 16:32:37,650 [INFO] [13/30] LLM enriching: Sports Rehab Center (score=30)
+2026-04-16 16:33:11,972 [INFO] [14/30] LLM enriching: Atlanta Total Wellness (score=30)
+2026-04-16 16:33:46,675 [INFO] [15/30] LLM enriching: Dunwoody Physical Therapy (score=30)
+2026-04-16 16:34:21,203 [INFO] [16/30] LLM enriching: Georgia Clinic (score=30)
+2026-04-16 16:34:55,230 [INFO] Scored 30 leads → /home/t0n34781/n8n-icp-stack/data/scored_leads_full.json
+2026-04-16 16:34:55,231 [INFO] Score summary — High: 4 | Medium: 7 | Low: 19
+2026-04-16 16:34:55,239 [INFO] === STEP 4: EXPORT ===
+2026-04-16 16:34:55,244 [INFO] Exported → /home/t0n34781/n8n-icp-stack/data/scored_leads.csv
+2026-04-16 16:34:55,248 [INFO] === STEP 5: VISUALIZE ===
+2026-04-16 16:34:57,549 [INFO] Dashboard generated successfully
+2026-04-16 16:34:57,549 [INFO] Pipeline complete in 608.9s
+2026-04-16 17:26:25,850 [INFO] === STEP 1: COLLECT ===
+2026-04-16 17:26:25,850 [INFO] Collecting for ZIP 30350 — healthcare ...
+2026-04-16 17:26:25,851 [INFO] Searching: healthcare provider near 30350
+2026-04-16 17:26:27,544 [INFO] Searching: medical clinic near 30350
+2026-04-16 17:26:29,228 [INFO] Searching: doctor office 30350 GA
+2026-04-16 17:26:30,918 [INFO] Searching: independent medical practice 30350
+2026-04-16 17:26:32,692 [INFO] Collected 0 unique leads for ZIP 30350 / category 'healthcare'
+2026-04-16 17:26:32,729 [INFO] Deduplication removed 1 near-duplicate leads
+2026-04-16 17:26:32,729 [INFO] Collected 29 total leads (0 new across 1 ZIP(s)) → /home/t0n34781/n8n-icp-stack/data/raw_leads.json
+2026-04-16 17:26:33,027 [INFO] === STEP 2: CRAWL ===
+2026-04-16 17:26:33,027 [INFO] Loaded 24 cached crawl timestamps for incremental mode
+2026-04-16 17:26:33,028 [INFO] [1/29] SKIP (crawled 0d ago): Perimeter Clinic Atlanta
+2026-04-16 17:26:33,028 [INFO] [2/29] SKIP (crawled 0d ago): Family Practice at Peachtree-Dunwoody
+2026-04-16 17:26:33,028 [INFO] [3/29] Crawling: Dunwoody Village Clinic — https://www.dunwoodyvillageclinic.com/
+2026-04-16 17:26:34,575 [INFO] [4/29] SKIP (crawled 0d ago): Family Practice Center
+2026-04-16 17:26:34,575 [INFO] [5/29] SKIP (crawled 0d ago): Active Life & Health Center
+2026-04-16 17:26:34,575 [INFO] [6/29] SKIP (crawled 0d ago): Dunwoody Chiropractic Center
+2026-04-16 17:26:34,575 [INFO] [7/29] SKIP (crawled 0d ago): Wilson Family Chiropractic
+2026-04-16 17:26:34,575 [INFO] [8/29] SKIP (crawled 0d ago): Dunwoody Dental Care
+2026-04-16 17:26:34,575 [INFO] [9/29] SKIP (crawled 0d ago): The Whole Tooth
+2026-04-16 17:26:34,575 [INFO] [10/29] SKIP (crawled 0d ago): Plunkett & Chaw Dental
+2026-04-16 17:26:34,575 [INFO] [11/29] SKIP (crawled 0d ago): Reagin Family Dentistry
+2026-04-16 17:26:34,575 [INFO] [12/29] SKIP (crawled 0d ago): Sports Rehab Center
+2026-04-16 17:26:34,575 [INFO] [13/29] SKIP (crawled 0d ago): Peachtree Dunwoody Medical Associates
+2026-04-16 17:26:34,575 [INFO] [14/29] SKIP (crawled 0d ago): Dunwoody Urgent Care
+2026-04-16 17:26:34,575 [INFO] [15/29] SKIP (crawled 0d ago): Perimeter Dental
+2026-04-16 17:26:34,575 [INFO] [16/29] Crawling: Dunwoody Family & Cosmetic Dentistry — https://www.dunwoodydentistry.com/
+2026-04-16 17:26:37,252 [INFO] [17/29] SKIP (crawled 0d ago): Atlanta Total Wellness
+2026-04-16 17:26:37,253 [INFO] [18/29] SKIP (crawled 0d ago): Dunwoody Pediatrics
+2026-04-16 17:26:37,253 [INFO] [19/29] SKIP (crawled 0d ago): Sandy Springs Pediatrics
+2026-04-16 17:26:37,253 [INFO] [20/29] SKIP (crawled 0d ago): Dunwoody Wellness Center
+2026-04-16 17:26:37,253 [INFO] [21/29] SKIP (crawled 0d ago): Dunwoody Physical Therapy
+2026-04-16 17:26:37,253 [INFO] [22/29] SKIP (crawled 0d ago): Perimeter Orthopaedics
+2026-04-16 17:26:37,253 [INFO] [23/29] Crawling: Dunwoody Dermatology — https://www.dunwoodydermatology.com/
+2026-04-16 17:26:38,787 [INFO] [24/29] SKIP (crawled 0d ago): Dunwoody OBGYN
+2026-04-16 17:26:38,788 [INFO] [25/29] Crawling: Atlanta Gastroenterology Associates — https://www.atlantagastro.com/location/dunwoody/
+2026-04-16 17:26:41,686 [INFO] [26/29] SKIP (crawled 0d ago): Georgia Clinic
+2026-04-16 17:26:41,687 [INFO] [27/29] Crawling: Northside Family Medicine — https://www.northside.com/locations/northside-family-medicine-dunwoody
+2026-04-16 17:26:43,719 [INFO] [28/29] SKIP (crawled 0d ago): Perimeter North Family Medicine
+2026-04-16 17:26:43,720 [INFO] [29/29] SKIP (crawled 0d ago): Back 2 Back Chiropractic
+2026-04-16 17:26:43,720 [INFO] Incremental crawl: 24 leads skipped (within 7-day window)
+2026-04-16 17:26:43,720 [INFO] === STEP 2b: GBP SIGNALS ===
+2026-04-16 17:26:43,722 [INFO] [1/29] GBP lookup: Perimeter Clinic Atlanta
+2026-04-16 17:26:43,943 [INFO] [2/29] GBP lookup: Family Practice at Peachtree-Dunwoody
+2026-04-16 17:26:44,184 [INFO] [3/29] GBP lookup: Dunwoody Village Clinic
+2026-04-16 17:26:44,439 [INFO] [4/29] GBP lookup: Family Practice Center
+2026-04-16 17:26:44,687 [INFO] [5/29] GBP lookup: Active Life & Health Center
+2026-04-16 17:26:44,928 [INFO] [6/29] GBP lookup: Dunwoody Chiropractic Center
+2026-04-16 17:26:45,207 [INFO] [7/29] GBP lookup: Wilson Family Chiropractic
+2026-04-16 17:26:45,482 [INFO] [8/29] GBP lookup: Dunwoody Dental Care
+2026-04-16 17:26:45,739 [INFO] [9/29] GBP lookup: The Whole Tooth
+2026-04-16 17:26:45,991 [INFO] [10/29] GBP lookup: Plunkett & Chaw Dental
+2026-04-16 17:26:46,174 [INFO] [11/29] GBP lookup: Reagin Family Dentistry
+2026-04-16 17:26:46,382 [INFO] [12/29] GBP lookup: Sports Rehab Center
+2026-04-16 17:26:46,605 [INFO] [13/29] GBP lookup: Peachtree Dunwoody Medical Associates
+2026-04-16 17:26:46,787 [INFO] [14/29] GBP lookup: Dunwoody Urgent Care
+2026-04-16 17:26:47,035 [INFO] [15/29] GBP lookup: Perimeter Dental
+2026-04-16 17:26:47,274 [INFO] [16/29] GBP lookup: Dunwoody Family & Cosmetic Dentistry
+2026-04-16 17:26:47,526 [INFO] [17/29] GBP lookup: Atlanta Total Wellness
+2026-04-16 17:26:47,785 [INFO] [18/29] GBP lookup: Dunwoody Pediatrics
+2026-04-16 17:26:48,019 [INFO] [19/29] GBP lookup: Sandy Springs Pediatrics
+2026-04-16 17:26:48,208 [INFO] [20/29] GBP lookup: Dunwoody Wellness Center
+2026-04-16 17:26:48,361 [INFO] [21/29] GBP lookup: Dunwoody Physical Therapy
+2026-04-16 17:26:48,616 [INFO] [22/29] GBP lookup: Perimeter Orthopaedics
+2026-04-16 17:26:48,852 [INFO] [23/29] GBP lookup: Dunwoody Dermatology
+2026-04-16 17:26:49,048 [INFO] [24/29] GBP lookup: Dunwoody OBGYN
+2026-04-16 17:26:49,302 [INFO] [25/29] GBP lookup: Atlanta Gastroenterology Associates
+2026-04-16 17:26:49,483 [INFO] [26/29] GBP lookup: Georgia Clinic
+2026-04-16 17:26:49,660 [INFO] [27/29] GBP lookup: Northside Family Medicine
+2026-04-16 17:26:49,846 [INFO] [28/29] GBP lookup: Perimeter North Family Medicine
+2026-04-16 17:26:50,047 [INFO] [29/29] GBP lookup: Back 2 Back Chiropractic
+2026-04-16 17:26:50,290 [INFO] Enriched 29 leads → /home/t0n34781/n8n-icp-stack/data/enriched_leads.json
+2026-04-16 17:26:50,290 [INFO] === STEP 3: SCORE ===
+2026-04-16 17:26:50,291 [INFO] Loaded leads from /home/t0n34781/n8n-icp-stack/data/enriched_leads.json
+2026-04-16 17:26:50,309 [INFO] Using Ollama models: scoring=qwen2.5-coder:7b reasoning=llama3.2:3b
+2026-04-16 17:26:50,309 [INFO] [1/29] LLM enriching: Dunwoody Village Clinic (score=75)
+2026-04-16 17:27:48,991 [INFO] [2/29] LLM enriching: Dunwoody Family & Cosmetic Dentistry (score=75)
+2026-04-16 17:28:25,582 [INFO] [3/29] LLM enriching: Dunwoody Dermatology (score=75)
+2026-04-16 17:29:05,868 [INFO] [4/29] LLM enriching: Northside Family Medicine (score=66)
+2026-04-16 17:29:42,802 [INFO] [5/29] LLM enriching: Atlanta Gastroenterology Associates (score=60)
+2026-04-16 17:30:17,729 [INFO] [6/29] LLM enriching: Perimeter North Family Medicine (score=60)
+2026-04-16 17:30:48,982 [INFO] [7/29] LLM enriching: Family Practice at Peachtree-Dunwoody (score=45)
+2026-04-16 17:31:22,159 [INFO] [8/29] LLM enriching: Perimeter Orthopaedics (score=45)
+2026-04-16 17:31:57,472 [INFO] [9/29] LLM enriching: Back 2 Back Chiropractic (score=45)
+2026-04-16 17:32:37,657 [INFO] [10/29] LLM enriching: Dunwoody Wellness Center (score=40)
+2026-04-16 17:33:15,485 [INFO] [11/29] LLM enriching: Dunwoody Dental Care (score=30)
+2026-04-16 17:33:50,754 [INFO] [12/29] LLM enriching: Sports Rehab Center (score=30)
+2026-04-16 17:34:25,470 [INFO] [13/29] LLM enriching: Atlanta Total Wellness (score=30)
+2026-04-16 17:35:04,247 [INFO] [14/29] LLM enriching: Dunwoody Physical Therapy (score=30)
+2026-04-16 17:35:38,451 [INFO] [15/29] LLM enriching: Georgia Clinic (score=30)
+2026-04-16 17:36:11,009 [INFO] Scored 29 leads → /home/t0n34781/n8n-icp-stack/data/scored_leads_full.json
+2026-04-16 17:36:11,009 [INFO] Score summary — High: 3 | Medium: 7 | Low: 19
+2026-04-16 17:36:11,024 [INFO] === STEP 4: EXPORT ===
+2026-04-16 17:36:11,030 [INFO] Exported → /home/t0n34781/n8n-icp-stack/data/scored_leads.csv
+2026-04-16 17:36:11,033 [INFO] === STEP 5: VISUALIZE ===
+2026-04-16 17:36:13,324 [INFO] Dashboard generated successfully
+2026-04-16 17:36:13,324 [INFO] Pipeline complete in 587.7s
+2026-04-20 05:32:11,345 [INFO] === STEP 1: COLLECT ===
+2026-04-20 05:32:11,346 [INFO] Collecting for ZIP 30350 — healthcare ...
+2026-04-20 05:32:11,346 [INFO] Searching: healthcare provider near 30350
+2026-04-20 05:32:13,334 [INFO] Searching: medical clinic near 30350
+2026-04-20 05:32:15,577 [INFO] Searching: doctor office 30350 GA
+2026-04-20 05:32:17,284 [INFO] Searching: independent medical practice 30350
+2026-04-20 05:32:19,110 [INFO] Collected 12 unique leads for ZIP 30350 / category 'healthcare'
+2026-04-20 05:32:19,172 [INFO] Collected 41 total leads (12 new across 1 ZIP(s)) → /home/t0n34781/projects/n8n_Lead-Gen-Go_v-4/data/raw_leads.json
+2026-04-20 05:32:19,507 [INFO] === STEP 2: CRAWL ===
+2026-04-20 05:32:19,509 [INFO] Loaded 24 cached crawl timestamps for incremental mode
+2026-04-20 05:32:19,509 [INFO] [1/41] SKIP (crawled 3d ago): Perimeter Clinic Atlanta
+2026-04-20 05:32:19,509 [INFO] [2/41] SKIP (crawled 3d ago): Family Practice at Peachtree-Dunwoody
+2026-04-20 05:32:19,509 [INFO] [3/41] Crawling: Dunwoody Village Clinic — https://www.dunwoodyvillageclinic.com/
+2026-04-20 05:32:21,045 [INFO] [4/41] SKIP (crawled 3d ago): Family Practice Center
+2026-04-20 05:32:21,045 [INFO] [5/41] SKIP (crawled 3d ago): Active Life & Health Center
+2026-04-20 05:32:21,045 [INFO] [6/41] SKIP (crawled 3d ago): Dunwoody Chiropractic Center
+2026-04-20 05:32:21,045 [INFO] [7/41] SKIP (crawled 3d ago): Wilson Family Chiropractic
+2026-04-20 05:32:21,045 [INFO] [8/41] SKIP (crawled 3d ago): Dunwoody Dental Care
+2026-04-20 05:32:21,045 [INFO] [9/41] SKIP (crawled 3d ago): The Whole Tooth
+2026-04-20 05:32:21,045 [INFO] [10/41] SKIP (crawled 3d ago): Plunkett & Chaw Dental
+2026-04-20 05:32:21,045 [INFO] [11/41] SKIP (crawled 3d ago): Reagin Family Dentistry
+2026-04-20 05:32:21,045 [INFO] [12/41] SKIP (crawled 3d ago): Sports Rehab Center
+2026-04-20 05:32:21,045 [INFO] [13/41] SKIP (crawled 3d ago): Peachtree Dunwoody Medical Associates
+2026-04-20 05:32:21,045 [INFO] [14/41] SKIP (crawled 3d ago): Dunwoody Urgent Care
+2026-04-20 05:32:21,045 [INFO] [15/41] SKIP (crawled 3d ago): Perimeter Dental
+2026-04-20 05:32:21,045 [INFO] [16/41] Crawling: Dunwoody Family & Cosmetic Dentistry — https://www.dunwoodydentistry.com/
+2026-04-20 05:32:23,334 [INFO] [17/41] SKIP (crawled 3d ago): Atlanta Total Wellness
+2026-04-20 05:32:23,334 [INFO] [18/41] SKIP (crawled 3d ago): Dunwoody Pediatrics
+2026-04-20 05:32:23,334 [INFO] [19/41] SKIP (crawled 3d ago): Sandy Springs Pediatrics
+2026-04-20 05:32:23,334 [INFO] [20/41] SKIP (crawled 3d ago): Dunwoody Wellness Center
+2026-04-20 05:32:23,334 [INFO] [21/41] SKIP (crawled 3d ago): Dunwoody Physical Therapy
+2026-04-20 05:32:23,334 [INFO] [22/41] SKIP (crawled 3d ago): Perimeter Orthopaedics
+2026-04-20 05:32:23,334 [INFO] [23/41] Crawling: Dunwoody Dermatology — https://www.dunwoodydermatology.com/
+2026-04-20 05:32:24,877 [INFO] [24/41] SKIP (crawled 3d ago): Dunwoody OBGYN
+2026-04-20 05:32:24,878 [INFO] [25/41] Crawling: Atlanta Gastroenterology Associates — https://www.atlantagastro.com/location/dunwoody/
+2026-04-20 05:32:27,504 [INFO] [26/41] SKIP (crawled 3d ago): Georgia Clinic
+2026-04-20 05:32:27,505 [INFO] [27/41] Crawling: Northside Family Medicine — https://www.northside.com/locations/northside-family-medicine-dunwoody
+2026-04-20 05:32:29,591 [INFO] [28/41] SKIP (crawled 3d ago): Perimeter North Family Medicine
+2026-04-20 05:32:29,592 [INFO] [29/41] SKIP (crawled 3d ago): Back 2 Back Chiropractic
+2026-04-20 05:32:29,592 [INFO] [30/41] Crawling: Medical Location Near You - Find Your Doctor Today — https://duckduckgo.com/y.js?ad_domain=kaiserpermanente.org&ad_provider=bingv7aa&ad_type=txad&click_metadata=3uUPKYXmbG_q6HbuQXJBWJg7KWnefSec5gWkGrLy2AdLnVUMtso6Pvp43SjhVKmFVOjGrrtVyzvYaa0qwB%2Dnm9lUSYiZIfLOYai5eOrD%2DRFLArDRAued79P6CZSPdT9zHe_O_2Efuh_agWFnLq5mUHWvhX7uzumCW4UJ4_5hB3k.94oD%2DrmfaYMngoP262NCww&rut=d693188565fe31cd67b161fabc94d585257ba4f3d9471243082e883dcfd913be&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8ybRAeIpyxNlkuPICVYiQ2DVUCUw7sORMcrjaqPjZfJP59WEuhvIh%2DqXKLPpPYoLCIFJX0MFvzwXcybT7sCgKskyuv2e_u%2DfpwZ_voAPZi_Ret7Mct_j6NiVEtltBij4GhA1Itrk3iHeB_M1ARzAPNtHqMjOmfX_IG6RjzkC_DV0c6koGgqpAUkC2CjpLAMT2heQ4Lm0%2DNqNaHkKNTnqc6hooT%2DA%26u%3DaHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q0MzcwMDA4MjU2MTMzMjM1MyUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODk0NjYxNzc3MCUyNmRzX2FfY2lkJTNkNjU2MTA2OTMzNiUyNmRzX2FfY2FpZCUzZDIyOTQyOTM1MDAyJTI2ZHNfYV9hZ2lkJTNkMTg1NDA1NTQyOTk4JTI2ZHNfYV9saWQlM2Rrd2QtMzAwOTAzMDI1NTgzJTI2JTI2ZHNfZV9hZGlkJTNkODEzNjM5OTc1OTI1NjYlMjZkc19lX3RhcmdldF9pZCUzZGt3ZC04MTM2NDIzNTgyODM1OCUyNiUyNmRzX2VfbmV0d29yayUzZHMlMjZkc191cmxfdiUzZDIlMjZkc19kZXN0X3VybCUzZGh0dHBzJTNhJTJmJTJmaGVhbHRoeS5rYWlzZXJwZXJtYW5lbnRlLm9yZyUyZmRvY3RvcnMtbG9jYXRpb25zJTNmcHJvbW9faWQlM2QyMzklMjZXVC5tY19pZCUzZDIzOSUyNldULnNlZ18xJTNkQmluZy16enpCTkR6enpfQVdSLWMtLXAtY2xpbmljJTI1MjBsb2NhdGlvbnMtJTI2Y2lkJTNkY2EtYnAlN2NyZS1nYSU3Y2NoLXBzJTdjcGwtYmklN2N0YS1wcm9zJTdjYXUtNjQlN2Niby1hd3IlN2MlMjZhZF9pZCUzZCUyNnBzZCUzZGtjLSU3Y210LXAlN2Nrbi1jbGluaWMlMjUyMGxvY2F0aW9ucyU3Y2tpLWt3ZC04MTM2NDIzNTgyODM1OCU3Y2NpLTYyNzU2MzU4OCU3Y3NraS0zMDA5MDMwMjU1ODMlN2NzY2ktMjI5NDI5MzUwMDIlN2NhZHYtNDY4ODc1NTgwNSUyNmdjbGlkJTNkNjI0MDY3YmZiOWIzMWY1YWUwZDMwZTVhNGIyZWJmNjUlMjZnY2xzcmMlM2QzcC5kcyUyNm1zY2xraWQlM2Q2MjQwNjdiZmI5YjMxZjVhZTBkMzBlNWE0YjJlYmY2NSUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZEtQX0JORF9CTkRNS1RfUFNfQklOR19HQV9OT05fTk9OX0FXUl9OT05fTk9OX05CQ19QUk9TX1VORF9QaHJhc2VfRU5HX05PTl9VNjUlMjZ1dG1fdGVybSUzZGNsaW5pYyUyNTIwbG9jYXRpb25zJTI2dXRtX2NvbnRlbnQlM2RNZWRpY2FsJTI1MjBBY2Nlc3MlMjMlMmZzZWFyY2gtZm9ybQ%26rlid%3D624067bfb9b31f5ae0d30e5a4b2ebf65&vqd=4-191847510138266249311062973851071865403&iurl=%7B1%7DIG%3D90FADE8FBBCC4129AAA3B6D5A34F0A78%26CID%3D14DE08C39B7F6210009F1F829AD263B5%26ID%3DDevEx%2C5045.1
+2026-04-20 05:32:34,367 [INFO] [31/41] Crawling: Urgent Care No Insurance Prices - Book Your Appointment Now — https://duckduckgo.com/y.js?ad_domain=doctorsbeyond.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=H9DP0c3qJCXEQK_kQimRPbYVNRjl2uoNbIluODXO6bnUeD5Ba6Kf9qAywmat4cCXLp6A%2DiwMf280uohZNJOAujVtE7goPlf6JFKqf%2DhjTa6gcOBbwcV9ctqgMD2jEj7hfy96Lu1WfSEjZu3L0%2DDil%2DWDyMhpYPMycn%2Dj9tzO_Lc.gUx5G5UOp0Bx7OHhCx%2Dk8Q&rut=ab64f5613e427053bd6d7e3ed92a29fd5f95141acfa53961698cb85cdd309048&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8GCmZamtlth6pTgh1iZZDbTVUCUxcUhNW5%2Dy9RHGDRa3CD4NDnGFkqGwBBLF1l5RrLMvs12OjrU4lV3QPrXvOHqg8KaOVxzClxXJgQItxd4MIULAu68Pt9Xh0fJymQuQuMUuhOGdKY3dg8ggK5Q2IWdT00bpnFvozyk9zAJjQoHewK%2DXd7xEMNYqV9uksVB53WL9a3sgO0CkEppCdCeJqZZRQNr4%26u%3DaHR0cHMlM2ElMmYlMmZkb2N0b3JzYmV5b25kLmNvbSUzZm1zY2xraWQlM2QxMGNmOTkwODA1MmQxYTZiOTE3YmYwZWRmN2IwYWY5NQ%26rlid%3D10cf9908052d1a6b917bf0edf7b0af95&vqd=4-5479531450162011545884533147848968640&iurl=%7B1%7DIG%3D90FADE8FBBCC4129AAA3B6D5A34F0A78%26CID%3D14DE08C39B7F6210009F1F829AD263B5%26ID%3DDevEx%2C5049.1
+2026-04-20 05:32:36,866 [INFO] [32/41] Crawling: Medical Plaza in Buford - Northeast Georgia Health System — https://www.nghs.com/locations/medical-plaza-buford
+2026-04-20 05:32:38,823 [INFO] [33/41] Crawling: NGPG Urgent Care in Buford, GA | Telehealth & Walk-in Clinic — https://www.ngpg.org/urgent-care/buford
+2026-04-20 05:32:40,861 [INFO] [34/41] Crawling: Buford, GA Free Clinics — https://www.freeclinics.com/cit/ga-buford
+2026-04-20 05:32:42,932 [INFO] [35/41] Crawling: Locations | MedLife Clinics — https://medlifeclinics.com/locations/
+2026-04-20 05:32:44,910 [INFO] [36/41] Crawling: Piedmont Urgent Care - Buford, GA — https://www.piedmonturgentcare.org/locations/buford-ga?location=0160
+2026-04-20 05:32:49,767 [INFO] [37/41] Crawling: Walk-in Primary Care Clinic in Buford, GA | AllCare Georgia — https://allcare-ga.com/location/hamilton-ridge/
+2026-04-20 05:32:52,290 [INFO] [38/41] Crawling: Urgent Care in Buford, GA | Walk-In Medical Clinic - Excelsior Healthcare — https://excelsiorhealthcare.com/locations/buford-ga/
+2026-04-20 05:32:56,037 [INFO] [39/41] Crawling: Emory at Buford - Primary Care — https://www.emoryhealthcare.org/locations/primary-care/emory-at-buford
+2026-04-20 05:32:58,124 [INFO] [40/41] Crawling: Gwinnett Clinic | Sugar Hill/Buford, GA — https://www.gwinnettclinic.com/locations/sugar-hill-buford/
+2026-04-20 05:33:00,265 [INFO] [41/41] Crawling: North Fulton Health Center | Grady Health — https://www.gradyhealth.org/locations/north-fulton-health-center/
+2026-04-20 05:33:02,449 [INFO] Incremental crawl: 24 leads skipped (within 7-day window)
+2026-04-20 05:33:02,450 [INFO] === STEP 2b: GBP SIGNALS ===
+2026-04-20 05:33:02,502 [INFO] [1/41] GBP lookup: Perimeter Clinic Atlanta
+2026-04-20 05:33:02,812 [INFO] [2/41] GBP lookup: Family Practice at Peachtree-Dunwoody
+2026-04-20 05:33:03,079 [INFO] [3/41] GBP lookup: Dunwoody Village Clinic
+2026-04-20 05:33:03,252 [INFO] [4/41] GBP lookup: Family Practice Center
+2026-04-20 05:33:03,469 [INFO] [5/41] GBP lookup: Active Life & Health Center
+2026-04-20 05:33:03,638 [INFO] [6/41] GBP lookup: Dunwoody Chiropractic Center
+2026-04-20 05:33:03,791 [INFO] [7/41] GBP lookup: Wilson Family Chiropractic
+2026-04-20 05:33:04,056 [INFO] [8/41] GBP lookup: Dunwoody Dental Care
+2026-04-20 05:33:04,298 [INFO] [9/41] GBP lookup: The Whole Tooth
+2026-04-20 05:33:04,563 [INFO] [10/41] GBP lookup: Plunkett & Chaw Dental
+2026-04-20 05:33:04,739 [INFO] [11/41] GBP lookup: Reagin Family Dentistry
+2026-04-20 05:33:04,924 [INFO] [12/41] GBP lookup: Sports Rehab Center
+2026-04-20 05:33:05,101 [INFO] [13/41] GBP lookup: Peachtree Dunwoody Medical Associates
+2026-04-20 05:33:05,313 [INFO] [14/41] GBP lookup: Dunwoody Urgent Care
+2026-04-20 05:33:05,581 [INFO] [15/41] GBP lookup: Perimeter Dental
+2026-04-20 05:33:05,861 [INFO] [16/41] GBP lookup: Dunwoody Family & Cosmetic Dentistry
+2026-04-20 05:33:06,125 [INFO] [17/41] GBP lookup: Atlanta Total Wellness
+2026-04-20 05:33:06,382 [INFO] [18/41] GBP lookup: Dunwoody Pediatrics
+2026-04-20 05:33:06,639 [INFO] [19/41] GBP lookup: Sandy Springs Pediatrics
+2026-04-20 05:33:06,894 [INFO] [20/41] GBP lookup: Dunwoody Wellness Center
+2026-04-20 05:33:07,110 [INFO] [21/41] GBP lookup: Dunwoody Physical Therapy
+2026-04-20 05:33:07,292 [INFO] [22/41] GBP lookup: Perimeter Orthopaedics
+2026-04-20 05:33:07,552 [INFO] [23/41] GBP lookup: Dunwoody Dermatology
+2026-04-20 05:33:07,765 [INFO] [24/41] GBP lookup: Dunwoody OBGYN
+2026-04-20 05:33:08,007 [INFO] [25/41] GBP lookup: Atlanta Gastroenterology Associates
+2026-04-20 05:33:08,254 [INFO] [26/41] GBP lookup: Georgia Clinic
+2026-04-20 05:33:08,440 [INFO] [27/41] GBP lookup: Northside Family Medicine
+2026-04-20 05:33:08,687 [INFO] [28/41] GBP lookup: Perimeter North Family Medicine
+2026-04-20 05:33:08,894 [INFO] [29/41] GBP lookup: Back 2 Back Chiropractic
+2026-04-20 05:33:09,156 [INFO] [30/41] GBP lookup: Medical Location Near You - Find Your Doctor Today
+2026-04-20 05:33:09,412 [INFO] [31/41] GBP lookup: Urgent Care No Insurance Prices - Book Your Appointment Now
+2026-04-20 05:33:09,637 [INFO] [32/41] GBP lookup: Medical Plaza in Buford - Northeast Georgia Health System
+2026-04-20 05:33:09,832 [INFO] [33/41] GBP lookup: NGPG Urgent Care in Buford, GA | Telehealth & Walk-in Clinic
+2026-04-20 05:33:09,996 [INFO] [34/41] GBP lookup: Buford, GA Free Clinics
+2026-04-20 05:33:10,184 [INFO] [35/41] GBP lookup: Locations | MedLife Clinics
+2026-04-20 05:33:10,371 [INFO] [36/41] GBP lookup: Piedmont Urgent Care - Buford, GA
+2026-04-20 05:33:10,564 [INFO] [37/41] GBP lookup: Walk-in Primary Care Clinic in Buford, GA | AllCare Georgia
+2026-04-20 05:33:10,808 [INFO] [38/41] GBP lookup: Urgent Care in Buford, GA | Walk-In Medical Clinic - Excelsior Healthcare
+2026-04-20 05:33:11,038 [INFO] [39/41] GBP lookup: Emory at Buford - Primary Care
+2026-04-20 05:33:11,231 [INFO] [40/41] GBP lookup: Gwinnett Clinic | Sugar Hill/Buford, GA
+2026-04-20 05:33:11,431 [INFO] [41/41] GBP lookup: North Fulton Health Center | Grady Health
+2026-04-20 05:33:11,582 [INFO] Enriched 41 leads → /home/t0n34781/projects/n8n_Lead-Gen-Go_v-4/data/enriched_leads.json
+2026-04-20 05:33:11,585 [INFO] === STEP 3: SCORE ===
+2026-04-20 05:33:11,586 [INFO] Loaded leads from /home/t0n34781/projects/n8n_Lead-Gen-Go_v-4/data/enriched_leads.json
+2026-04-20 05:33:11,649 [INFO] Using Ollama models: scoring=qwen2.5-coder:7b reasoning=llama3.1:8b
+2026-04-20 05:33:11,649 [INFO] [1/41] LLM enriching: Dunwoody Village Clinic (score=75)
+2026-04-20 05:34:11,715 [WARNING] Ollama call failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)
+2026-04-20 05:34:54,156 [INFO] [2/41] LLM enriching: Dunwoody Family & Cosmetic Dentistry (score=75)
+2026-04-20 05:35:54,219 [WARNING] Ollama call failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)
+2026-04-20 05:36:20,904 [INFO] [3/41] LLM enriching: Dunwoody Dermatology (score=75)
+2026-04-20 05:37:34,795 [INFO] [4/41] LLM enriching: Northside Family Medicine (score=66)
+2026-04-20 05:38:48,520 [INFO] [5/41] LLM enriching: Atlanta Gastroenterology Associates (score=60)

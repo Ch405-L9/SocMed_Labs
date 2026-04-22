@@ -1,0 +1,14 @@
+You are a senior sales strategist. Summarize in 2-3 sentences the outreach opportunity for this healthcare business:
+
+Business: {{ business_name }} ({{ category }})
+Location: {{ address }}
+Digital Gaps: {{ gaps if gaps else "minimal gaps detected" }}
+ICP Score: {{ icp_score }}/100
+{% if gbp_unclaimed %}
+Note: Google Business Profile appears unclaimed — significant local visibility opportunity.
+{% endif %}
+{% if pagespeed_performance is not none and pagespeed_performance < 50 %}
+Note: Mobile performance score {{ pagespeed_performance }}/100 — site is very slow on mobile devices.
+{% endif %}
+
+Be specific, actionable, and concise. Reference concrete gaps, not generic advice.

@@ -1,0 +1,384 @@
+[
+    {
+        "name": "Perimeter Clinic Atlanta",
+        "category": "Primary Care",
+        "url": "https://www.perimeterclinicatlanta.com/",
+        "address": "3867 Peachtree Dunwoody Rd NE, Atlanta, GA 30342",
+        "analysis": {
+            "status": "success",
+            "booking": true,
+            "has_seo": true,
+            "socials": [],
+            "secure": true,
+            "title": "Perimeter Clinic Atlanta | Primary Care on Peachtree Dunwoody"
+        }
+    },
+    {
+        "name": "Family Practice at Peachtree-Dunwoody",
+        "category": "Primary Care",
+        "url": "https://drhickspractice.com/",
+        "address": "6105 Peachtree Dunwoody Road, Building C, Suite 115, Sandy Springs, GA 30328",
+        "analysis": {
+            "status": "exception",
+            "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+        }
+    },
+    {
+        "name": "Dunwoody Village Clinic",
+        "category": "Primary Care",
+        "url": "https://www.dunwoodyvillageclinic.com/",
+        "address": "5471 Chamblee Dunwoody Rd, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "exception",
+            "error": "HTTPSConnectionPool(host='www.dunwoodyvillageclinic.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.dunwoodyvillageclinic.com', port=443): Failed to resolve 'www.dunwoodyvillageclinic.com' ([Errno -2] Name or service not known)\"))"
+        }
+    },
+    {
+        "name": "Family Practice Center",
+        "category": "Primary Care",
+        "url": "https://familypracticecenterpc.com/",
+        "address": "993 Johnson Ferry Rd NE, Suite 210, Atlanta, GA 30342",
+        "analysis": {
+            "status": "exception",
+            "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+        }
+    },
+    {
+        "name": "Active Life & Health Center",
+        "category": "Chiropractic",
+        "url": "https://www.dunwoodychiropractic.com/",
+        "address": "6849 Peachtree-Dunwoody Road, Building B4, Suite 100, Sandy Springs, GA 30328",
+        "analysis": {
+            "status": "success",
+            "booking": true,
+            "has_seo": true,
+            "socials": [],
+            "secure": true,
+            "title": "Active Life & Health Center: Chiropractors: Sandy Springs, GA"
+        }
+    },
+    {
+        "name": "Dunwoody Chiropractic Center",
+        "category": "Chiropractic",
+        "url": "https://www.dunwoodychiropracticcenter.com/",
+        "address": "1 Dunwoody Park, Suite 124, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "success",
+            "booking": true,
+            "has_seo": true,
+            "socials": [],
+            "secure": true,
+            "title": "Dunwoody Chiropractic Center - Dunwoody, GA - Chiropractic Care for All Ages"
+        }
+    },
+    {
+        "name": "Wilson Family Chiropractic",
+        "category": "Chiropractic",
+        "url": "https://wfc4health.com/",
+        "address": "1713 Mt Vernon Rd, Suite 3, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "error",
+            "code": 403
+        }
+    },
+    {
+        "name": "Dunwoody Dental Care",
+        "category": "Dental",
+        "url": "https://dunwoodydentalcare.com/",
+        "address": "1505 Mt Vernon Rd, Suite 150, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "error",
+            "code": 403
+        }
+    },
+    {
+        "name": "The Whole Tooth",
+        "category": "Dental",
+        "url": "https://www.wholetoothdunwoody.com/",
+        "address": "1713 Mt Vernon Rd, Suite 2, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "success",
+            "booking": true,
+            "has_seo": true,
+            "socials": [
+                "https://www.instagram.com/thewholetoothdunwoody/?hl=en",
+                "https://www.facebook.com/The-Whole-Tooth-118700923327339",
+                "https://www.facebook.com/profile.php?id=100063756382611"
+            ],
+            "secure": true,
+            "title": "Dentist in Dunwoody GA | The Whole Tooth"
+        }
+    },
+    {
+        "name": "Plunkett & Chaw Dental",
+        "category": "Dental",
+        "url": "https://drleeplunkett.com/",
+        "address": "1713 Mt Vernon Rd, Suite 1, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "success",
+            "booking": true,
+            "has_seo": true,
+            "socials": [
+                "https://www.facebook.com/plunkettchawdental"
+            ],
+            "secure": true,
+            "title": "Family Dentists in Dunwoody | Dunwoody Dentists - Plunkett & Chaw Dental"
+        }
+    },
+    {
+        "name": "Reagin Family Dentistry",
+        "category": "Dental",
+        "url": "https://www.reaginfamilydentistry.com/",
+        "address": "1370 Center Dr, Ste 101, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "success",
+            "booking": true,
+            "has_seo": true,
+            "socials": [
+                "https://www.instagram.com/reaginfamilydentistry/",
+                "https://www.facebook.com/ReaginFamilyDentistry/"
+            ],
+            "secure": true,
+            "title": "Reagin Family Dentistry Dunwoody, GA - Dental Care for Healthy Smiles"
+        }
+    },
+    {
+        "name": "Sports Rehab Center",
+        "category": "Physical Therapy",
+        "url": "https://www.sportsrehabcenter.com/locations/location_dunwoody/",
+        "address": "4 Dunwoody Park, Suite 122, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "success",
+            "booking": false,
+            "has_seo": false,
+            "socials": [
+                "https://www.facebook.com/sportsrehabcenter",
+                "https://twitter.com/SportsRehabATL"
+            ],
+            "secure": true,
+            "title": "Dunwoody | Sports Rehab Center"
+        }
+    },
+    {
+        "name": "Peachtree Dunwoody Medical Associates",
+        "category": "Primary Care",
+        "url": "https://peachtreedunwoodymed.com/",
+        "address": "5505 Peachtree Dunwoody Rd, Suite 460, Atlanta, GA 30342",
+        "analysis": {
+            "status": "success",
+            "booking": true,
+            "has_seo": false,
+            "socials": [],
+            "secure": true,
+            "title": "\r\n\tHome | Peachtree Dunwoody Medical Associates\r\n"
+        }
+    },
+    {
+        "name": "Dunwoody Urgent Care",
+        "category": "Urgent Care",
+        "url": "https://www.peachtreemed.com/location/dunwoody/",
+        "address": "4500 Olde Perimeter Way, Suite 100, Dunwoody, GA 30346",
+        "analysis": {
+            "status": "success",
+            "booking": true,
+            "has_seo": true,
+            "socials": [],
+            "secure": true,
+            "title": "Dunwoody Urgent Care \u2022 Peachtree Immediate Care"
+        }
+    },
+    {
+        "name": "Perimeter Dental",
+        "category": "Dental",
+        "url": "https://www.perimeterdental.com/",
+        "address": "110 Perimeter Center Terrace, Suite 250, Dunwoody, GA 30346",
+        "analysis": {
+            "status": "success",
+            "booking": true,
+            "has_seo": true,
+            "socials": [],
+            "secure": true,
+            "title": "Atlanta & Sandy Springs Dentist \u2013 Perimeter Dental \u2013 2 Convenient Locations"
+        }
+    },
+    {
+        "name": "Dunwoody Family & Cosmetic Dentistry",
+        "category": "Dental",
+        "url": "https://www.dunwoodydentistry.com/",
+        "address": "1 Dunwoody Park, Suite 125, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "error",
+            "code": 404
+        }
+    },
+    {
+        "name": "Atlanta Total Wellness",
+        "category": "Chiropractic",
+        "url": "https://www.atlantatotalwellness.com/",
+        "address": "110 Perimeter Center Terrace, Suite 100, Dunwoody, GA 30346",
+        "analysis": {
+            "status": "success",
+            "booking": true,
+            "has_seo": true,
+            "socials": [
+                "https://www.facebook.com/pages/Atlanta-Total-Wellness/133313133373150?sk=wall",
+                "https://www.instagram.com/atlantatotalwellness/"
+            ],
+            "secure": true,
+            "title": "Atlanta Total Wellness: Atlanta Chiropractor"
+        }
+    },
+    {
+        "name": "Dunwoody Pediatrics",
+        "category": "Pediatrics",
+        "url": "https://www.dunwoodypediatrics.com/",
+        "address": "1 Dunwoody Park, Suite 120, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "error",
+            "code": 403
+        }
+    },
+    {
+        "name": "Sandy Springs Pediatrics",
+        "category": "Pediatrics",
+        "url": "https://www.sandyspringspediatrics.com/",
+        "address": "1100 Johnson Ferry Rd NE, Suite 400, Atlanta, GA 30342",
+        "analysis": {
+            "status": "error",
+            "code": 403
+        }
+    },
+    {
+        "name": "Dunwoody Wellness Center",
+        "category": "Wellness",
+        "url": "https://www.dunwoodywellnesscenter.com/",
+        "address": "1713 Mt Vernon Rd, Suite 4, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "success",
+            "booking": false,
+            "has_seo": true,
+            "socials": [],
+            "secure": true,
+            "title": "Dunwoody Wellness Center: Chiropractic | Medical Massage | Skincare 404.590.392"
+        }
+    },
+    {
+        "name": "Dunwoody Physical Therapy",
+        "category": "Physical Therapy",
+        "url": "https://www.dunwoodypt.com/",
+        "address": "1713 Mt Vernon Rd, Suite 5, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "success",
+            "booking": false,
+            "has_seo": true,
+            "socials": [
+                "https://www.facebook.com/DunwoodyPreservationTrust",
+                "https://www.instagram.com/dunwoodypt/"
+            ],
+            "secure": true,
+            "title": "Dunwoody History & Heritage | Dunwoody Preservation Trust"
+        }
+    },
+    {
+        "name": "Perimeter Orthopaedics",
+        "category": "Specialty",
+        "url": "https://www.perimeterortho.com/",
+        "address": "5673 Peachtree Dunwoody Rd, Suite 825, Atlanta, GA 30342",
+        "analysis": {
+            "status": "success",
+            "booking": false,
+            "has_seo": false,
+            "socials": [],
+            "secure": true,
+            "title": "No Title"
+        }
+    },
+    {
+        "name": "Dunwoody Dermatology",
+        "category": "Specialty",
+        "url": "https://www.dunwoodydermatology.com/",
+        "address": "1 Dunwoody Park, Suite 121, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "exception",
+            "error": "HTTPSConnectionPool(host='www.dunwoodydermatology.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.dunwoodydermatology.com', port=443): Failed to resolve 'www.dunwoodydermatology.com' ([Errno -2] Name or service not known)\"))"
+        }
+    },
+    {
+        "name": "Dunwoody OBGYN",
+        "category": "Specialty",
+        "url": "https://www.dunwoodyobgyn.com/",
+        "address": "1 Dunwoody Park, Suite 123, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "success",
+            "booking": true,
+            "has_seo": true,
+            "socials": [],
+            "secure": true,
+            "title": "Dunwoody OBGYN: OBGYNs: North Atlanta Dunwoody, GA"
+        }
+    },
+    {
+        "name": "Atlanta Gastroenterology Associates",
+        "category": "Specialty",
+        "url": "https://www.atlantagastro.com/location/dunwoody/",
+        "address": "1140 Hammond Dr, Suite E-525, Atlanta, GA 30328",
+        "analysis": {
+            "status": "error",
+            "code": 403
+        }
+    },
+    {
+        "name": "Georgia Clinic",
+        "category": "Specialty",
+        "url": "https://gaclinicpc.com/",
+        "address": "6300 Hospital Pkwy, Johns Creek, GA 30097",
+        "analysis": {
+            "status": "exception",
+            "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+        }
+    },
+    {
+        "name": "Northside Family Medicine",
+        "category": "Primary Care",
+        "url": "https://www.northside.com/locations/northside-family-medicine-dunwoody",
+        "address": "1140 Hammond Dr, Suite E-525, Atlanta, GA 30328",
+        "analysis": {
+            "status": "error",
+            "code": 403
+        }
+    },
+    {
+        "name": "Perimeter North Family Medicine",
+        "category": "Primary Care",
+        "url": "https://www.perimeternorth.com/",
+        "address": "Multiple locations",
+        "analysis": {
+            "status": "success",
+            "booking": false,
+            "has_seo": true,
+            "socials": [],
+            "secure": true,
+            "title": "PerimeterNorth.com is for sale | HugeDomains"
+        }
+    },
+    {
+        "name": "Back 2 Back Chiropractic",
+        "category": "Chiropractic",
+        "url": "https://b2bchiro.net/",
+        "address": "1 Dunwoody Park, Suite 124, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "error",
+            "code": 403
+        }
+    },
+    {
+        "name": "Dunwoody Village Clinic",
+        "category": "Primary Care",
+        "url": "https://www.dunwoodyvillageclinic.com/",
+        "address": "5471 Chamblee Dunwoody Rd, Dunwoody, GA 30338",
+        "analysis": {
+            "status": "exception",
+            "error": "HTTPSConnectionPool(host='www.dunwoodyvillageclinic.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.dunwoodyvillageclinic.com', port=443): Failed to resolve 'www.dunwoodyvillageclinic.com' ([Errno -2] Name or service not known)\"))"
+        }
+    }
+]
