@@ -1,0 +1,17 @@
+{
+  "brand_name": "Badger Technologies LLC",
+  "slogan": "CTRL + ALT + deliver",
+  "core_service": "Web optimization + digital visibility acceleration for small/medium businesses",
+  "positioning": "Affordable, high-performance alternative to expensive agencies",
+  "brand_messages": [
+    "Affordable web optimization",
+    "Underdog business empowerment",
+    "Speed + efficiency",
+    "Fix your online visibility before your competitors do"
+  ],
+  "logo_paths": [
+    "/home/ubuntu/Claude-Code-MCP/badgr_logo_no-bg.png",
+    "/home/ubuntu/Claude-Code-MCP/official_badgr-logo_px512.png",
+    "/home/ubuntu/Claude-Code-MCP/ATL_skylin-badgrtech.png"
+  ]
+}

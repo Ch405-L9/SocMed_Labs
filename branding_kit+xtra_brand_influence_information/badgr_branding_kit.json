@@ -1,0 +1,59 @@
+{
+  "file_name": "badgr_branding_kit.json",
+  "organization": "BADGR Technologies LLC",
+  "document_type": "branding_kit",
+  "source_files": [
+    "/mnt/data/official_badgr-logo_px512.png"
+  ],
+  "brand_identity": {
+    "display_name": "BADGR Technologies LLC",
+    "legal_name": "BADGRTechnologies LLC",
+    "entity_type": "LLC",
+    "naming_convention": {
+      "rule": "Never use 'BADGR Technologies' (with space between BADGR and Technologies). Always run together.",
+      "formal": "BADGRTechnologies LLC",
+      "short": "BADGRTech",
+      "handle": "@badgrtechnologies",
+      "usage": {
+        "display_name_social": "BADGRTech",
+        "legal_documents": "BADGRTechnologies LLC",
+        "email_signature": "BADGRTech | BADGRTechnologies LLC",
+        "hashtag": "#BADGRTech"
+      },
+      "forbidden_forms": ["BADGR Technologies", "Badgr Tech", "badgr tech", "BADGR TECH", "Badgr Technologies"]
+    }
+  },
+  "visual_identity": {
+    "logo_path": "/mnt/data/official_badgr-logo_px512.png",
+    "color_system": {
+      "primary": {
+        "badgr_blue": "#02068D",
+        "logo_primary": "#0E305F",
+        "logo_primary_dark": "#0A2345",
+        "logo_mid": "#1C4A86",
+        "logo_light": "#3E6FB0",
+        "logo_lightest": "#7FA1D3"
+      },
+      "neutral": {
+        "white": "#F2F0E6",
+        "grey": "#A9A9A9",
+        "black": "#050505"
+      }
+    },
+    "usage_rules": {
+      "header_color": "#0E305F",
+      "body_text": "#050505",
+      "background": "#F2F0E6",
+      "accent_primary": "#02068D"
+    }
+  },
+  "design_direction": {
+    "style": "minimal_high_contrast_blue_black_system",
+    "application_scope": [
+      "web_ui",
+      "reports",
+      "internal_tools",
+      "client deliverables"
+    ]
+  }
+}

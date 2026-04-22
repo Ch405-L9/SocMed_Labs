@@ -1,0 +1,84 @@
+{
+  "_schema": "build_log_v1",
+  "_note": "Copy to <platform>_post_kit/build_log.json after each run. Fill all fields. Do not leave nulls in final log.",
+
+  "platform": "",
+  "run_id": "",
+  "timestamp": "",
+  "execution_model": "",
+  "brand_context_path": "/home/t0n34781/Desktop/brand/badgr_branding_kit.json",
+  "voice_tone_path": "/home/t0n34781/Desktop/brand/voice_and_tone.md",
+  "logo_source_path": "/home/t0n34781/Desktop/brand/official_badgr-logo_px512.png",
+  "standard_version": "2.1",
+  "operator": "claude-sonnet-4-6 | ollama-mcp-server",
+
+  "steps": [
+    {
+      "step": 1,
+      "name": "guardrail_gate",
+      "status": null,
+      "checks": {
+        "brand_context_found":    null,
+        "voice_tone_found":       null,
+        "logo_source_found":      null,
+        "platform_valid":         null,
+        "model_routing_verified": null,
+        "output_dir_writable":    null
+      },
+      "gate_result": "PASS | FAIL — ABORT if FAIL",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "brand_context_load",
+      "status": null,
+      "context_loaded": ["badgr_branding_kit.json", "voice_and_tone.md"],
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "profile_build_generation",
+      "status": null,
+      "model_used": "",
+      "char_counts": {
+        "display_name":  { "value": null, "limit": null, "pass": null },
+        "bio_or_about":  { "value": null, "limit": null, "pass": null }
+      },
+      "violations_detected": [],
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "name": "image_conversion",
+      "status": null,
+      "assets_attempted": [],
+      "assets_written": [],
+      "assets_failed": [],
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "validation",
+      "status": null,
+      "brand_alignment_score":  null,
+      "compliance_score":       null,
+      "copy_quality_score":     null,
+      "violations_found":       [],
+      "violations_resolved":    [],
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "output_write",
+      "status": null,
+      "files_written": [],
+      "files_failed":  [],
+      "notes": ""
+    }
+  ],
+
+  "final_status": "COMPLETE | FAILED | PARTIAL",
+  "requires_review": false,
+  "review_items": [],
+  "run_duration_seconds": null
+}

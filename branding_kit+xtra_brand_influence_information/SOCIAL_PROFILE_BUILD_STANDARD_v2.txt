@@ -1,0 +1,573 @@
+BADGRTechnologies LLC — SOCIAL MEDIA PROFILE BUILD STANDARD
+Version: 2.2 | Status: PRODUCTION
+=========================================================
+
+TASK: Generate a complete, production-ready social media profile package
+for ONE platform only per execution (TikTok OR X OR YouTube OR Instagram OR Facebook).
+
+You are operating inside an MCP + Ollama tool environment.
+All outputs must be deterministic, structured, and ready for direct deployment.
+
+---
+
+# 1. GLOBAL TYPOGRAPHY STANDARD (MANDATORY ACROSS ALL OUTPUTS)
+
+All text formatting references MUST follow this system:
+
+  H1 HEADERS  → Goldman Bold
+  H2 HEADERS  → Satoshi
+  H3 + BODY   → Inter
+
+RULE:
+- This is a formatting contract for downstream rendering systems.
+- You do NOT visually render fonts.
+- You MUST tag structure correctly in human output AND mirror it in the
+  JSON typography_map block (see Section 4A).
+
+Human-format tagging:
+
+  [H1] Header Text [/H1]
+  [H2] Subheader Text [/H2]
+  [BODY] Content text [/BODY]
+
+JSON-format tagging (typography_map — included in every machine output):
+
+  "typography_map": [
+    { "tag": "H1",   "font": "Goldman Bold", "content": "<value>" },
+    { "tag": "H2",   "font": "Satoshi",      "content": "<value>" },
+    { "tag": "BODY", "font": "Inter",         "content": "<value>" }
+  ]
+
+PURPOSE: Keeps human copy-paste tags and machine output in sync.
+Downstream renderers use typography_map as the authoritative source.
+
+---
+
+# 2. IMAGE HANDLING RULES (NON-DESTRUCTIVE — CRITICAL)
+
+For ALL image assets, ONLY the following transforms are permitted:
+
+  - Resizing to platform specifications
+  - Format conversion (PNG → JPG if required by platform)
+  - Light enhancement: contrast/clarity adjustment only — NO redesign
+  - Cropping ONLY if required for platform ratio compliance
+
+STRICT PROHIBITIONS:
+  - No logo redesign
+  - No color palette changes
+  - No layout restructuring
+  - No overlay additions
+
+Every image asset block MUST include:
+
+  "source_file"          — absolute path to original
+  "transformations"      — array of transforms applied (resize, convert, crop, enhance)
+  "processing_tool"      — tool used to execute transforms (default: imagemagick)
+  "transform_command"    — exact executable command string
+  "output_path"          — absolute path for final asset
+  "compliance_confirmed" — true/false
+
+IMAGE HANDLING RULES — MASTER VS PLATFORM OUTPUTS:
+
+  MASTER FILE (official_badgr-logo_px512.png):
+    - Transparent PNG. NEVER modify. NEVER add background. NEVER save with fill.
+    - All platform outputs derive FROM this file. It stays untouched.
+
+  PLATFORM OUTPUTS (profile photos, banners, covers):
+    - Profile photos: resize logo, add brand-color padding bg (#0E305F), output JPG or PNG per platform spec.
+    - Padding bg is REQUIRED for circle-crop platforms — prevents logo edge crop.
+    - Banners/covers: navy canvas (#0E305F) + centered logo. Background is structural, not decorative.
+    - These are DERIVED assets. The master is still transparent.
+
+ImageMagick command pattern (profile photo with padding):
+
+  convert <source> -resize <logo_WxH> -background '#0E305F' -gravity center -extent <canvas_WxH> <output>
+
+PLATFORM IMAGE SPECS (authoritative reference):
+
+  tiktok:
+    profile_photo: 200x200 jpg, max 2MB, circle display, bg #0E305F
+
+  x:
+    profile_photo: 400x400 jpg, max 2MB, circle display, bg #0E305F
+    banner:        1500x500 jpg, max 5MB, safe zone center 1260x360
+
+  youtube:
+    profile_photo: 800x800 png, max 4MB, circle display, bg #0E305F
+    banner:        2560x1440 jpg, max 6MB, safe zone center 1546x423
+
+  instagram:
+    profile_photo: 320x320 jpg, max 2MB, circle display, bg #0E305F
+
+  facebook:
+    profile_photo: 170x170 jpg, max 2MB, circle display, bg #0E305F
+    cover:         820x312 jpg, max 4MB, safe zone avoid bottom-left 88px (profile overlap)
+
+  linkedin:
+    profile_photo: 400x400 jpg, max 8MB, circle display, bg #0E305F
+    banner:        1584x396 jpg, max 8MB, safe zone center 1200x396
+
+---
+
+# 3. TOOL EXECUTION FLOW (MCP + OLLAMA)
+
+Step 1 — Retrieve brand context ONCE:
+
+  ollama_rag_query:
+    query: "BADGR brand voice, Next-Gen Prompt Bundle positioning,
+            platform constraints, typography system"
+    top_k: 5
+
+  Cache result. Reuse for ALL steps in this run. Do not re-query.
+
+---
+
+Step 2 — Generate full profile:
+
+  ollama_profile_build:
+    model: gemma3:4b              ← copy generation (see §14 and badgr_brand_rules model_routing)
+    platform: <selected platform>
+    NOTE: mistral:latest MUST NOT be used for profile_build or write tasks.
+    It fails structured generation (echoes instructions). Use gemma3:4b.
+    Full routing map in badgr_brand_rules section: model_routing.
+    brand_context_path: /home/t0n34781/Desktop/brand/badgr_branding_kit.json
+    voice_tone_path: /home/t0n34781/Desktop/brand/voice_and_tone.md
+    logo_source_path: /home/t0n34781/Desktop/brand/official_badgr-logo_px512.png
+    output_dir: /home/t0n34781/Desktop/brand/<platform>_post_kit/
+
+  Must produce:
+    - Platform-native text fields (character limits enforced per platform)
+    - Narratives in BADGR voice (outcome-first, Atlanta-local, no hedging)
+    - Full content kit (posts, hooks, captions)
+    - Image asset specifications (non-destructive transforms only)
+    - typography_map block
+    - learning_loop_tags per content piece
+
+---
+
+Step 3 — Validate:
+
+  ollama_validate:
+    platform: <selected platform>
+    brand_context_path: /home/t0n34781/Desktop/brand/badgr_branding_kit.json
+
+  Validate:
+    - Platform field character limits
+    - Brand voice compliance (no question openers, no fluff, outcome-first)
+    - Typography structure completeness (typography_map populated)
+    - Image asset specs complete (processing_tool + transform_command present)
+    - Learning loop tags present on all content pieces
+
+---
+
+Step 4 — OPTIONAL enhancement:
+
+  ollama_generate_variants:
+    variation_axis: tone | length | hook | platform
+    (invoke ONLY if hooks, bios, or captions fail validation or need A/B options)
+
+---
+
+# 4. OUTPUT FORMAT (MANDATORY DUAL OUTPUT)
+
+Return BOTH formats. Neither is optional.
+
+---
+
+## A) MACHINE OUTPUT (JSON)
+
+Filesystem-ready. Written to /home/t0n34781/Desktop/brand/<platform>_post_kit/
+
+Required structure:
+
+{
+  "platform": "",
+  "generated_at": "<ISO8601>",
+  "brand": "BADGR Technologies LLC",
+  "execution_model": "mistral:latest",
+
+  "typography_map": [
+    { "tag": "H1",   "font": "Goldman Bold", "content": "" },
+    { "tag": "H2",   "font": "Satoshi",      "content": "" },
+    { "tag": "BODY", "font": "Inter",         "content": "" }
+  ],
+
+  "text_fields": {
+    "display_name": "",
+    "display_name_char_count": 0,
+    "display_name_limit": 0,
+    "handle": "@badgrtechnologies",
+    "platform_field_label": "<bio | about | description | headline>",
+    "bio_or_about": "",
+    "bio_char_count": 0,
+    "bio_limit": 0,
+    "website_url": "badgrtech.com",
+    "cta": "DM us CTRL at @badgrtechnologies",
+    "hashtags": []
+  },
+
+  "content_kit": {
+    "pinned_post_hook": "",
+    "starter_post_captions": [
+      {
+        "type": "service_ad | educational | viral_hook | social_proof",
+        "caption": "",
+        "char_count": 0,
+        "learning_loop_tags": {
+          "hook_type": "contrarian | proof | problem_statement | result_first",
+          "format": "problem_solution | list | statement | narrative",
+          "tone": "technical_direct | conversational | punchy | results_heavy",
+          "content_pillar": "service_ad | educational | viral_adaptation | social_proof",
+          "estimated_engagement_tier": "high | medium | low"
+        }
+      }
+    ]
+  },
+
+  "image_assets": {
+    "profile_photo": {
+      "source_file": "",
+      "transformations": [],
+      "processing_tool": "imagemagick",
+      "transform_command": "",
+      "output_path": "",
+      "compliance_confirmed": true
+    },
+    "banner_or_cover": null
+  },
+
+  "validation": {
+    "platform_compliance_pass": true,
+    "brand_voice_pass": true,
+    "character_limits_pass": true,
+    "typography_map_complete": true,
+    "image_specs_executable": true,
+    "learning_loop_tags_present": true,
+    "violations_resolved": []
+  }
+}
+
+---
+
+## B) COPY-PASTE READY PACK (HUMAN FORMAT)
+
+Optimized for direct paste into platform UI.
+No JSON. No metadata. Clean line breaks only.
+
+PLATFORM FORMAT RULES:
+  - TikTok:    Plain text ONLY. No [H1]/[BODY] tags. No markdown. No multiline bio.
+  - Instagram: Plain text. Bio may use line breaks (3 lines max).
+  - X:         Plain text. Bio single line.
+  - YouTube:   Plain text with paragraph breaks in description.
+  - Facebook:  Plain text. About is single block.
+  - LinkedIn:  May use light structure (line breaks) in About field.
+
+DYNAMIC FIELD LABEL RULE:
+  - TikTok / Instagram: use "BIO"
+  - YouTube:            use "DESCRIPTION"
+  - Facebook:           use "ABOUT"
+  - X (Twitter):        use "BIO"
+  - LinkedIn:           use "HEADLINE" + "ABOUT"
+
+Format EXACTLY:
+
+---
+
+[H1] <DISPLAY NAME> [/H1]
+
+[H2] <PLATFORM_FIELD_LABEL> [/H2]
+[BODY]
+<bio / about / description text>
+[/BODY]
+
+[H2] HANDLE [/H2]
+[BODY] @badgrtechnologies [/BODY]
+
+[H2] WEBSITE [/H2]
+[BODY] badgrtech.com [/BODY]
+
+[H2] CTA [/H2]
+[BODY] DM us CTRL at @badgrtechnologies [/BODY]
+
+[H2] HASHTAGS [/H2]
+[BODY]
+#BADGRTech #CTRLALTDELIVER #<rotating tag>
+[/BODY]
+
+[H2] PINNED POST [/H2]
+[BODY]
+<full pinned post text>
+[/BODY]
+
+[H2] POSTS [/H2]
+[BODY]
+POST 1 — <type>
+<caption>
+
+POST 2 — <type>
+<caption>
+
+POST 3 — <type>
+<caption>
+[/BODY]
+
+---
+
+# 5. PLATFORM EXECUTION LIMIT
+
+- ONLY ONE PLATFORM PER RUN — strictly enforced
+- NEVER batch platforms together in a single execution
+- Each platform run writes to its own post_kit directory
+
+---
+
+# 6. LEARNING LOOP INTEGRATION
+
+Every content piece MUST include learning_loop_tags in JSON output.
+These feed the RAG memory system and content selection engine.
+
+Required tags per content piece:
+
+  hook_type:
+    contrarian | proof | problem_statement | result_first | data_point
+
+  format:
+    problem_solution | list | statement | narrative | before_after
+
+  tone:
+    technical_direct | conversational | punchy | results_heavy | local_voice
+
+  content_pillar:
+    service_ad | educational | viral_adaptation | social_proof
+
+  estimated_engagement_tier:
+    high | medium | low
+
+---
+
+# 7. FINAL OUTPUT CHECKLIST
+
+Before returning output, confirm all items present:
+
+  [ ] JSON profile package — complete, filesystem-ready
+  [ ] Copy-paste pack — human format, platform field labels dynamic
+  [ ] typography_map — populated in JSON
+  [ ] Image spec block — processing_tool + transform_command present
+  [ ] Learning loop tags — on every content piece
+  [ ] Validation block — all fields evaluated, violations listed
+
+NO explanations.
+NO extra commentary.
+ONLY production-ready assets.
+
+---
+
+# 8. BRAND NAMING RULES (MANDATORY — APPLIED BEFORE ANY OUTPUT)
+
+NEVER use:  "BADGR Technologies" (space between BADGR and Technologies)
+NEVER use:  "Badgr Tech", "badgr tech", "BADGR TECH", "Badgr Technologies"
+
+PLATFORM HANDLES (registered):
+  TikTok:    @badgrtech25         (platform-registered)
+  X:         @badgrtechnologies
+  Instagram: @badgrtechnologies
+  YouTube:   @badgrtechnologies
+  Facebook:  @badgrtechnologies
+  NOTE: Handles differ per platform. Use platform-specific handle in all CTAs and mentions.
+
+ALWAYS use one of:
+  Short form:   BADGRTech            (social display names, captions, hashtags)
+  Formal form:  BADGRTechnologies LLC (legal references, email signatures)
+  Handle:       @badgrtechnologies    (all platforms)
+  Hashtag:      #BADGRTech
+
+Rule: If output contains any forbidden form, it MUST be caught in the
+validation block under violations_resolved before the file is written.
+
+---
+
+# 9. STATISTICS & PROOF STANDARDS
+
+HASHTAG STRATEGY (UPDATED v2.2):
+  - Minimum ratio: 5 discovery tags + 2 branded tags per post
+  - Never exceed 3 branded tags per post
+  - Rotate from alt_pool to prevent hashtag fatigue
+  - Discovery tags drive reach; branded tags build recognition
+
+  Discovery pool:  #WebDesign #SEO #SmallBusiness #AtlantaBusiness #LocalSEO
+                   #WebsiteOptimization #LeadGeneration #DigitalMarketing
+  Branded:         #BADGRTech #CTRLALTDELIVER
+  Optional:        #TechAgency #Entrepreneur
+
+PRIOR HASHTAG RULE (SUPERSEDED): branded-only sets. Do not revert.
+
+---
+
+NEVER fabricate specific numbers (percentages, dollar amounts, scores, times).
+
+Permitted patterns when no verified client data is available:
+  - "results vary"
+  - Process-proof: "scan → fix → before/after report"
+  - Brand proof: "BADGR Bolt — live on the Play Store. We ship."
+  - Outcome framing: "ATL sites leak leads silently. We find it. We fix it."
+
+Permitted only when sourced from real client work:
+  - Specific Lighthouse score deltas
+  - Specific load time improvements
+  - Specific dollar outcomes
+
+If real data exists, TAG the source in the learning_loop_tags:
+  "data_source": "client_audit | internal_test | platform_metric"
+
+---
+
+# 10. ICP REFERENCE (PHASE 1 — LOCKED)
+
+Target ICP for all web optimization content:
+  - ATL Metro law firms: 5–25 person practices
+  - ATL Metro medical/dental: small independent practices
+
+DO NOT target: enterprise, national brands, outside Atlanta, or outside these verticals.
+
+Phase 1 price band: $197–$500 (quick wins, one vertical only)
+Free entry CTA: 15-min site walkthrough — ATL businesses only
+
+Source: BADGR_Phase1_FullOpsManual.pdf
+
+---
+
+# 11. PLATFORM ROLLOUT ORDER (PHASE 1 RECOMMENDED SEQUENCE)
+
+Execute platforms in this order — one per session:
+
+  1. TikTok    ✓ COMPLETE (v2.1)
+  2. X         ✓ COMPLETE (v2.1)
+  3. Facebook  ✓ COMPLETE (v2.1)
+  4. YouTube   ✓ COMPLETE (v2.1)
+  5. Instagram ✓ COMPLETE (v2.1)
+  6. LinkedIn  ← DEFERRED — evaluate after Gate 1 (3–5 ATL clients + 3 testimonials)
+
+Rationale:
+  - TikTok + X = highest reach for ATL SMB awareness
+  - Facebook = primary platform for ATL law/medical practices
+  - YouTube = longer-form proof content (before/after walkthroughs)
+  - Instagram = brand presence, lower priority for law/medical ICP
+  - LinkedIn = defer — ATL SMBs in this segment engage on FB/TikTok first
+
+---
+
+# 12. REUSABLE REFERENCE BLOCK — BADGR BOLT BETA
+
+Copy into any platform build that includes a Bolt beta post.
+Do NOT re-derive these links manually each run.
+
+  status:        Beta — open to testers
+  platform:      Android
+  step_1_group:  https://groups.google.com/g/testers_community_04
+  step_2_test:   https://play.google.com/apps/testing/com.badgr.orbreader
+  step_3_install:https://play.google.com/store/apps/details?id=com.badgr.orbreader
+  fallback:      help@badgrtech.com
+  site:          https://www.badgrtech.com
+  links_page:    https://www.badgrtech.com/links  ← PENDING BUILD
+
+  Caption pattern (adjust per platform character limits):
+    "BADGR Bolt is live. ATL-built Android app — beta spots open.
+     STEP 1: Join Here --> groups.google.com/g/testers_community_04
+     STEP 2: Become a tester --> play.google.com/apps/testing/com.badgr.orbreader
+     STEP 3: Install --> play.google.com/store/apps/details?id=com.badgr.orbreader
+     Full steps at link in bio ↑ | Questions? help@badgrtech.com"
+
+  Platform link note:
+    - TikTok: links not clickable in captions — direct to 'link in bio ↑'
+    - X: links ARE clickable — use full URLs directly in tweet
+    - Facebook: links ARE clickable — use full URLs
+    - YouTube: links clickable in description — use full URLs with labels
+    - Instagram: links not clickable in captions — direct to 'link in bio ↑'
+
+---
+
+# 13. UPDATED FINAL OUTPUT CHECKLIST
+
+Before returning output, confirm all items present:
+
+  [ ] JSON profile package — complete, filesystem-ready
+  [ ] Copy-paste pack — human format, platform field labels dynamic
+  [ ] typography_map — populated in JSON
+  [ ] Image spec block — processing_tool + transform_command present
+  [ ] Learning loop tags — on every content piece, data_source tagged if numbers used
+  [ ] Validation block — all fields evaluated, violations listed
+  [ ] Brand naming check — no forbidden name forms in any output field
+  [ ] Stats check — no fabricated numbers, results vary applied where needed
+  [ ] ICP check — web ops content targets ATL law/medical only
+  [ ] Bolt beta links — pulled from Section 12 reference block, not re-derived
+
+NO explanations.
+NO extra commentary.
+ONLY production-ready assets.
+
+---
+
+# 14. PRE-EXECUTION GUARDRAIL GATE
+
+Run these checks BEFORE calling ollama_profile_build. ABORT if any check fails.
+Do not generate content without passing all gates.
+
+  GATE 1 — File dependencies
+  [ ] brand_context_path exists: /home/t0n34781/Desktop/brand/badgr_branding_kit.json
+  [ ] voice_tone_path exists:    /home/t0n34781/Desktop/brand/voice_and_tone.md
+  [ ] logo_source_path exists:   /home/t0n34781/Desktop/brand/official_badgr-logo_px512.png
+  [ ] output_dir is writable:    /home/t0n34781/Desktop/brand/<platform>_post_kit/
+  → FAIL: ABORT. Log failure in build_log.json step 1.
+
+  GATE 2 — Model routing
+  [ ] Copy task (profile_bio, write, rewrite) → model MUST be gemma3:4b
+  [ ] Summarization → mistral:latest
+  [ ] Code/structured output → qwen2.5-coder:7b
+  [ ] mistral:latest MUST NOT be assigned to profile_build or write tasks
+  → FAIL: Reassign model per routing map, do not proceed with wrong model.
+
+  GATE 3 — Content pre-flight (apply before generation, not after)
+  [ ] Platform is in enum: tiktok | x | youtube | instagram | facebook | linkedin
+  [ ] Platform rollout order respected (see §11)
+  [ ] Bolt beta links pulled from §12, not re-derived
+  [ ] "link in bio" strategy confirmed if platform = tiktok or instagram
+
+  GATE 4 — Post-generation content flags (catch before validation pass)
+  [ ] No emojis in any field
+  [ ] No question openers (bio, posts, hooks)
+  [ ] No forbidden name forms (BADGR Technologies, Badgr Tech — see §8)
+  [ ] No fabricated stats (see §9)
+  [ ] ICP match confirmed: ATL law/medical only for web ops content (see §10)
+  [ ] Character limits within platform spec (see ollama_profile_build.platform_field_limits)
+
+  → Any post-generation flag MUST appear in validation.violations before file write.
+  → Scores (brand_alignment_score, compliance_score, copy_quality_score) must be set.
+  → Deduct per scoring formula in ollama_profile_build.output_schema.validation.
+
+---
+
+# 15. RUN CHECKPOINT STRUCTURE
+
+After every successful profile build, write a build_log.json to the platform post kit directory.
+Template: /home/t0n34781/Desktop/brand/build_log_template.json
+
+  Location: /home/t0n34781/Desktop/brand/<platform>_post_kit/build_log.json
+
+  Required fields at completion:
+    platform, run_id, timestamp, execution_model, final_status
+    steps[*].status — every step marked pass | fail | skip
+    steps[5].files_written — every output file listed
+    validation scores — brand_alignment_score, compliance_score, copy_quality_score
+    violations_found / violations_resolved — even if empty arrays
+
+  final_status values:
+    COMPLETE  — all gates passed, all files written, no open violations
+    PARTIAL   — files written but violations_resolved is non-empty
+    FAILED    — gate failure or file write failure; requires_review: true
+
+  Run log is the authoritative record of what was generated and when.
+  Do not overwrite a previous run's log — increment run_id.
+
+---
+
+END.

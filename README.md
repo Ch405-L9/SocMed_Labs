@@ -1,78 +1,335 @@
-# BADGR Social Lab
+<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
+```
+# <q>If you want, next step I can write a single README-stack-operations.md that lives in /home/t0n34781/dev/claude-mcp-stack/ with just the cheat‑sheet portion, formatted exactly as a quick‑reference you can open in your editor.</q> yes
+```
 
-Short-form content system and AI knowledge base for **BADGR Technologies LLC** — technical SEO and website compliance for Atlanta law firms and medical/dental practices.
+Here’s a `README-stack-operations.md` you can drop into `/home/t0n34781/dev/claude-mcp-stack/`. You can copy‑paste this into a file as‑is.
 
-## What This Is
+```markdown
+# Claude MCP Stack – Operations Cheat Sheet
 
-A fully structured, locally queryable knowledge base that powers:
-- 12 ready-to-record video scripts across 4 content series
-- 2 ad creative briefs (Cursor-style + Solopreneur Promise)
-- Local RAG (Ollama + ChromaDB) — query your own docs in seconds
-- Q2 2026 posting calendar (30 slots, Tue/Thu/Sat 4:30 PM)
-- Offer docs, pricing, compliance disclaimers, and prompt templates
+Local AI stack for: Claude (planner/verifier) + Ollama (execution) + MCP (tools) + n8n (workflows) on BADGR‑Lab.
 
-## Quick Start
+Root: `/home/t0n34781/dev/claude-mcp-stack`
+Primary projects root: `/home/t0n34781/projects`
+
+---
+
+## 1. Stack components
+
+- **Claude (cloud)**
+  - Role: planner, verifier, integrator.
+  - Access: via Claude Code / API.
+  - Config: reads `~/.claude.json` for MCP servers.
+
+- **Ollama (local models)**
+  - Models installed:
+    - `llama3.1:8b`
+    - `mistral:latest`
+    - `qwen2.5-coder:7b`
+    - `llama3.2:3b`
+    - `phi3:mini`
+  - Typical usage:
+    - `qwen2.5-coder:7b` – coding tasks.
+    - `mistral:latest` – heavy text/summarization.
+    - `llama3.2:3b` / `phi3:mini` – routing/utility.
+
+- **MCP servers**
+  - **Ollama MCP**
+    - Path:  
+      `/home/t0n34781/dev/claude-mcp-stack/ollama-mcp-server/build/index.js`
+    - Exposes local models as tools to Claude.
+  - **Filesystem MCP**
+    - Root:  
+      `/home/t0n34781/projects`
+    - Claude can read/write/create files only under this root.
+  - **Memory MCP**
+    - Persistent memory backed by a JSON file (recommended):
+      - Dir: `/home/t0n34781/.claude-memory/`
+      - File: `global-memory.json`
+
+- **n8n**
+  - Role: workflow/orchestration:
+    - Triggers (webhooks, cron, manual).
+    - Calls Claude API & external HTTP APIs.
+    - Future: orchestrate MCP-based agents.
+
+---
+
+## 2. Global configuration files
+
+### 2.1 MCP mapping for Claude
+
+File: `~/.claude.json`
+
+Example (adjust if paths change):
+
+```json
+{
+  "mcpServers": {
+    "ollama": {
+      "command": "node",
+      "args": [
+        "/home/t0n34781/dev/claude-mcp-stack/ollama-mcp-server/build/index.js"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-filesystem",
+        "--root",
+        "/home/t0n34781/projects"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_FILE_PATH": "/home/t0n34781/.claude-memory/global-memory.json"
+      }
+    }
+  }
+}
+```
+
+
+### 2.2 CLAUDE.md (behavior contract)
+
+File: `CLAUDE.md` in any project or in this stack repo.
+
+Key ideas to encode:
+
+- Claude = planner/verifier/integrator.
+- Local models = executors (code \& bulk text).
+- Filesystem MCP = all file ops.
+- Memory MCP = persistent context.
+- Standard: “boil the ocean, production‑grade by default.”
+
+---
+
+## 3. Start/stop commands
+
+From any shell on BADGR‑Lab:
+
+### 3.1 Ollama
 
 ```bash
-# 1. Activate the environment
+# Ensure Ollama is running
+ollama serve
+# Test a model
+ollama run qwen2.5-coder:7b
+```
+
+
+### 3.2 n8n
+
+```bash
+# Start n8n in the foreground
+n8n start
+```
+
+Browse to the n8n UI (default: `http://localhost:5678`) and build workflows.
+
+### 3.3 MCP servers (general notes)
+
+MCP servers are started on demand by Claude based on `~/.claude.json`. No manual start is usually necessary.
+
+To test an MCP server manually:
+
+```bash
+# Example: run filesystem MCP directly
+npx @modelcontextprotocol/server-filesystem --root /home/t0n34781/projects
+```
+
+
+---
+
+## 4. Operating modes (delegation patterns)
+
+Use these three mental modes when talking to Claude.
+
+### Mode A – Local “junior dev” (default)
+
+Local models handle:
+
+- Small, mechanical tasks:
+    - Create project dirs/boilerplate.
+    - Single components/endpoints.
+    - HTML/CSS mockups, landing pages.
+- Bulk operations:
+    - Summaries, transforms.
+    - Boilerplate CRUD, test scaffolds.
+
+Prompt pattern:
+
+> Plan the work first, then delegate all implementation to local models via the Ollama tool and filesystem tool. Use Claude only for planning and light verification.
+
+### Mode B – Claude “school teacher” (reviewer)
+
+Claude reviews local output when:
+
+- You want architecture/API review.
+- You have non-trivial code or legal text.
+
+Prompt pattern:
+
+> Local tools have produced these files. Review them for correctness, architecture, and edge cases. Propose concrete improvements and refactors. Do not re-implement everything from scratch.
+
+### Mode C – Claude “hand‑hold” planner/integrator
+
+Claude does high‑level design and integration when:
+
+- Designing larger systems (e‑commerce, multi-service pipelines).
+- Defining directory structure, modules, and boundaries.
+
+Prompt pattern:
+
+> First design the architecture and directory structure. Use filesystem tools to create only the folder and documentation skeleton. Mark future implementation steps for local models. Later, we will delegate those implementation steps to local models via Ollama.
+
+---
+
+## 5. New project workflows
+
+### 5.1 New utility script (Python/Node/CLI)
+
+```bash
+cd /home/t0n34781/projects
+mkdir my-script && cd my-script
+```
+
+Then in Claude Code (project root opened):
+
+1. Ask Claude to:
+    - Plan minimal structure (`src/`, `tests/`, config).
+    - Create files via filesystem MCP.
+    - Generate code/tests via local models.
+2. Run locally:
+```bash
+# For Python
+python -m venv .venv
 source .venv/bin/activate
-
-# 2. Query the knowledge base
-python3 ask_social_lab.py "What's the pre-flight checklist for a medical client?"
-python3 ask_social_lab.py "Give me a hook for the compliance check series"
-python3 ask_social_lab.py "What are the Gate 1 criteria?"
-
-# 3. After editing any file in social-lab/, re-ingest
-python3 social_lab_ingest.py
+pip install -e .[dev]
+pytest
 ```
 
-**See `CHEATSHEET.md` for the full command reference.**
+Use Claude (Mode B) to review failing tests and structure.
 
-## Structure
+---
 
-```
-SocMed_Labs/
-├── social-lab/              # The knowledge base
-│   ├── 00_admin/            # README, change log, glossary
-│   ├── 01_brand/            # Brand profile YAML, messaging
-│   ├── 02_research/         # Viral research, benchmarks, ops manual
-│   ├── 03_prompts/          # Reusable Claude/Ollama prompt templates
-│   ├── 04_content_blueprints/ # 12 scripts, 4 archetypes, ad creatives
-│   ├── 05_analytics/        # KPI definitions, experiment log CSV
-│   ├── 06_distribution/     # Posting calendar, platform playbooks
-│   ├── 07_products/         # Phase 1 offer, pricing ladder, Bolt
-│   └── 08_legal_and_policy/ # Privacy, AI disclosure, disclaimers
-├── social_lab_ingest.py     # Index social-lab/ into ChromaDB
-├── ask_social_lab.py        # Query the RAG
-├── CHEATSHEET.md            # All commands in one place
-├── CLAUDE.md                # Claude Code context file
-└── requirements.txt         # Python dependencies
-```
+### 5.2 Web dev – landing page / small site
 
-## Flagship Offer
-
-**14-Day Lead Leak & Compliance Fix** — $3,000–$5,000 flat fee
-- Target: Atlanta law firms and small medical/dental practices (5–25 FTEs)
-- Scope: Scan → Fix → Proof on existing website (top 5–10 revenue-killing issues)
-- Deliverables: Before/after Lighthouse reports, fix log, compliance report, 3 next-step options
-
-## Content Series
-
-| Series | Platform | Length | Style |
-|--------|----------|--------|-------|
-| Atlanta Stack Check | TikTok, Reels, Shorts | 25–40s | Faceless screen-share |
-| Phase 1 Daily Ops | YouTube Shorts, TikTok | 30–50s | Screen-share / DevTools |
-| Compliance Check in 60s | TikTok, Reels, LinkedIn | 30–60s | Faceless, text-heavy |
-| RAG Lab | YouTube Shorts, LinkedIn | 40–60s | Terminal + Python output |
-
-## Local RAG Stack
-
-- **Embeddings:** `all-MiniLM-L6-v2` via ChromaDB (runs on CPU, fast)
-- **Generation:** Ollama — use `phi3:mini` (2.2GB, fits in 4GB VRAM) for speed
-- **Storage:** `.chroma_db/` (local, not committed to git)
-
-Pull faster models when ready:
 ```bash
-ollama pull phi3:mini
-ollama pull llama3.2:3b
+cd /home/t0n34781/projects
+mkdir my-landing && cd my-landing
 ```
+
+Claude prompt:
+
+> Build a static landing page with sections X/Y/Z. Use filesystem tools to create `index.html`, `styles.css`, and `scripts.js`, and delegate all HTML/CSS/JS implementation to a local model.
+
+Run locally:
+
+```bash
+python -m http.server 8000
+# Visit http://localhost:8000
+```
+
+
+---
+
+### 5.3 Web dev – e‑commerce skeleton
+
+```bash
+cd /home/t0n34781/projects
+mkdir ecommerce-core && cd ecommerce-core
+```
+
+Claude prompt (Mode C):
+
+> Design a modular architecture for an e-commerce site with ~200 products, cart, checkout, auth, and payments. Create only the folder structure and documentation in this repo using filesystem tools. Defer all detailed implementation to later local-model passes.
+
+Then shift back to Mode A/B for actual implementation.
+
+---
+
+### 5.4 Mobile app project
+
+```bash
+cd /home/t0n34781/projects
+mkdir mobile-app-foo && cd mobile-app-foo
+```
+
+Claude prompt:
+
+> Plan a Kotlin/Flutter mobile app for X. Create the project skeleton and key modules using filesystem tools. For each screen and feature, delegate implementation to local models. I will run builds in Android Studio/CLI.
+
+Use Claude to:
+
+- Generate Activity/Fragment/Composable or Flutter widget skeletons.
+- Review build logs and suggest fixes.
+
+---
+
+## 6. Memory MCP usage
+
+### 6.1 Set up persistent memory
+
+One-time setup:
+
+```bash
+mkdir -p /home/t0n34781/.claude-memory
+```
+
+Ensure `MEMORY_FILE_PATH` is set in `~/.claude.json` as shown above.
+
+### 6.2 Store preferences
+
+Prompt example:
+
+> Use your memory tool to permanently remember this: my main projects root is `/home/t0n34781/projects`. Prefer `qwen2.5-coder:7b` for coding tasks and `mistral` for heavy text.
+
+### 6.3 Recall test
+
+New session:
+
+> What projects root and coding model did I previously ask you to remember? Use your memory tool to recall it.
+
+If recall fails, verify:
+
+- `MEMORY_FILE_PATH` is correct.
+- The directory exists.
+- Claude is running with the current `~/.claude.json`.
+
+---
+
+## 7. Quick checklist (per new project)
+
+1. Create project:
+
+```bash
+cd /home/t0n34781/projects
+mkdir project-name && cd project-name
+```
+
+2. Ensure infrastructure running:
+
+```bash
+ollama serve      # if needed
+n8n start         # if using workflows
+```
+
+3. Open project in Claude Code.
+4. Initial prompt:
+    - For scripts:
+> Plan minimal project structure and create files using filesystem tools. Delegate implementation to local models.
+    - For web/mobile:
+> First design architecture \& structure, then scaffold using filesystem tools. Implementation goes to local models.
+5. Run tests/builds locally; use Claude as reviewer.
+6. Use memory MCP for cross-session preferences.
+
+---
+```
+```
+

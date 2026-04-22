@@ -1,0 +1,89 @@
+{
+  "platform": "X",
+  "profile_build": {
+    "username_suggestions": [
+      "@BadgerTechLLC",
+      "@BadgerOptimize",
+      "@CTRLALTdeliver_"
+    ],
+    "profile_bio": "Simulated X bio for Badger Technologies LLC: \"CTRL + ALT + deliver! Web optimization + digital visibility for SMBs. Ditch expensive agencies, get high-performance results. #BadgerTech #WebDev #SEO\"",
+    "banner_visual_direction": "AI image prompt: A dynamic, wide banner for X (Twitter) featuring a stylized, abstract cityscape at night with glowing data lines connecting buildings. The Badger Technologies logo (official_badgr-logo_px512.png) subtly integrated into the lower right. Focus on digital connectivity and speed. Safe zone for text/logo in the center. Style: Modern, high-tech, slightly futuristic. Colors: Deep blues, purples, electric greens.",
+    "profile_image_guidance": "AI image prompt: A clean, circular crop of the Badger Technologies logo (official_badgr-logo_px512.png) on a solid brand-blue background. Optimized for X profile picture. Focus on clarity and brand recognition.",
+    "cta_strategy": "Pinned tweet with a direct link to a free audit. Use strong calls to action in video captions and replies."
+  },
+  "posting_strategy": {
+    "frequency": "5-7 times per week, mix of text, image, and video posts.",
+    "best_times": "9-11 AM EST, 1-3 PM EST, 7-9 PM EST (peak engagement windows).",
+    "engagement_loop": "Actively engage in relevant conversations, reply to mentions, retweet valuable content. Use polls and questions to drive interaction. Host occasional Q&A sessions.",
+    "hashtags": [
+      "#WebOptimization",
+      "#DigitalMarketing",
+      "#SMB",
+      "#TechNews",
+      "#SEO",
+      "#WebsiteTips",
+      "#OnlineBusiness",
+      "#SmallBiz",
+      "#GrowthStrategy",
+      "#MarketingTips",
+      "#BusinessGrowth",
+      "#Cybersecurity",
+      "#DataPrivacy",
+      "#TechTrends",
+      "#StartupLife",
+      "#CTRLALTdeliver",
+      "#BadgerTech",
+      "#AffordableSEO",
+      "#DigitalTransformation",
+      "#WebDev"
+    ],
+    "viral_formatting_rules": "Short, punchy text. Use relevant visuals (images, GIFs, short videos). Thread complex ideas. Strong hooks in the first sentence. Leverage trending topics with relevant commentary."
+  },
+  "video_content_system": {
+    "concept_title": "The Great Data Escape (and how to prevent it)",
+    "hook": "Is your website a data leak waiting to happen?",
+    "full_script": "Simulated X video script: \"Hook: Is your website a data leak waiting to happen? Tension: Slow sites, invisible online \u2013 costing you clients. Payoff: Badger Technologies: CTRL + ALT + deliver! We fix it. CTA: Click bio for free audit! #Cybersecurity #WebOptimization #BadgerTech\"",
+    "voiceover_text": "Simulated X video script: \"Hook: Is your website a data leak waiting to happen? Tension: Slow sites, invisible online \u2013 costing you clients. Payoff: Badger Technologies: CTRL + ALT + deliver! We fix it. CTA: Click bio for free audit! #Cybersecurity #WebOptimization #BadgerTech\"",
+    "on_screen_text_sequence": [
+      "DATA LEAK? NOT ON OUR WATCH!",
+      "SLOW SITE = LOST CLIENTS",
+      "BADGER TECH: YOUR DIGITAL SHIELD",
+      "CTRL + ALT + DELIVER",
+      "AFFORDABLE. FAST. EFFECTIVE.",
+      "FREE AUDIT IN BIO!"
+    ],
+    "visual_generation_prompts": [
+      "Gemini video generation prompt: A short, impactful animation showing data packets humorously attempting to escape a website, only to be gently herded back by a digital badger. Glitch effects and 'ACCESS DENIED' pop-ups appear playfully. Style: Cartoonish, clean, fast-paced. Duration: 10 seconds.",
+      "Nano-Banana video generation prompt: An abstract animation of a website's firewall as a comical, wobbly brick wall. Data streams try to sneak through cracks, but a 'CTRL + ALT + deliver' hammer (wielded by an unseen force) quickly patches them. Style: Minimalist, humorous, infographic-like. Duration: 10 seconds.",
+      "HeyGen avatar workflow: Energetic, professional female avatar. Confident and slightly playful tone. Background: Abstract tech patterns. Wardrobe: Business casual. Gestures: Emphatic, engaging. Sync voiceover with animated captions."
+    ],
+    "editing_direction": {
+      "pacing": "Quick cuts, dynamic transitions, keep attention high.",
+      "cuts_per_second": "1-1.5 cuts per second, with bursts of faster cuts during problem/solution.",
+      "meme_viral_style_reference": "Use popular short-form video editing techniques: quick zooms, text overlays, subtle sound effects for emphasis. Reference viral tech explainers."
+    },
+    "cta": "Click the link in our bio for a free web optimization audit!"
+  },
+  "seo_discovery_engineering": {
+    "algorithmic_growth_explanation": "X's algorithm prioritizes recent, relevant, and engaging content. High retweet and reply rates, especially from influential accounts, boost visibility. Videos and images generally perform better than plain text. Trending hashtags increase discoverability.",
+    "best_performing_content_patterns": [
+      "Short, impactful video clips (15-30s)",
+      "Infographic-style images with key stats",
+      "Thought-provoking questions/polls",
+      "Threads breaking down complex topics"
+    ],
+    "hashtag_clustering_strategy": "Combine 1-2 trending hashtags with 2-3 relevant niche hashtags (#Cybersecurity, #WebDev) and 1-2 brand-specific hashtags (#BadgerTech, #CTRLALTdeliver).",
+    "engagement_bait_strategies": [
+      "Ask direct questions to spark debate or discussion.",
+      "Run polls on industry hot topics.",
+      "Reply to comments promptly and thoughtfully.",
+      "Share behind-the-scenes glimpses of work or insights."
+    ],
+    "what_drives_reach_breakdown": {
+      "retention": "High watch time on videos, indicating engaging content.",
+      "saves": "Valuable content that users want to revisit (e.g., tips, resources).",
+      "shares": "Content that resonates strongly enough to be amplified by others (retweets, quote tweets).",
+      "comment_velocity": "Rapid and numerous replies, signaling strong interest and discussion."
+    }
+  }
+}

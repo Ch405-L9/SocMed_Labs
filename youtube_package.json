@@ -1,0 +1,89 @@
+{
+  "platform": "YouTube",
+  "profile_build": {
+    "username_suggestions": [
+      "@BadgerTechOfficial",
+      "@BadgerTechSolutions",
+      "@CTRLALTdeliverTech"
+    ],
+    "profile_bio": "Simulated YouTube bio for Badger Technologies LLC: \"Welcome to Badger Technologies LLC! We provide affordable web optimization and digital visibility acceleration for small to medium businesses. Say goodbye to expensive agencies and hello to high-performance online presence. Subscribe for expert tips, cybersecurity insights, and how to CTRL + ALT + deliver your business goals! #WebOptimization #SMBSuccess #CybersecurityAwareness\"",
+    "banner_visual_direction": "AI image prompt: A wide, high-resolution YouTube banner for Badger Technologies LLC. Dominant features: a stylized, abstract digital landscape with flowing data streams and subtle security shield motifs. The Badger Technologies logo (official_badgr-logo_px512.png) prominently displayed in the safe area. Text overlay: \"CTRL + ALT + deliver: Web Optimization & Digital Visibility\". Style: Professional, high-tech, clean, with a touch of humor. Colors: Brand blue, silver, and electric green accents. Optimized for desktop, mobile, and TV views.",
+    "profile_image_guidance": "AI image prompt: A crisp, circular crop of the Badger Technologies logo (official_badgr-logo_px512.png) on a solid, dark blue background. Optimized for YouTube profile picture. Ensure high visibility and brand recognition at small sizes.",
+    "cta_strategy": "End screens with subscribe button and link to website. Cards for relevant videos. Link in description for free audit. Verbal CTAs throughout videos."
+  },
+  "posting_strategy": {
+    "frequency": "1-2 long-form videos per week, 3-5 Shorts per week.",
+    "best_times": "Long-form: Wednesdays 2-4 PM EST, Saturdays 10 AM - 12 PM EST. Shorts: Daily, 6-10 AM EST, 5-9 PM EST.",
+    "engagement_loop": "Respond to comments, pin valuable comments. Encourage likes, shares, and subscriptions. Create community polls. Feature viewer questions in Q&A videos.",
+    "hashtags": [
+      "#WebOptimization",
+      "#DigitalMarketing",
+      "#SMB",
+      "#TechTips",
+      "#SEOStrategy",
+      "#WebsiteSecurity",
+      "#OnlinePresence",
+      "#SmallBusinessGrowth",
+      "#MarketingHacks",
+      "#BusinessTips",
+      "#Cybersecurity",
+      "#DataProtection",
+      "#TechTrends2026",
+      "#StartupAdvice",
+      "#CTRLALTdeliver",
+      "#BadgerTech",
+      "#AffordableSEO",
+      "#DigitalTransformation",
+      "#YouTubeShorts",
+      "#WebDevTutorial"
+    ],
+    "viral_formatting_rules": "Long-form: Engaging intros, clear chapter markers, high-quality visuals, professional editing. Shorts: Fast-paced, strong hooks (first 3 seconds), animated captions, clear visual focal points, mid-video CTA."
+  },
+  "video_content_system": {
+    "concept_title": "The Day the Data Went Wild: A Cybersecurity Comedy",
+    "hook": "Ever wonder where your website data REALLY goes?",
+    "full_script": "Simulated YouTube video script: \"Hook: Ever wonder where your website data REALLY goes? Tension: Data breaches are no joke, and small businesses are prime targets. Payoff: Badger Technologies helps you secure your digital fortress! We CTRL + ALT + deliver peace of mind and online visibility. CTA: Hit subscribe and visit our link in description for a free security audit! #YouTubeShorts #CybersecuritySatire #BadgerTech\"",
+    "voiceover_text": "Simulated YouTube video script: \"Hook: Ever wonder where your website data REALLY goes? Tension: Data breaches are no joke, and small businesses are prime targets. Payoff: Badger Technologies helps you secure your digital fortress! We CTRL + ALT + deliver peace of mind and online visibility. CTA: Hit subscribe and visit our link in description for a free security audit! #YouTubeShorts #CybersecuritySatire #BadgerTech\"",
+    "on_screen_text_sequence": [
+      "WHERE DOES YOUR DATA GO?",
+      "SMALL BIZ = BIG TARGET",
+      "SECURE YOUR DIGITAL FORTRESS",
+      "BADGER TECH: CTRL + ALT + DELIVER",
+      "PEACE OF MIND. ONLINE VISIBILITY.",
+      "SUBSCRIBE & FREE AUDIT!"
+    ],
+    "visual_generation_prompts": [
+      "Gemini video generation prompt: A humorous, fast-paced animation depicting data packets as mischievous cartoon characters causing chaos on a server farm, then being comically rounded up and secured by a digital badger. Glitch effects and exaggerated warning pop-ups. Style: Playful, energetic, 2D animation. Duration: 15 seconds.",
+      "Nano-Banana video generation prompt: An abstract animation illustrating a website as a vulnerable castle, with data streams (represented by glowing lines) escaping through cracks. A friendly, armored badger then appears, repairing the walls with a \"CTRL + ALT + deliver\" shield. Style: Whimsical, infographic-like, clean. Duration: 15 seconds.",
+      "HeyGen avatar workflow: Professional, engaging male avatar. Enthusiastic and knowledgeable tone. Background: Clean, modern tech office. Wardrobe: Business casual. Gestures: Confident, inviting. Sync voiceover with animated captions and on-screen text."
+    ],
+    "editing_direction": {
+      "pacing": "Dynamic, with clear transitions between problem, tension, and solution. Shorts should be very fast-paced.",
+      "cuts_per_second": "Long-form: 0.5-1 cut per second. Shorts: 1.5-2 cuts per second, with rapid cuts during high-energy moments.",
+      "meme_viral_style_reference": "For Shorts, use popular YouTube Shorts editing trends: jump cuts, sound effects, text pop-ups. For long-form, maintain a professional yet engaging style with B-roll and graphics."
+    },
+    "cta": "Hit subscribe and visit our link in the description for a free security audit!"
+  },
+  "seo_discovery_engineering": {
+    "algorithmic_growth_explanation": "YouTube's algorithm prioritizes watch time, audience retention, engagement (likes, comments, shares), and consistency. High click-through rates on thumbnails and titles are crucial. Shorts benefit from high completion rates and rewatches.",
+    "best_performing_content_patterns": [
+      "How-to tutorials (long-form and Shorts)",
+      "Problem/Solution explainers",
+      "Cybersecurity myth-busting",
+      "Behind-the-scenes of web optimization projects"
+    ],
+    "hashtag_clustering_strategy": "For long-form, use 5-8 relevant hashtags in description. For Shorts, use 3-5 hashtags including #Shorts, #YouTubeShorts, and niche tags (#Cybersecurity, #WebDev).",
+    "engagement_bait_strategies": [
+      "Ask viewers to share their experiences in the comments.",
+      "Run polls in community tab.",
+      "Create Q&A videos based on viewer questions.",
+      "Encourage subscriptions for more content."
+    ],
+    "what_drives_reach_breakdown": {
+      "retention": "High percentage of video watched, especially crucial in the first 30 seconds.",
+      "saves": "Not directly applicable to YouTube videos in the same way as other platforms, but 'add to playlist' indicates similar value.",
+      "shares": "Viewers sharing videos directly or embedding them, expanding reach beyond subscribers.",
+      "comment_velocity": "Number of comments received shortly after upload, indicating strong initial engagement and interest."
+    }
+  }
+}

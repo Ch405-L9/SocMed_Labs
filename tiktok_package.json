@@ -1,0 +1,89 @@
+{
+  "platform": "TikTok",
+  "profile_build": {
+    "username_suggestions": [
+      "@BadgerTechOfficial",
+      "@Badger_Optimize",
+      "@CTRLALTdeliver"
+    ],
+    "profile_bio": "Simulated TikTok bio for Badger Technologies LLC: \"CTRL + ALT + deliver! We optimize your web presence & accelerate digital visibility for SMBs. Say goodbye to expensive agencies & hello to high-performance results. #BadgerTech #WebOptimization #SMBSuccess\"",
+    "profile_image_guidance": "AI image prompt: A sleek, modern badger logo (from official_badgr-logo_px512.png) on a vibrant, tech-inspired abstract background with subtle data stream or circuit board elements. Circular crop, optimized for TikTok profile picture. Focus on brand recognition and digital innovation. Style: Minimalist, high-tech, dynamic. Colors: Brand blue, silver, and electric accents.",
+    "cta_strategy": "Link in bio to free web optimization audit. Use direct, urgent language in video CTAs."
+  },
+  "posting_strategy": {
+    "frequency": "3-5 times per week, consistent schedule.",
+    "best_times": "6-10 AM EST, 7-11 PM EST (global algorithmic windows).",
+    "engagement_loop": "Respond to all comments within 1 hour. Use question stickers, polls, and duets/stitches with trending tech content. Encourage saves and shares with valuable, actionable tips.",
+    "hashtags": [
+      "#WebOptimization",
+      "#DigitalMarketing",
+      "#SMBSuccess",
+      "#TechStartup",
+      "#SEOtips",
+      "#WebsiteDesign",
+      "#OnlineVisibility",
+      "#SmallBusiness",
+      "#GrowthHacks",
+      "#MarketingStrategy",
+      "#BusinessTips",
+      "#TechTrends",
+      "#CybersecurityAwareness",
+      "#DataPrivacy",
+      "#ViralMarketing",
+      "#CTRLALTdeliver",
+      "#BadgerTech",
+      "#AffordableSEO",
+      "#DigitalTransformation",
+      "#StartupLife"
+    ],
+    "viral_formatting_rules": "Fast cuts (0.5-1 second per shot), on-screen text for key points, trending audio (neutral electronic), clear hook in first 1-2 seconds, direct and concise language."
+  },
+  "video_content_system": {
+    "concept_title": "The 'Oops, My Data Leaked' Dance",
+    "hook": "Ever feel like your website's a digital ghost town?",
+    "full_script": "Simulated TikTok video script: \"Hook: Ever feel like your website's a digital ghost town? Tension: You're paying big bucks, but getting zero visibility. Payoff: Badger Technologies swoops in! We're CTRL + ALT + deliver \u2013 affordable web optimization that gets you seen. CTA: DM us 'BADGER' for a free visibility audit! #CybersecuritySatire #DataLeakAwareness #BadgerTech\"",
+    "voiceover_text": "Simulated TikTok video script: \"Hook: Ever feel like your website's a digital ghost town? Tension: You're paying big bucks, but getting zero visibility. Payoff: Badger Technologies swoops in! We're CTRL + ALT + deliver \u2013 affordable web optimization that gets you seen. CTA: DM us 'BADGER' for a free visibility audit! #CybersecuritySatire #DataLeakAwareness #BadgerTech\"",
+    "on_screen_text_sequence": [
+      "WEBSITE GHOST TOWN?",
+      "DATA LEAK NIGHTMARE?",
+      "EXPENSIVE AGENCIES? NO THANKS!",
+      "BADGER TECH: CTRL + ALT + DELIVER",
+      "AFFORDABLE WEB OPTIMIZATION",
+      "GET SEEN. GET CUSTOMERS.",
+      "DM 'BADGER' FOR FREE AUDIT!"
+    ],
+    "visual_generation_prompts": [
+      "Gemini video generation prompt: A short, fast-paced animation depicting a website slowly fading into a 'ghost' outline, then rapidly transforming into a vibrant, high-traffic site with data streams flowing. Incorporate glitch effects and warning screen overlays humorously. Style: Cyberpunk-lite, energetic. Duration: 10 seconds.",
+      "Nano-Banana video generation prompt: A humorous, abstract animation of servers sweating profusely, then a 'data leak' represented by cartoonish, overflowing digital pipes. A friendly badger character (representing Badger Tech) then 'patches' the leaks with a 'CTRL + ALT + deliver' wrench. Style: Playful, minimalist, vector art. Duration: 10 seconds.",
+      "HeyGen avatar workflow: Professional, friendly male avatar. Expressive but not overly dramatic. Background: Abstract tech patterns. Wardrobe: Smart casual. Gestures: Confident, reassuring. Sync voiceover with animated captions."
+    ],
+    "editing_direction": {
+      "pacing": "Extremely fast, rapid cuts every 0.5-1 second.",
+      "cuts_per_second": "1-2 cuts per second, increasing intensity during 'tension' phase.",
+      "meme_viral_style_reference": "Zoom-ins on key text, quick transitions, sound effects for emphasis (e.g., 'whoosh' for speed, 'boing' for humor). Reference popular tech meme formats (e.g., 'distracted boyfriend' but with data)."
+    },
+    "cta": "DM us 'BADGER' for a free visibility audit!"
+  },
+  "seo_discovery_engineering": {
+    "algorithmic_growth_explanation": "TikTok's algorithm prioritizes watch time, rewatches, shares, and comments. High completion rates on short, engaging videos signal value. Trending audio and niche hashtags increase discoverability within relevant communities.",
+    "best_performing_content_patterns": [
+      "Problem/Solution (quick fix)",
+      "Myth vs. Fact (debunking tech myths)",
+      "Behind-the-scenes (showing web optimization process)",
+      "Mini-tutorials (15-30s actionable tips)"
+    ],
+    "hashtag_clustering_strategy": "Combine 2-3 broad hashtags (#WebOptimization, #DigitalMarketing) with 2-3 niche hashtags (#SMBSEO, #LocalBusinessTech) and 1-2 viral/trending tags (#TechTok, #StartupHacks). Avoid keyword stuffing.",
+    "engagement_bait_strategies": [
+      "Ask open-ended questions in captions and video ('What's your biggest website headache?').",
+      "Create 'fill-in-the-blank' prompts related to web issues.",
+      "Run polls on common business tech struggles.",
+      "Reply to top comments with video responses."
+    ],
+    "what_drives_reach_breakdown": {
+      "retention": "High watch completion rate, especially in the first 3 seconds.",
+      "saves": "Content that provides lasting value or a 'how-to' guide.",
+      "shares": "Relatable content, humorous takes, or highly valuable insights.",
+      "comment_velocity": "Rapid influx of comments shortly after posting, indicating strong initial engagement."
+    }
+  }
+}
